@@ -18,3 +18,10 @@ pipeline/assets/**
 !pipeline/assets/.gitkeep
 pipeline/shorts.config.json
 *.stackdump
+
+# dashboard build and test output
+dashboard/.next/
+dashboard/out/
+dashboard/test-results/
+dashboard/playwright-report/
+*.tsbuildinfo
