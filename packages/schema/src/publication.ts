@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { channelId, isoDate } from "./common.js";
+import { channelId, isoDate } from "./common.ts";
 
 /** One row of `data/publications.csv`: a video published (or planned) on one platform. */
 

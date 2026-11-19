@@ -12,6 +12,8 @@ const config: NextConfig = {
   trailingSlash: true,
   images: { unoptimized: true },
   reactStrictMode: true,
+  // workspace packages ship TypeScript sources
+  transpilePackages: ["@shorts/schema"],
   env: { NEXT_PUBLIC_BASE_PATH: basePath },
 };
 

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { channelId, isoDate } from "./common.js";
+import { channelId, isoDate } from "./common.ts";
 
 /** `data/stats/<date>.json` – one snapshot written by `pnpm stats --save`. */
 

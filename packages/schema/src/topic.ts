@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { TOPIC_FORMATS } from "./formats.js";
-import { PRODUCT_ID_RE } from "./product.js";
+import { TOPIC_FORMATS } from "./formats.ts";
+import { PRODUCT_ID_RE } from "./product.ts";
 
 /**
  * Topic card – the source of facts for videos without a product (F5, F3).

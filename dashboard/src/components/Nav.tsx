@@ -15,7 +15,7 @@ export const NAV = [
 const normalise = (p: string) => (p.endsWith("/") ? p : `${p}/`);
 
 /** Five words. The current view sits on the highlighter. */
-export function Nav() {
+export function Nav({ counts = {} }: { counts?: Partial<Record<(typeof NAV)[number]["href"], number>> }) {
   const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   const raw = usePathname() ?? "/";
   const path = normalise(raw.startsWith(base) ? raw.slice(base.length) || "/" : raw);
@@ -31,6 +31,7 @@ export function Nav() {
           className="-ml-1.5 px-1.5 py-2.5 font-semibold no-underline transition-colors duration-[120ms] ease-film [font-stretch:88%] hover:underline aria-[current=page]:bg-hl aria-[current=page]:text-hl-ink md:py-1"
         >
           {item.label}
+          {counts[item.href] !== undefined && <span className="ml-0.5 font-mono text-xs font-normal text-ink-3 in-aria-[current=page]:text-inherit"> {counts[item.href]}</span>}
         </Link>
       ))}
     </nav>

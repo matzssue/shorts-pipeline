@@ -1,4 +1,4 @@
-import { PUBLICATION_COLUMNS, type IgAccountStats, type IgMediaStats, type Publication, type YtChannelStats, type YtVideoStats } from "@shorts/schema";
+import { parseCsv, PUBLICATION_COLUMNS, type IgAccountStats, type IgMediaStats, type Publication, type YtChannelStats, type YtVideoStats } from "@shorts/schema";
 import type { FetchFn } from "./ig-publish.js";
 import { GRAPH } from "./ig-publish.js";
 import { API as YT_API, type YtFetch } from "./yt-publish.js";
@@ -22,28 +22,7 @@ export const IG_REEL_METRICS = ["views", "reach", "likes", "comments", "shares",
 export { PUBLICATION_COLUMNS };
 export type { IgAccountStats, IgMediaStats, Publication, YtChannelStats, YtVideoStats };
 
-/** Simple CSV parser (quotes, commas and newlines inside fields). */
-export function parseCsv(text: string): string[][] {
-  const rows: string[][] = [];
-  let row: string[] = [];
-  let field = "";
-  let quoted = false;
-  for (let i = 0; i < text.length; i++) {
-    const c = text[i];
-    if (quoted) {
-      if (c === '"' && text[i + 1] === '"') (field += '"'), i++;
-      else if (c === '"') quoted = false;
-      else field += c;
-    } else if (c === '"') quoted = true;
-    else if (c === ",") row.push(field), (field = "");
-    else if (c === "\n" || c === "\r") {
-      if (c === "\r" && text[i + 1] === "\n") i++;
-      row.push(field), rows.push(row), (row = []), (field = "");
-    } else field += c;
-  }
-  if (field || row.length) row.push(field), rows.push(row);
-  return rows.filter((r) => r.some((f) => f.trim()));
-}
+export { parseCsv };
 
 export function readPublications(csv: string): Publication[] {
   const [head, ...rows] = parseCsv(csv.replace(/^﻿/, ""));

@@ -33,7 +33,7 @@ fixtures/content/    its output: a complete example content directory, committed
 dashboard/           Stykówka: static Next.js dashboard on the mock data (in progress)
 ```
 
-**Stykówka** (Polish for *contact sheet*: one sheet with every frame of a film roll) is the dashboard. Next.js 16 static export, Tailwind 4 with its default theme switched off in favour of its own tokens, self-hosted fonts, light and dark themes. Playwright with axe checks every view in both themes and at phone width.
+**Stykówka** (Polish for *contact sheet*: one sheet with every frame of a film roll) is the dashboard. Next.js 16 static export, Tailwind 4 with its default theme switched off in favour of its own tokens, self-hosted fonts, light and dark themes. At build time it reads a content directory (the committed mock fixtures; real data is refused in the public build), validates every file with `@shorts/schema` and joins videos with their publications, stats and narration costs. A broken file stops the build with its path and field. Vitest covers the data layer; Playwright with axe checks every view in both themes and at phone width.
 
 ```sh
 pnpm --filter @shorts/dashboard dev     # http://localhost:3000
