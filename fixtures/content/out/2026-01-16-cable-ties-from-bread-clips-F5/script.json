@@ -1,0 +1,84 @@
+{
+  "input": {
+    "kind": "topic",
+    "id": "cable-ties-from-bread-clips"
+  },
+  "format": "F5",
+  "series": 1,
+  "angle": "Bread bag clips as cable labels",
+  "hooks": [
+    "Every charger in the drawer looks the same."
+  ],
+  "scenes": [
+    {
+      "kind": "video",
+      "duration_s": 4.5,
+      "visual": "Close-up that shows: Which charger is which?",
+      "prompt": "Vertical close-up, soft daylight, no people: which charger is which?",
+      "voiceover": "Every charger in the drawer looks the same.",
+      "on_screen_text": "Which charger is which?",
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 6.5,
+      "visual": "Clip on the cable",
+      "prompt": "Vertical shot, hands only, no faces: clip on the cable",
+      "voiceover": "A bread bag clip snaps right around a charging cable and stays put.",
+      "on_screen_text": "Clip on the cable",
+      "overlay": {
+        "type": "label",
+        "heading": "You need:",
+        "value": "clip + marker"
+      },
+      "claims": [
+        {
+          "text": "A plastic bread bag clip fits around a standard charging cable.",
+          "source": "clip_fits"
+        }
+      ]
+    },
+    {
+      "kind": "image",
+      "duration_s": 5.5,
+      "visual": "Write the name",
+      "prompt": "Still life, top view, no text: write the name",
+      "voiceover": "Write the device name on the flat side with a marker.",
+      "on_screen_text": "Write the name",
+      "claims": [
+        {
+          "text": "The flat side of the clip can be written on with a marker.",
+          "source": "write_on_clip"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 3.5,
+      "visual": "Source card",
+      "prompt": "",
+      "voiceover": "This comes from Example Source 6.",
+      "on_screen_text": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 6, example.com"
+      },
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 4.5,
+      "visual": "Wide shot of a tidy shelf",
+      "prompt": "Vertical wide shot of a tidy shelf, slow push-in, no people",
+      "voiceover": "How many mystery chargers do you have?",
+      "on_screen_text": "Tell me below",
+      "claims": []
+    }
+  ],
+  "caption": "Bread bag clips as cable labels. Source: Example Source 6. Script and facts checked by a person; visuals and voice made with AI.",
+  "hashtags": [
+    "#hometips",
+    "#homeorganisation"
+  ],
+  "notes": ""
+}

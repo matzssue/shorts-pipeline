@@ -1,0 +1,324 @@
+{
+  "series": 1,
+  "seriesTitle": "Quick tip",
+  "sourceLabel": "Source",
+  "audioSrc": "voice/narrator-b.mp3",
+  "scenes": [
+    {
+      "kind": "video",
+      "src": "scenes/01.mp4",
+      "from": 0,
+      "durationInFrames": 165,
+      "playbackRate": 1,
+      "headline": "Loose batteries? Box them",
+      "audio": {
+        "startFrom": 0,
+        "endAt": 138,
+        "delay": 18
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/02.mp4",
+      "from": 165,
+      "durationInFrames": 180,
+      "playbackRate": 1,
+      "headline": "Ends away from metal",
+      "overlay": {
+        "type": "label",
+        "heading": "Store:",
+        "value": "box with sections"
+      },
+      "audio": {
+        "startFrom": 138,
+        "endAt": 305,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "image",
+      "src": "scenes/03.png",
+      "from": 345,
+      "durationInFrames": 180,
+      "playbackRate": 1,
+      "headline": "Sort by size",
+      "audio": {
+        "startFrom": 305,
+        "endAt": 462,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "text",
+      "from": 525,
+      "durationInFrames": 120,
+      "playbackRate": 1,
+      "headline": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 12, example.com"
+      },
+      "audio": {
+        "startFrom": 462,
+        "endAt": 553,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/05.mp4",
+      "from": 645,
+      "durationInFrames": 150,
+      "playbackRate": 1,
+      "headline": "Tell me below",
+      "audio": {
+        "startFrom": 553,
+        "endAt": 693,
+        "delay": 0
+      }
+    }
+  ],
+  "words": [
+    {
+      "text": "Loose",
+      "from": 20,
+      "to": 31
+    },
+    {
+      "text": "batteries",
+      "from": 33,
+      "to": 54
+    },
+    {
+      "text": "rolling",
+      "from": 56,
+      "to": 73
+    },
+    {
+      "text": "around",
+      "from": 75,
+      "to": 89
+    },
+    {
+      "text": "a",
+      "from": 91,
+      "to": 93
+    },
+    {
+      "text": "drawer",
+      "from": 96,
+      "to": 110
+    },
+    {
+      "text": "is",
+      "from": 112,
+      "to": 116
+    },
+    {
+      "text": "a",
+      "from": 119,
+      "to": 121
+    },
+    {
+      "text": "small",
+      "from": 123,
+      "to": 135
+    },
+    {
+      "text": "risk.",
+      "from": 137,
+      "to": 149
+    },
+    {
+      "text": "When",
+      "from": 172,
+      "to": 181
+    },
+    {
+      "text": "battery",
+      "from": 184,
+      "to": 200
+    },
+    {
+      "text": "ends",
+      "from": 202,
+      "to": 211
+    },
+    {
+      "text": "touch",
+      "from": 214,
+      "to": 225
+    },
+    {
+      "text": "keys",
+      "from": 227,
+      "to": 237
+    },
+    {
+      "text": "or",
+      "from": 239,
+      "to": 244
+    },
+    {
+      "text": "coins,",
+      "from": 246,
+      "to": 260
+    },
+    {
+      "text": "they",
+      "from": 267,
+      "to": 277
+    },
+    {
+      "text": "can",
+      "from": 279,
+      "to": 286
+    },
+    {
+      "text": "slowly",
+      "from": 288,
+      "to": 302
+    },
+    {
+      "text": "run",
+      "from": 304,
+      "to": 311
+    },
+    {
+      "text": "down.",
+      "from": 313,
+      "to": 325
+    },
+    {
+      "text": "A",
+      "from": 352,
+      "to": 354
+    },
+    {
+      "text": "small",
+      "from": 357,
+      "to": 368
+    },
+    {
+      "text": "box",
+      "from": 370,
+      "to": 377
+    },
+    {
+      "text": "with",
+      "from": 380,
+      "to": 389
+    },
+    {
+      "text": "sections",
+      "from": 391,
+      "to": 410
+    },
+    {
+      "text": "keeps",
+      "from": 412,
+      "to": 424
+    },
+    {
+      "text": "them",
+      "from": 426,
+      "to": 435
+    },
+    {
+      "text": "apart",
+      "from": 437,
+      "to": 449
+    },
+    {
+      "text": "and",
+      "from": 451,
+      "to": 458
+    },
+    {
+      "text": "sorted",
+      "from": 461,
+      "to": 474
+    },
+    {
+      "text": "by",
+      "from": 477,
+      "to": 481
+    },
+    {
+      "text": "size.",
+      "from": 484,
+      "to": 495
+    },
+    {
+      "text": "This",
+      "from": 532,
+      "to": 541
+    },
+    {
+      "text": "comes",
+      "from": 544,
+      "to": 555
+    },
+    {
+      "text": "from",
+      "from": 557,
+      "to": 567
+    },
+    {
+      "text": "Example",
+      "from": 569,
+      "to": 585
+    },
+    {
+      "text": "Source",
+      "from": 587,
+      "to": 601
+    },
+    {
+      "text": "12.",
+      "from": 604,
+      "to": 611
+    },
+    {
+      "text": "How",
+      "from": 650,
+      "to": 657
+    },
+    {
+      "text": "many",
+      "from": 659,
+      "to": 669
+    },
+    {
+      "text": "dead",
+      "from": 671,
+      "to": 680
+    },
+    {
+      "text": "batteries",
+      "from": 682,
+      "to": 703
+    },
+    {
+      "text": "are",
+      "from": 706,
+      "to": 712
+    },
+    {
+      "text": "in",
+      "from": 715,
+      "to": 719
+    },
+    {
+      "text": "your",
+      "from": 722,
+      "to": 731
+    },
+    {
+      "text": "drawer?",
+      "from": 733,
+      "to": 749
+    }
+  ],
+  "durationInFrames": 795
+}

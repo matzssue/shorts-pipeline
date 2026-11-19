@@ -1,0 +1,308 @@
+{
+  "narrator": "narrator-a",
+  "provider": "mock",
+  "voiceId": "mock-voice-a",
+  "model": "eleven_v3",
+  "hash": "2e3e4cfbe586d5c0",
+  "text": "The door is the busiest part of the fridge. Every time you open the fridge, the door shelves warm up first. Keep the door for jars and sauces. They handle the small changes better. This comes from Example Source 9. What is in your fridge door right now?",
+  "parts": [
+    "The door is the busiest part of the fridge.",
+    "Every time you open the fridge, the door shelves warm up first.",
+    "Keep the door for jars and sauces. They handle the small changes better.",
+    "This comes from Example Source 9.",
+    "What is in your fridge door right now?"
+  ],
+  "sources": [
+    "full recording",
+    "full recording",
+    "full recording",
+    "full recording",
+    "full recording"
+  ],
+  "duration_s": 22.591,
+  "billed_chars": 253,
+  "words": [
+    {
+      "text": "The",
+      "start": 0.05,
+      "end": 0.295
+    },
+    {
+      "text": "door",
+      "start": 0.377,
+      "end": 0.704
+    },
+    {
+      "text": "is",
+      "start": 0.786,
+      "end": 0.949
+    },
+    {
+      "text": "the",
+      "start": 1.031,
+      "end": 1.276
+    },
+    {
+      "text": "busiest",
+      "start": 1.358,
+      "end": 1.93
+    },
+    {
+      "text": "part",
+      "start": 2.012,
+      "end": 2.339
+    },
+    {
+      "text": "of",
+      "start": 2.421,
+      "end": 2.584
+    },
+    {
+      "text": "the",
+      "start": 2.666,
+      "end": 2.911
+    },
+    {
+      "text": "fridge.",
+      "start": 2.993,
+      "end": 3.566
+    },
+    {
+      "text": "Every",
+      "start": 4.035,
+      "end": 4.443
+    },
+    {
+      "text": "time",
+      "start": 4.525,
+      "end": 4.852
+    },
+    {
+      "text": "you",
+      "start": 4.934,
+      "end": 5.179
+    },
+    {
+      "text": "open",
+      "start": 5.261,
+      "end": 5.588
+    },
+    {
+      "text": "the",
+      "start": 5.67,
+      "end": 5.915
+    },
+    {
+      "text": "fridge,",
+      "start": 5.997,
+      "end": 6.569
+    },
+    {
+      "text": "the",
+      "start": 6.777,
+      "end": 7.022
+    },
+    {
+      "text": "door",
+      "start": 7.104,
+      "end": 7.431
+    },
+    {
+      "text": "shelves",
+      "start": 7.513,
+      "end": 8.085
+    },
+    {
+      "text": "warm",
+      "start": 8.167,
+      "end": 8.494
+    },
+    {
+      "text": "up",
+      "start": 8.576,
+      "end": 8.739
+    },
+    {
+      "text": "first.",
+      "start": 8.821,
+      "end": 9.311
+    },
+    {
+      "text": "Keep",
+      "start": 9.761,
+      "end": 10.088
+    },
+    {
+      "text": "the",
+      "start": 10.17,
+      "end": 10.415
+    },
+    {
+      "text": "door",
+      "start": 10.497,
+      "end": 10.824
+    },
+    {
+      "text": "for",
+      "start": 10.906,
+      "end": 11.151
+    },
+    {
+      "text": "jars",
+      "start": 11.233,
+      "end": 11.56
+    },
+    {
+      "text": "and",
+      "start": 11.641,
+      "end": 11.887
+    },
+    {
+      "text": "sauces.",
+      "start": 11.968,
+      "end": 12.541
+    },
+    {
+      "text": "They",
+      "start": 12.989,
+      "end": 13.316
+    },
+    {
+      "text": "handle",
+      "start": 13.398,
+      "end": 13.889
+    },
+    {
+      "text": "the",
+      "start": 13.971,
+      "end": 14.216
+    },
+    {
+      "text": "small",
+      "start": 14.298,
+      "end": 14.706
+    },
+    {
+      "text": "changes",
+      "start": 14.788,
+      "end": 15.36
+    },
+    {
+      "text": "better.",
+      "start": 15.442,
+      "end": 16.014
+    },
+    {
+      "text": "This",
+      "start": 16.398,
+      "end": 16.725
+    },
+    {
+      "text": "comes",
+      "start": 16.807,
+      "end": 17.216
+    },
+    {
+      "text": "from",
+      "start": 17.297,
+      "end": 17.624
+    },
+    {
+      "text": "Example",
+      "start": 17.706,
+      "end": 18.278
+    },
+    {
+      "text": "Source",
+      "start": 18.36,
+      "end": 18.851
+    },
+    {
+      "text": "9.",
+      "start": 18.932,
+      "end": 19.096
+    },
+    {
+      "text": "What",
+      "start": 19.485,
+      "end": 19.812
+    },
+    {
+      "text": "is",
+      "start": 19.894,
+      "end": 20.057
+    },
+    {
+      "text": "in",
+      "start": 20.139,
+      "end": 20.302
+    },
+    {
+      "text": "your",
+      "start": 20.384,
+      "end": 20.711
+    },
+    {
+      "text": "fridge",
+      "start": 20.793,
+      "end": 21.283
+    },
+    {
+      "text": "door",
+      "start": 21.365,
+      "end": 21.692
+    },
+    {
+      "text": "right",
+      "start": 21.774,
+      "end": 22.183
+    },
+    {
+      "text": "now?",
+      "start": 22.264,
+      "end": 22.591
+    }
+  ],
+  "scenes": [
+    {
+      "index": 0,
+      "duration_s": 4.5,
+      "voice": {
+        "start": 0.05,
+        "end": 3.566
+      }
+    },
+    {
+      "index": 1,
+      "duration_s": 6,
+      "voice": {
+        "start": 4.035,
+        "end": 9.311
+      }
+    },
+    {
+      "index": 2,
+      "duration_s": 7,
+      "voice": {
+        "start": 9.761,
+        "end": 16.014
+      }
+    },
+    {
+      "index": 3,
+      "duration_s": 3.5,
+      "voice": {
+        "start": 16.398,
+        "end": 19.096
+      }
+    },
+    {
+      "index": 4,
+      "duration_s": 4.5,
+      "voice": {
+        "start": 19.485,
+        "end": 22.591
+      }
+    }
+  ]
+}

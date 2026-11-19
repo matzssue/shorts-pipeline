@@ -1,0 +1,84 @@
+{
+  "input": {
+    "kind": "topic",
+    "id": "spice-jars-labels-on-lids"
+  },
+  "format": "F5",
+  "series": 1,
+  "angle": "Label spice jars on the lid, not the side",
+  "hooks": [
+    "In a drawer, you only ever see the lids."
+  ],
+  "scenes": [
+    {
+      "kind": "video",
+      "duration_s": 4,
+      "visual": "Close-up that shows: Labels on the lids",
+      "prompt": "Vertical close-up, soft daylight, no people: labels on the lids",
+      "voiceover": "In a drawer, you only ever see the lids.",
+      "on_screen_text": "Labels on the lids",
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 6,
+      "visual": "Seen from above",
+      "prompt": "Vertical shot, hands only, no faces: seen from above",
+      "voiceover": "Jars in a drawer are seen from above, so side labels are hidden.",
+      "on_screen_text": "Seen from above",
+      "overlay": {
+        "type": "label",
+        "heading": "Order:",
+        "value": "A to Z"
+      },
+      "claims": [
+        {
+          "text": "Jars stored in a drawer are seen from above.",
+          "source": "lids_visible"
+        }
+      ]
+    },
+    {
+      "kind": "image",
+      "duration_s": 7.5,
+      "visual": "A to Z",
+      "prompt": "Still life, top view, no text: a to z",
+      "voiceover": "Put the lid labels in alphabetical order and each spice takes a second to find.",
+      "on_screen_text": "A to Z",
+      "claims": [
+        {
+          "text": "Sorting jars alphabetically makes one jar faster to find.",
+          "source": "alphabetical"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 4,
+      "visual": "Source card",
+      "prompt": "",
+      "voiceover": "This comes from Example Source 16.",
+      "on_screen_text": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 16, example.com"
+      },
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 4,
+      "visual": "Wide shot of a tidy shelf",
+      "prompt": "Vertical wide shot of a tidy shelf, slow push-in, no people",
+      "voiceover": "Drawer or rack for your spices?",
+      "on_screen_text": "Tell me below",
+      "claims": []
+    }
+  ],
+  "caption": "Label spice jars on the lid, not the side. Source: Example Source 16. Script and facts checked by a person; visuals and voice made with AI.",
+  "hashtags": [
+    "#hometips",
+    "#kitchen"
+  ],
+  "notes": ""
+}

@@ -1,0 +1,324 @@
+{
+  "series": 1,
+  "seriesTitle": "Quick tip",
+  "sourceLabel": "Source",
+  "audioSrc": "voice/narrator-a.mp3",
+  "scenes": [
+    {
+      "kind": "video",
+      "src": "scenes/01.mp4",
+      "from": 0,
+      "durationInFrames": 135,
+      "playbackRate": 1,
+      "headline": "Milk in the door?",
+      "audio": {
+        "startFrom": 0,
+        "endAt": 114,
+        "delay": 18
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/02.mp4",
+      "from": 135,
+      "durationInFrames": 180,
+      "playbackRate": 1,
+      "headline": "Door warms first",
+      "overlay": {
+        "type": "label",
+        "heading": "Door:",
+        "value": "sauces, not milk"
+      },
+      "audio": {
+        "startFrom": 114,
+        "endAt": 286,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "image",
+      "src": "scenes/03.png",
+      "from": 315,
+      "durationInFrames": 210,
+      "playbackRate": 1,
+      "headline": "Door: jars and sauces",
+      "audio": {
+        "startFrom": 286,
+        "endAt": 486,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "text",
+      "from": 525,
+      "durationInFrames": 105,
+      "playbackRate": 1,
+      "headline": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 9, example.com"
+      },
+      "audio": {
+        "startFrom": 486,
+        "endAt": 579,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/05.mp4",
+      "from": 630,
+      "durationInFrames": 135,
+      "playbackRate": 1,
+      "headline": "Tell me below",
+      "audio": {
+        "startFrom": 579,
+        "endAt": 714,
+        "delay": 0
+      }
+    }
+  ],
+  "words": [
+    {
+      "text": "The",
+      "from": 20,
+      "to": 27
+    },
+    {
+      "text": "door",
+      "from": 29,
+      "to": 39
+    },
+    {
+      "text": "is",
+      "from": 42,
+      "to": 46
+    },
+    {
+      "text": "the",
+      "from": 49,
+      "to": 56
+    },
+    {
+      "text": "busiest",
+      "from": 59,
+      "to": 76
+    },
+    {
+      "text": "part",
+      "from": 78,
+      "to": 88
+    },
+    {
+      "text": "of",
+      "from": 91,
+      "to": 96
+    },
+    {
+      "text": "the",
+      "from": 98,
+      "to": 105
+    },
+    {
+      "text": "fridge.",
+      "from": 108,
+      "to": 125
+    },
+    {
+      "text": "Every",
+      "from": 142,
+      "to": 154
+    },
+    {
+      "text": "time",
+      "from": 157,
+      "to": 167
+    },
+    {
+      "text": "you",
+      "from": 169,
+      "to": 176
+    },
+    {
+      "text": "open",
+      "from": 179,
+      "to": 189
+    },
+    {
+      "text": "the",
+      "from": 191,
+      "to": 198
+    },
+    {
+      "text": "fridge,",
+      "from": 201,
+      "to": 218
+    },
+    {
+      "text": "the",
+      "from": 224,
+      "to": 232
+    },
+    {
+      "text": "door",
+      "from": 234,
+      "to": 244
+    },
+    {
+      "text": "shelves",
+      "from": 246,
+      "to": 264
+    },
+    {
+      "text": "warm",
+      "from": 266,
+      "to": 276
+    },
+    {
+      "text": "up",
+      "from": 278,
+      "to": 283
+    },
+    {
+      "text": "first.",
+      "from": 286,
+      "to": 300
+    },
+    {
+      "text": "Keep",
+      "from": 322,
+      "to": 332
+    },
+    {
+      "text": "the",
+      "from": 334,
+      "to": 341
+    },
+    {
+      "text": "door",
+      "from": 344,
+      "to": 354
+    },
+    {
+      "text": "for",
+      "from": 356,
+      "to": 363
+    },
+    {
+      "text": "jars",
+      "from": 366,
+      "to": 376
+    },
+    {
+      "text": "and",
+      "from": 378,
+      "to": 386
+    },
+    {
+      "text": "sauces.",
+      "from": 388,
+      "to": 405
+    },
+    {
+      "text": "They",
+      "from": 419,
+      "to": 428
+    },
+    {
+      "text": "handle",
+      "from": 431,
+      "to": 446
+    },
+    {
+      "text": "the",
+      "from": 448,
+      "to": 455
+    },
+    {
+      "text": "small",
+      "from": 458,
+      "to": 470
+    },
+    {
+      "text": "changes",
+      "from": 473,
+      "to": 490
+    },
+    {
+      "text": "better.",
+      "from": 492,
+      "to": 509
+    },
+    {
+      "text": "This",
+      "from": 531,
+      "to": 541
+    },
+    {
+      "text": "comes",
+      "from": 543,
+      "to": 555
+    },
+    {
+      "text": "from",
+      "from": 558,
+      "to": 568
+    },
+    {
+      "text": "Example",
+      "from": 570,
+      "to": 587
+    },
+    {
+      "text": "Source",
+      "from": 590,
+      "to": 604
+    },
+    {
+      "text": "9.",
+      "from": 607,
+      "to": 612
+    },
+    {
+      "text": "What",
+      "from": 636,
+      "to": 646
+    },
+    {
+      "text": "is",
+      "from": 648,
+      "to": 653
+    },
+    {
+      "text": "in",
+      "from": 655,
+      "to": 660
+    },
+    {
+      "text": "your",
+      "from": 663,
+      "to": 673
+    },
+    {
+      "text": "fridge",
+      "from": 675,
+      "to": 690
+    },
+    {
+      "text": "door",
+      "from": 692,
+      "to": 702
+    },
+    {
+      "text": "right",
+      "from": 705,
+      "to": 717
+    },
+    {
+      "text": "now?",
+      "from": 719,
+      "to": 729
+    }
+  ],
+  "durationInFrames": 765
+}

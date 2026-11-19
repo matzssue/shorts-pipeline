@@ -1,0 +1,144 @@
+{
+  "measuredAt": "2026-01-11T09:30:00.000Z",
+  "accounts": [
+    {
+      "channel": "a",
+      "youtube": {
+        "id": "mock-channel-a",
+        "title": "Example Channel A",
+        "subscribers": 41,
+        "views": 3272,
+        "videos": 2
+      },
+      "instagram": {
+        "username": "example_channel_a",
+        "followers": 51,
+        "mediaCount": 2
+      }
+    },
+    {
+      "channel": "b",
+      "youtube": {
+        "id": "mock-channel-b",
+        "title": "Example Channel B",
+        "subscribers": 21,
+        "views": 835,
+        "videos": 1
+      },
+      "instagram": {
+        "username": "example_channel_b",
+        "followers": 29,
+        "mediaCount": 1
+      }
+    }
+  ],
+  "youtube": [
+    {
+      "id": "mock-yt-0001",
+      "title": "Drawer dividers from old shoe boxes",
+      "publishedAt": "2026-01-06T16:00:00Z",
+      "privacy": "public",
+      "views": 849,
+      "likes": 29,
+      "comments": 2,
+      "avgViewPercent": 69.4,
+      "avgViewSeconds": 20,
+      "shares": 4,
+      "subscribersGained": 3,
+      "pub": {
+        "date": "2026-01-06",
+        "channel": "a",
+        "link": "https://example.com/shorts/mock-yt-0001"
+      }
+    },
+    {
+      "id": "mock-yt-0002",
+      "title": "Fold socks in thirds, not in balls",
+      "publishedAt": "2026-01-08T16:00:00Z",
+      "privacy": "public",
+      "views": 835,
+      "likes": 29,
+      "comments": 4,
+      "avgViewPercent": 70.7,
+      "avgViewSeconds": 19,
+      "shares": 7,
+      "subscribersGained": 3,
+      "pub": {
+        "date": "2026-01-08",
+        "channel": "b",
+        "link": "https://example.com/shorts/mock-yt-0002"
+      }
+    },
+    {
+      "id": "mock-yt-0003",
+      "title": "Label freezer bags before you fill them",
+      "publishedAt": "2026-01-10T16:00:00Z",
+      "privacy": "public",
+      "views": 2423,
+      "likes": 98,
+      "comments": 9,
+      "pub": {
+        "date": "2026-01-10",
+        "channel": "a",
+        "link": "https://example.com/shorts/mock-yt-0003"
+      }
+    }
+  ],
+  "instagram": [
+    {
+      "id": "mock-ig-0001",
+      "permalink": "https://example.com/reel/mock-ig-0001/",
+      "timestamp": "2026-01-06T16:05:00+0000",
+      "likes": 23,
+      "comments": 3,
+      "views": 500,
+      "reach": 370,
+      "shares": 4,
+      "saved": 5,
+      "totalInteractions": 35,
+      "avgWatchSeconds": 15.7,
+      "pub": {
+        "date": "2026-01-06",
+        "channel": "a",
+        "link": "https://example.com/reel/mock-ig-0001/"
+      }
+    },
+    {
+      "id": "mock-ig-0002",
+      "permalink": "https://example.com/reel/mock-ig-0002/",
+      "timestamp": "2026-01-08T16:05:00+0000",
+      "likes": 23,
+      "comments": 1,
+      "views": 555,
+      "reach": 411,
+      "shares": 2,
+      "saved": 3,
+      "totalInteractions": 29,
+      "avgWatchSeconds": 14.5,
+      "pub": {
+        "date": "2026-01-08",
+        "channel": "b",
+        "link": "https://example.com/reel/mock-ig-0002/"
+      }
+    },
+    {
+      "id": "mock-ig-0003",
+      "permalink": "https://example.com/reel/mock-ig-0003/",
+      "timestamp": "2026-01-10T16:05:00+0000",
+      "likes": 38,
+      "comments": 6,
+      "views": 1164,
+      "reach": 861,
+      "shares": 5,
+      "saved": 8,
+      "totalInteractions": 57,
+      "avgWatchSeconds": 15.2,
+      "pub": {
+        "date": "2026-01-10",
+        "channel": "a",
+        "link": "https://example.com/reel/mock-ig-0003/"
+      }
+    }
+  ],
+  "notes": []
+}

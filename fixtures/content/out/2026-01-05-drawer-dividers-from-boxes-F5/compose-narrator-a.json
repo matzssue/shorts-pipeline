@@ -1,0 +1,359 @@
+{
+  "series": 1,
+  "seriesTitle": "Quick tip",
+  "sourceLabel": "Source",
+  "audioSrc": "voice/narrator-a.mp3",
+  "scenes": [
+    {
+      "kind": "video",
+      "src": "scenes/01.mp4",
+      "from": 0,
+      "durationInFrames": 150,
+      "playbackRate": 1,
+      "headline": "Junk drawer fix for free",
+      "audio": {
+        "startFrom": 0,
+        "endAt": 113,
+        "delay": 18
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/02.mp4",
+      "from": 150,
+      "durationInFrames": 240,
+      "playbackRate": 1,
+      "headline": "Lids become trays",
+      "overlay": {
+        "type": "label",
+        "heading": "Cost:",
+        "value": "zero"
+      },
+      "audio": {
+        "startFrom": 113,
+        "endAt": 317,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "image",
+      "src": "scenes/03.png",
+      "from": 390,
+      "durationInFrames": 225,
+      "playbackRate": 1,
+      "headline": "Trim to drawer height",
+      "audio": {
+        "startFrom": 317,
+        "endAt": 503,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "text",
+      "from": 615,
+      "durationInFrames": 105,
+      "playbackRate": 1,
+      "headline": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 1, example.com"
+      },
+      "audio": {
+        "startFrom": 503,
+        "endAt": 585,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/05.mp4",
+      "from": 720,
+      "durationInFrames": 150,
+      "playbackRate": 1,
+      "headline": "Tell me below",
+      "audio": {
+        "startFrom": 585,
+        "endAt": 714,
+        "delay": 0
+      }
+    }
+  ],
+  "words": [
+    {
+      "text": "Your",
+      "from": 20,
+      "to": 28
+    },
+    {
+      "text": "junk",
+      "from": 30,
+      "to": 39
+    },
+    {
+      "text": "drawer",
+      "from": 41,
+      "to": 54
+    },
+    {
+      "text": "needs",
+      "from": 56,
+      "to": 66
+    },
+    {
+      "text": "walls,",
+      "from": 69,
+      "to": 81
+    },
+    {
+      "text": "not",
+      "from": 88,
+      "to": 95
+    },
+    {
+      "text": "a",
+      "from": 97,
+      "to": 99
+    },
+    {
+      "text": "new",
+      "from": 101,
+      "to": 107
+    },
+    {
+      "text": "drawer.",
+      "from": 110,
+      "to": 125
+    },
+    {
+      "text": "Cut",
+      "from": 156,
+      "to": 163
+    },
+    {
+      "text": "the",
+      "from": 165,
+      "to": 171
+    },
+    {
+      "text": "lids",
+      "from": 174,
+      "to": 182
+    },
+    {
+      "text": "off",
+      "from": 184,
+      "to": 191
+    },
+    {
+      "text": "your",
+      "from": 193,
+      "to": 201
+    },
+    {
+      "text": "old",
+      "from": 203,
+      "to": 210
+    },
+    {
+      "text": "shoe",
+      "from": 212,
+      "to": 221
+    },
+    {
+      "text": "boxes.",
+      "from": 223,
+      "to": 235
+    },
+    {
+      "text": "They",
+      "from": 249,
+      "to": 258
+    },
+    {
+      "text": "make",
+      "from": 260,
+      "to": 268
+    },
+    {
+      "text": "shallow",
+      "from": 270,
+      "to": 285
+    },
+    {
+      "text": "trays",
+      "from": 287,
+      "to": 298
+    },
+    {
+      "text": "for",
+      "from": 300,
+      "to": 307
+    },
+    {
+      "text": "batteries",
+      "from": 309,
+      "to": 328
+    },
+    {
+      "text": "and",
+      "from": 330,
+      "to": 337
+    },
+    {
+      "text": "keys.",
+      "from": 339,
+      "to": 349
+    },
+    {
+      "text": "Trim",
+      "from": 395,
+      "to": 403
+    },
+    {
+      "text": "the",
+      "from": 406,
+      "to": 412
+    },
+    {
+      "text": "sides",
+      "from": 414,
+      "to": 425
+    },
+    {
+      "text": "to",
+      "from": 427,
+      "to": 431
+    },
+    {
+      "text": "the",
+      "from": 433,
+      "to": 440
+    },
+    {
+      "text": "height",
+      "from": 442,
+      "to": 455
+    },
+    {
+      "text": "of",
+      "from": 457,
+      "to": 461
+    },
+    {
+      "text": "the",
+      "from": 463,
+      "to": 470
+    },
+    {
+      "text": "drawer,",
+      "from": 472,
+      "to": 487
+    },
+    {
+      "text": "so",
+      "from": 494,
+      "to": 498
+    },
+    {
+      "text": "it",
+      "from": 500,
+      "to": 505
+    },
+    {
+      "text": "still",
+      "from": 507,
+      "to": 517
+    },
+    {
+      "text": "closes",
+      "from": 520,
+      "to": 532
+    },
+    {
+      "text": "without",
+      "from": 534,
+      "to": 549
+    },
+    {
+      "text": "a",
+      "from": 552,
+      "to": 554
+    },
+    {
+      "text": "fight.",
+      "from": 556,
+      "to": 569
+    },
+    {
+      "text": "This",
+      "from": 622,
+      "to": 630
+    },
+    {
+      "text": "comes",
+      "from": 632,
+      "to": 643
+    },
+    {
+      "text": "from",
+      "from": 645,
+      "to": 654
+    },
+    {
+      "text": "Example",
+      "from": 656,
+      "to": 671
+    },
+    {
+      "text": "Source",
+      "from": 673,
+      "to": 686
+    },
+    {
+      "text": "1.",
+      "from": 688,
+      "to": 692
+    },
+    {
+      "text": "What",
+      "from": 725,
+      "to": 734
+    },
+    {
+      "text": "lives",
+      "from": 736,
+      "to": 747
+    },
+    {
+      "text": "in",
+      "from": 749,
+      "to": 753
+    },
+    {
+      "text": "your",
+      "from": 755,
+      "to": 764
+    },
+    {
+      "text": "junk",
+      "from": 766,
+      "to": 774
+    },
+    {
+      "text": "drawer",
+      "from": 776,
+      "to": 789
+    },
+    {
+      "text": "right",
+      "from": 791,
+      "to": 802
+    },
+    {
+      "text": "now?",
+      "from": 804,
+      "to": 813
+    }
+  ],
+  "durationInFrames": 870
+}

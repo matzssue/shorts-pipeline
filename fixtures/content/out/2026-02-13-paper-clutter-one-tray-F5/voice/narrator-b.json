@@ -1,0 +1,313 @@
+{
+  "narrator": "narrator-b",
+  "provider": "mock",
+  "voiceId": "mock-voice-b",
+  "model": "eleven_multilingual_v2",
+  "hash": "9f6f7bdf9a9dc613",
+  "text": "Paper piles grow because nothing has a place. Give every new letter one place to land: a single tray. Empty it once a week. The pile never gets the chance to grow. This comes from Example Source 14. When did you last see the bottom of your paper pile?",
+  "parts": [
+    "Paper piles grow because nothing has a place.",
+    "Give every new letter one place to land: a single tray.",
+    "Empty it once a week. The pile never gets the chance to grow.",
+    "This comes from Example Source 14.",
+    "When did you last see the bottom of your paper pile?"
+  ],
+  "sources": [
+    "full recording",
+    "full recording",
+    "full recording",
+    "full recording",
+    "full recording"
+  ],
+  "duration_s": 21.243,
+  "billed_chars": 251,
+  "words": [
+    {
+      "text": "Paper",
+      "start": 0.05,
+      "end": 0.443
+    },
+    {
+      "text": "piles",
+      "start": 0.522,
+      "end": 0.915
+    },
+    {
+      "text": "grow",
+      "start": 0.993,
+      "end": 1.308
+    },
+    {
+      "text": "because",
+      "start": 1.386,
+      "end": 1.936
+    },
+    {
+      "text": "nothing",
+      "start": 2.015,
+      "end": 2.565
+    },
+    {
+      "text": "has",
+      "start": 2.644,
+      "end": 2.879
+    },
+    {
+      "text": "a",
+      "start": 2.958,
+      "end": 3.037
+    },
+    {
+      "text": "place.",
+      "start": 3.115,
+      "end": 3.587
+    },
+    {
+      "text": "Give",
+      "start": 3.981,
+      "end": 4.295
+    },
+    {
+      "text": "every",
+      "start": 4.374,
+      "end": 4.767
+    },
+    {
+      "text": "new",
+      "start": 4.845,
+      "end": 5.081
+    },
+    {
+      "text": "letter",
+      "start": 5.16,
+      "end": 5.631
+    },
+    {
+      "text": "one",
+      "start": 5.71,
+      "end": 5.946
+    },
+    {
+      "text": "place",
+      "start": 6.024,
+      "end": 6.417
+    },
+    {
+      "text": "to",
+      "start": 6.496,
+      "end": 6.653
+    },
+    {
+      "text": "land:",
+      "start": 6.731,
+      "end": 7.124
+    },
+    {
+      "text": "a",
+      "start": 7.203,
+      "end": 7.282
+    },
+    {
+      "text": "single",
+      "start": 7.36,
+      "end": 7.832
+    },
+    {
+      "text": "tray.",
+      "start": 7.91,
+      "end": 8.303
+    },
+    {
+      "text": "Empty",
+      "start": 8.714,
+      "end": 9.107
+    },
+    {
+      "text": "it",
+      "start": 9.185,
+      "end": 9.342
+    },
+    {
+      "text": "once",
+      "start": 9.421,
+      "end": 9.735
+    },
+    {
+      "text": "a",
+      "start": 9.814,
+      "end": 9.893
+    },
+    {
+      "text": "week.",
+      "start": 9.971,
+      "end": 10.364
+    },
+    {
+      "text": "The",
+      "start": 10.712,
+      "end": 10.948
+    },
+    {
+      "text": "pile",
+      "start": 11.026,
+      "end": 11.341
+    },
+    {
+      "text": "never",
+      "start": 11.419,
+      "end": 11.812
+    },
+    {
+      "text": "gets",
+      "start": 11.891,
+      "end": 12.205
+    },
+    {
+      "text": "the",
+      "start": 12.284,
+      "end": 12.519
+    },
+    {
+      "text": "chance",
+      "start": 12.598,
+      "end": 13.07
+    },
+    {
+      "text": "to",
+      "start": 13.148,
+      "end": 13.305
+    },
+    {
+      "text": "grow.",
+      "start": 13.384,
+      "end": 13.777
+    },
+    {
+      "text": "This",
+      "start": 14.121,
+      "end": 14.436
+    },
+    {
+      "text": "comes",
+      "start": 14.514,
+      "end": 14.907
+    },
+    {
+      "text": "from",
+      "start": 14.986,
+      "end": 15.3
+    },
+    {
+      "text": "Example",
+      "start": 15.379,
+      "end": 15.929
+    },
+    {
+      "text": "Source",
+      "start": 16.008,
+      "end": 16.479
+    },
+    {
+      "text": "14.",
+      "start": 16.558,
+      "end": 16.794
+    },
+    {
+      "text": "When",
+      "start": 17.156,
+      "end": 17.47
+    },
+    {
+      "text": "did",
+      "start": 17.549,
+      "end": 17.785
+    },
+    {
+      "text": "you",
+      "start": 17.863,
+      "end": 18.099
+    },
+    {
+      "text": "last",
+      "start": 18.178,
+      "end": 18.492
+    },
+    {
+      "text": "see",
+      "start": 18.571,
+      "end": 18.806
+    },
+    {
+      "text": "the",
+      "start": 18.885,
+      "end": 19.121
+    },
+    {
+      "text": "bottom",
+      "start": 19.199,
+      "end": 19.671
+    },
+    {
+      "text": "of",
+      "start": 19.75,
+      "end": 19.907
+    },
+    {
+      "text": "your",
+      "start": 19.985,
+      "end": 20.3
+    },
+    {
+      "text": "paper",
+      "start": 20.378,
+      "end": 20.771
+    },
+    {
+      "text": "pile?",
+      "start": 20.85,
+      "end": 21.243
+    }
+  ],
+  "scenes": [
+    {
+      "index": 0,
+      "duration_s": 4.5,
+      "voice": {
+        "start": 0.05,
+        "end": 3.587
+      }
+    },
+    {
+      "index": 1,
+      "duration_s": 5.5,
+      "voice": {
+        "start": 3.981,
+        "end": 8.303
+      }
+    },
+    {
+      "index": 2,
+      "duration_s": 7,
+      "voice": {
+        "start": 8.714,
+        "end": 13.777
+      }
+    },
+    {
+      "index": 3,
+      "duration_s": 4,
+      "voice": {
+        "start": 14.121,
+        "end": 16.794
+      }
+    },
+    {
+      "index": 4,
+      "duration_s": 5.5,
+      "voice": {
+        "start": 17.156,
+        "end": 21.243
+      }
+    }
+  ]
+}

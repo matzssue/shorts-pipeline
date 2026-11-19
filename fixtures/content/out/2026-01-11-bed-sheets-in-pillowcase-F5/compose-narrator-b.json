@@ -1,0 +1,319 @@
+{
+  "series": 1,
+  "seriesTitle": "Quick tip",
+  "sourceLabel": "Source",
+  "audioSrc": "voice/narrator-b.mp3",
+  "scenes": [
+    {
+      "kind": "video",
+      "src": "scenes/01.mp4",
+      "from": 0,
+      "durationInFrames": 120,
+      "playbackRate": 1,
+      "headline": "One set, one pillowcase",
+      "audio": {
+        "startFrom": 0,
+        "endAt": 86,
+        "delay": 18
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/02.mp4",
+      "from": 120,
+      "durationInFrames": 195,
+      "playbackRate": 1,
+      "headline": "Sheets go inside",
+      "overlay": {
+        "type": "label",
+        "heading": "Shelf:",
+        "value": "one bundle per bed"
+      },
+      "audio": {
+        "startFrom": 86,
+        "endAt": 248,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "image",
+      "src": "scenes/03.png",
+      "from": 315,
+      "durationInFrames": 195,
+      "playbackRate": 1,
+      "headline": "Grab one bundle",
+      "audio": {
+        "startFrom": 248,
+        "endAt": 422,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "text",
+      "from": 510,
+      "durationInFrames": 105,
+      "playbackRate": 1,
+      "headline": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 4, example.com"
+      },
+      "audio": {
+        "startFrom": 422,
+        "endAt": 505,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/05.mp4",
+      "from": 615,
+      "durationInFrames": 135,
+      "playbackRate": 1,
+      "headline": "Tell me below",
+      "audio": {
+        "startFrom": 505,
+        "endAt": 635,
+        "delay": 0
+      }
+    }
+  ],
+  "words": [
+    {
+      "text": "Stop",
+      "from": 20,
+      "to": 28
+    },
+    {
+      "text": "digging",
+      "from": 31,
+      "to": 46
+    },
+    {
+      "text": "for",
+      "from": 48,
+      "to": 55
+    },
+    {
+      "text": "the",
+      "from": 57,
+      "to": 64
+    },
+    {
+      "text": "matching",
+      "from": 66,
+      "to": 83
+    },
+    {
+      "text": "sheet.",
+      "from": 86,
+      "to": 99
+    },
+    {
+      "text": "Fold",
+      "from": 125,
+      "to": 134
+    },
+    {
+      "text": "the",
+      "from": 136,
+      "to": 143
+    },
+    {
+      "text": "sheets",
+      "from": 145,
+      "to": 158
+    },
+    {
+      "text": "and",
+      "from": 161,
+      "to": 167
+    },
+    {
+      "text": "slide",
+      "from": 170,
+      "to": 181
+    },
+    {
+      "text": "the",
+      "from": 183,
+      "to": 189
+    },
+    {
+      "text": "whole",
+      "from": 192,
+      "to": 203
+    },
+    {
+      "text": "set",
+      "from": 205,
+      "to": 211
+    },
+    {
+      "text": "into",
+      "from": 214,
+      "to": 222
+    },
+    {
+      "text": "one",
+      "from": 225,
+      "to": 231
+    },
+    {
+      "text": "of",
+      "from": 233,
+      "to": 238
+    },
+    {
+      "text": "its",
+      "from": 240,
+      "to": 247
+    },
+    {
+      "text": "pillowcases.",
+      "from": 249,
+      "to": 275
+    },
+    {
+      "text": "Now",
+      "from": 322,
+      "to": 328
+    },
+    {
+      "text": "the",
+      "from": 331,
+      "to": 337
+    },
+    {
+      "text": "shelf",
+      "from": 339,
+      "to": 350
+    },
+    {
+      "text": "holds",
+      "from": 353,
+      "to": 364
+    },
+    {
+      "text": "whole",
+      "from": 366,
+      "to": 377
+    },
+    {
+      "text": "sets.",
+      "from": 379,
+      "to": 390
+    },
+    {
+      "text": "You",
+      "from": 402,
+      "to": 409
+    },
+    {
+      "text": "grab",
+      "from": 411,
+      "to": 420
+    },
+    {
+      "text": "one",
+      "from": 422,
+      "to": 429
+    },
+    {
+      "text": "bundle",
+      "from": 431,
+      "to": 444
+    },
+    {
+      "text": "and",
+      "from": 446,
+      "to": 453
+    },
+    {
+      "text": "you",
+      "from": 455,
+      "to": 462
+    },
+    {
+      "text": "are",
+      "from": 464,
+      "to": 470
+    },
+    {
+      "text": "done.",
+      "from": 473,
+      "to": 484
+    },
+    {
+      "text": "This",
+      "from": 515,
+      "to": 524
+    },
+    {
+      "text": "comes",
+      "from": 526,
+      "to": 537
+    },
+    {
+      "text": "from",
+      "from": 539,
+      "to": 548
+    },
+    {
+      "text": "Example",
+      "from": 550,
+      "to": 566
+    },
+    {
+      "text": "Source",
+      "from": 568,
+      "to": 581
+    },
+    {
+      "text": "4.",
+      "from": 583,
+      "to": 588
+    },
+    {
+      "text": "How",
+      "from": 620,
+      "to": 627
+    },
+    {
+      "text": "many",
+      "from": 629,
+      "to": 638
+    },
+    {
+      "text": "sheet",
+      "from": 640,
+      "to": 651
+    },
+    {
+      "text": "sets",
+      "from": 654,
+      "to": 662
+    },
+    {
+      "text": "do",
+      "from": 665,
+      "to": 669
+    },
+    {
+      "text": "you",
+      "from": 671,
+      "to": 678
+    },
+    {
+      "text": "actually",
+      "from": 680,
+      "to": 698
+    },
+    {
+      "text": "use?",
+      "from": 700,
+      "to": 709
+    }
+  ],
+  "durationInFrames": 750
+}

@@ -1,0 +1,93 @@
+{
+  "input": {
+    "kind": "topic",
+    "id": "socks-folded-in-thirds"
+  },
+  "format": "F5",
+  "series": 2,
+  "angle": "Fold socks in thirds, not in balls",
+  "hooks": [
+    "Rolling socks into balls is why the drawer never closes."
+  ],
+  "scenes": [
+    {
+      "kind": "video",
+      "duration_s": 5.5,
+      "visual": "Close-up that shows: Stop balling your socks",
+      "prompt": "Vertical close-up, soft daylight, no people: stop balling your socks",
+      "voiceover": "Rolling socks into balls is why the drawer never closes.",
+      "on_screen_text": "Stop balling your socks",
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 7,
+      "visual": "Balls stretch the cuff",
+      "prompt": "Vertical shot, hands only, no faces: balls stretch the cuff",
+      "voiceover": "A sock ball keeps the cuff pulled tight the whole time it sits in the drawer.",
+      "on_screen_text": "Balls stretch the cuff",
+      "overlay": {
+        "type": "label",
+        "heading": "Time:",
+        "value": "10 seconds a pair"
+      },
+      "claims": [
+        {
+          "text": "Balled socks keep the cuff stretched while stored.",
+          "source": "balls_stretch"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 7.5,
+      "visual": "Quiz card",
+      "prompt": "",
+      "voiceover": "Fold each pair in thirds and stand it up. You see every pair at once.",
+      "on_screen_text": "Fold in thirds, stand up",
+      "overlay": {
+        "type": "quiz",
+        "options": [
+          "Balls save space",
+          "Upright saves space"
+        ],
+        "countdown": 3,
+        "answer": 1
+      },
+      "claims": [
+        {
+          "text": "Socks folded in thirds can stand upright in a drawer.",
+          "source": "thirds_stand_up"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 3.5,
+      "visual": "Source card",
+      "prompt": "",
+      "voiceover": "This comes from Example Source 2.",
+      "on_screen_text": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 2, example.com"
+      },
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 3.5,
+      "visual": "Wide shot of a tidy shelf",
+      "prompt": "Vertical wide shot of a tidy shelf, slow push-in, no people",
+      "voiceover": "Team balls or team thirds?",
+      "on_screen_text": "Tell me below",
+      "claims": []
+    }
+  ],
+  "caption": "Fold socks in thirds, not in balls. Source: Example Source 2. Script and facts checked by a person; visuals and voice made with AI.",
+  "hashtags": [
+    "#hometips",
+    "#homeorganisation"
+  ],
+  "notes": ""
+}

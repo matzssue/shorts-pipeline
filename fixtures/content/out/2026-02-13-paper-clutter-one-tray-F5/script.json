@@ -1,0 +1,93 @@
+{
+  "input": {
+    "kind": "topic",
+    "id": "paper-clutter-one-tray"
+  },
+  "format": "F5",
+  "series": 2,
+  "angle": "One tray for paper that needs action",
+  "hooks": [
+    "Paper piles grow because nothing has a place."
+  ],
+  "scenes": [
+    {
+      "kind": "video",
+      "duration_s": 4.5,
+      "visual": "Close-up that shows: One tray for paper",
+      "prompt": "Vertical close-up, soft daylight, no people: one tray for paper",
+      "voiceover": "Paper piles grow because nothing has a place.",
+      "on_screen_text": "One tray for paper",
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 5.5,
+      "visual": "One landing spot",
+      "prompt": "Vertical shot, hands only, no faces: one landing spot",
+      "voiceover": "Give every new letter one place to land: a single tray.",
+      "on_screen_text": "One landing spot",
+      "overlay": {
+        "type": "label",
+        "heading": "Routine:",
+        "value": "once a week"
+      },
+      "claims": [
+        {
+          "text": "A single tray for incoming paper keeps it in one place.",
+          "source": "single_inbox"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 7,
+      "visual": "Quiz card",
+      "prompt": "",
+      "voiceover": "Empty it once a week. The pile never gets the chance to grow.",
+      "on_screen_text": "Clear it weekly",
+      "overlay": {
+        "type": "quiz",
+        "options": [
+          "More trays, more order",
+          "One tray is enough"
+        ],
+        "countdown": 3,
+        "answer": 1
+      },
+      "claims": [
+        {
+          "text": "Clearing the tray once a week keeps the pile small.",
+          "source": "weekly_clear"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 4,
+      "visual": "Source card",
+      "prompt": "",
+      "voiceover": "This comes from Example Source 14.",
+      "on_screen_text": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 14, example.com"
+      },
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 5.5,
+      "visual": "Wide shot of a tidy shelf",
+      "prompt": "Vertical wide shot of a tidy shelf, slow push-in, no people",
+      "voiceover": "When did you last see the bottom of your paper pile?",
+      "on_screen_text": "Tell me below",
+      "claims": []
+    }
+  ],
+  "caption": "One tray for paper that needs action. Source: Example Source 14. Script and facts checked by a person; visuals and voice made with AI.",
+  "hashtags": [
+    "#hometips",
+    "#homeorganisation"
+  ],
+  "notes": ""
+}

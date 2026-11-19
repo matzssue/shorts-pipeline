@@ -1,0 +1,84 @@
+{
+  "input": {
+    "kind": "topic",
+    "id": "towels-rolled-vs-folded"
+  },
+  "format": "F5",
+  "series": 1,
+  "angle": "Roll towels on open shelves, fold them in cupboards",
+  "hooks": [
+    "Rolled or folded towels? It depends on the shelf."
+  ],
+  "scenes": [
+    {
+      "kind": "video",
+      "duration_s": 5,
+      "visual": "Close-up that shows: Roll or fold towels?",
+      "prompt": "Vertical close-up, soft daylight, no people: roll or fold towels?",
+      "voiceover": "Rolled or folded towels? It depends on the shelf.",
+      "on_screen_text": "Roll or fold towels?",
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 7.5,
+      "visual": "Open shelf: roll",
+      "prompt": "Vertical shot, hands only, no faces: open shelf: roll",
+      "voiceover": "On open shelves and in baskets, rolls stay neat and you can pull one out easily.",
+      "on_screen_text": "Open shelf: roll",
+      "overlay": {
+        "type": "label",
+        "heading": "Rule:",
+        "value": "shelf decides"
+      },
+      "claims": [
+        {
+          "text": "Rolled towels sit neatly on open shelves and baskets.",
+          "source": "rolls_open_shelf"
+        }
+      ]
+    },
+    {
+      "kind": "image",
+      "duration_s": 6.5,
+      "visual": "Cupboard: fold",
+      "prompt": "Still life, top view, no text: cupboard: fold",
+      "voiceover": "In a deep cupboard, flat folds stack higher and use the space better.",
+      "on_screen_text": "Cupboard: fold",
+      "claims": [
+        {
+          "text": "Folded towels stack flat and use the full depth of a cupboard.",
+          "source": "folds_stack"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 3.5,
+      "visual": "Source card",
+      "prompt": "",
+      "voiceover": "This comes from Example Source 7.",
+      "on_screen_text": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 7, example.com"
+      },
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 3.5,
+      "visual": "Wide shot of a tidy shelf",
+      "prompt": "Vertical wide shot of a tidy shelf, slow push-in, no people",
+      "voiceover": "Where do your towels live?",
+      "on_screen_text": "Tell me below",
+      "claims": []
+    }
+  ],
+  "caption": "Roll towels on open shelves, fold them in cupboards. Source: Example Source 7. Script and facts checked by a person; visuals and voice made with AI.",
+  "hashtags": [
+    "#hometips",
+    "#homeorganisation"
+  ],
+  "notes": ""
+}

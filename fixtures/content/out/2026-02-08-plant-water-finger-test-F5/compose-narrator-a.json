@@ -1,0 +1,334 @@
+{
+  "series": 1,
+  "seriesTitle": "Quick tip",
+  "sourceLabel": "Source",
+  "audioSrc": "voice/narrator-a.mp3",
+  "scenes": [
+    {
+      "kind": "video",
+      "src": "scenes/01.mp4",
+      "from": 0,
+      "durationInFrames": 165,
+      "playbackRate": 1,
+      "headline": "Water less, check more",
+      "audio": {
+        "startFrom": 0,
+        "endAt": 131,
+        "delay": 18
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/02.mp4",
+      "from": 165,
+      "durationInFrames": 180,
+      "playbackRate": 1,
+      "headline": "Top soil dry?",
+      "overlay": {
+        "type": "label",
+        "heading": "Check:",
+        "value": "one finger deep"
+      },
+      "audio": {
+        "startFrom": 131,
+        "endAt": 277,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "image",
+      "src": "scenes/03.png",
+      "from": 345,
+      "durationInFrames": 197,
+      "playbackRate": 1,
+      "headline": "Finger test",
+      "audio": {
+        "startFrom": 277,
+        "endAt": 474,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "text",
+      "from": 542,
+      "durationInFrames": 120,
+      "playbackRate": 1,
+      "headline": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 13, example.com"
+      },
+      "audio": {
+        "startFrom": 474,
+        "endAt": 563,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/05.mp4",
+      "from": 662,
+      "durationInFrames": 135,
+      "playbackRate": 1,
+      "headline": "Tell me below",
+      "audio": {
+        "startFrom": 563,
+        "endAt": 690,
+        "delay": 0
+      }
+    }
+  ],
+  "words": [
+    {
+      "text": "Most",
+      "from": 20,
+      "to": 28
+    },
+    {
+      "text": "house",
+      "from": 31,
+      "to": 42
+    },
+    {
+      "text": "plants",
+      "from": 44,
+      "to": 57
+    },
+    {
+      "text": "get",
+      "from": 60,
+      "to": 66
+    },
+    {
+      "text": "too",
+      "from": 69,
+      "to": 75
+    },
+    {
+      "text": "much",
+      "from": 78,
+      "to": 86
+    },
+    {
+      "text": "water,",
+      "from": 89,
+      "to": 102
+    },
+    {
+      "text": "not",
+      "from": 109,
+      "to": 115
+    },
+    {
+      "text": "too",
+      "from": 118,
+      "to": 124
+    },
+    {
+      "text": "little.",
+      "from": 126,
+      "to": 142
+    },
+    {
+      "text": "Many",
+      "from": 172,
+      "to": 181
+    },
+    {
+      "text": "plants",
+      "from": 183,
+      "to": 197
+    },
+    {
+      "text": "only",
+      "from": 199,
+      "to": 208
+    },
+    {
+      "text": "need",
+      "from": 210,
+      "to": 219
+    },
+    {
+      "text": "water",
+      "from": 221,
+      "to": 232
+    },
+    {
+      "text": "when",
+      "from": 235,
+      "to": 244
+    },
+    {
+      "text": "the",
+      "from": 246,
+      "to": 253
+    },
+    {
+      "text": "top",
+      "from": 255,
+      "to": 261
+    },
+    {
+      "text": "of",
+      "from": 264,
+      "to": 268
+    },
+    {
+      "text": "the",
+      "from": 270,
+      "to": 277
+    },
+    {
+      "text": "soil",
+      "from": 279,
+      "to": 288
+    },
+    {
+      "text": "is",
+      "from": 290,
+      "to": 295
+    },
+    {
+      "text": "dry.",
+      "from": 297,
+      "to": 306
+    },
+    {
+      "text": "Push",
+      "from": 350,
+      "to": 359
+    },
+    {
+      "text": "a",
+      "from": 361,
+      "to": 363
+    },
+    {
+      "text": "finger",
+      "from": 366,
+      "to": 379
+    },
+    {
+      "text": "into",
+      "from": 381,
+      "to": 390
+    },
+    {
+      "text": "the",
+      "from": 392,
+      "to": 399
+    },
+    {
+      "text": "soil.",
+      "from": 401,
+      "to": 413
+    },
+    {
+      "text": "Dry?",
+      "from": 424,
+      "to": 433
+    },
+    {
+      "text": "Water",
+      "from": 445,
+      "to": 456
+    },
+    {
+      "text": "it.",
+      "from": 458,
+      "to": 465
+    },
+    {
+      "text": "Damp?",
+      "from": 476,
+      "to": 487
+    },
+    {
+      "text": "Wait",
+      "from": 499,
+      "to": 508
+    },
+    {
+      "text": "a",
+      "from": 510,
+      "to": 513
+    },
+    {
+      "text": "few",
+      "from": 515,
+      "to": 521
+    },
+    {
+      "text": "days.",
+      "from": 524,
+      "to": 535
+    },
+    {
+      "text": "This",
+      "from": 549,
+      "to": 558
+    },
+    {
+      "text": "comes",
+      "from": 560,
+      "to": 571
+    },
+    {
+      "text": "from",
+      "from": 573,
+      "to": 582
+    },
+    {
+      "text": "Example",
+      "from": 585,
+      "to": 600
+    },
+    {
+      "text": "Source",
+      "from": 603,
+      "to": 616
+    },
+    {
+      "text": "13.",
+      "from": 618,
+      "to": 625
+    },
+    {
+      "text": "Which",
+      "from": 668,
+      "to": 679
+    },
+    {
+      "text": "plant",
+      "from": 681,
+      "to": 693
+    },
+    {
+      "text": "of",
+      "from": 695,
+      "to": 699
+    },
+    {
+      "text": "yours",
+      "from": 702,
+      "to": 713
+    },
+    {
+      "text": "always",
+      "from": 715,
+      "to": 728
+    },
+    {
+      "text": "looks",
+      "from": 731,
+      "to": 742
+    },
+    {
+      "text": "sad?",
+      "from": 744,
+      "to": 753
+    }
+  ],
+  "durationInFrames": 797
+}

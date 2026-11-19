@@ -1,0 +1,93 @@
+{
+  "input": {
+    "kind": "topic",
+    "id": "umbrella-dry-open"
+  },
+  "format": "F5",
+  "series": 2,
+  "angle": "Dry an umbrella open, but not in the sun",
+  "hooks": [
+    "A closed wet umbrella starts to smell."
+  ],
+  "scenes": [
+    {
+      "kind": "video",
+      "duration_s": 4,
+      "visual": "Close-up that shows: Wet umbrella? Open it",
+      "prompt": "Vertical close-up, soft daylight, no people: wet umbrella? open it",
+      "voiceover": "A closed wet umbrella starts to smell.",
+      "on_screen_text": "Wet umbrella? Open it",
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 5.5,
+      "visual": "Open dries faster",
+      "prompt": "Vertical shot, hands only, no faces: open dries faster",
+      "voiceover": "Open it up after the rain. It dries much faster that way.",
+      "on_screen_text": "Open dries faster",
+      "overlay": {
+        "type": "label",
+        "heading": "Dry:",
+        "value": "open, in the shade"
+      },
+      "claims": [
+        {
+          "text": "An open umbrella dries faster than a closed one.",
+          "source": "open_dries"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 7,
+      "visual": "Quiz card",
+      "prompt": "",
+      "voiceover": "Just keep it out of strong sun for hours, or the fabric fades.",
+      "on_screen_text": "Shade, not sun",
+      "overlay": {
+        "type": "quiz",
+        "options": [
+          "Dry it closed",
+          "Dry it open"
+        ],
+        "countdown": 3,
+        "answer": 1
+      },
+      "claims": [
+        {
+          "text": "Long strong sun can fade umbrella fabric.",
+          "source": "no_strong_sun"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 4,
+      "visual": "Source card",
+      "prompt": "",
+      "voiceover": "This comes from Example Source 17.",
+      "on_screen_text": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 17, example.com"
+      },
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 4,
+      "visual": "Wide shot of a tidy shelf",
+      "prompt": "Vertical wide shot of a tidy shelf, slow push-in, no people",
+      "voiceover": "Where does your umbrella dry?",
+      "on_screen_text": "Tell me below",
+      "claims": []
+    }
+  ],
+  "caption": "Dry an umbrella open, but not in the sun. Source: Example Source 17. Script and facts checked by a person; visuals and voice made with AI.",
+  "hashtags": [
+    "#hometips",
+    "#homecare"
+  ],
+  "notes": ""
+}

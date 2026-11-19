@@ -1,0 +1,318 @@
+{
+  "narrator": "narrator-a",
+  "provider": "mock",
+  "voiceId": "mock-voice-a",
+  "model": "eleven_v3",
+  "hash": "939731ca8647a045",
+  "text": "Most house plants get too much water, not too little. Many plants only need water when the top of the soil is dry. Push a finger into the soil. Dry? Water it. Damp? Wait a few days. This comes from Example Source 13. Which plant of yours always looks sad?",
+  "parts": [
+    "Most house plants get too much water, not too little.",
+    "Many plants only need water when the top of the soil is dry.",
+    "Push a finger into the soil. Dry? Water it. Damp? Wait a few days.",
+    "This comes from Example Source 13.",
+    "Which plant of yours always looks sad?"
+  ],
+  "sources": [
+    "full recording",
+    "full recording",
+    "full recording",
+    "full recording",
+    "full recording"
+  ],
+  "duration_s": 21.79,
+  "billed_chars": 255,
+  "words": [
+    {
+      "text": "Most",
+      "start": 0.05,
+      "end": 0.348
+    },
+    {
+      "text": "house",
+      "start": 0.422,
+      "end": 0.794
+    },
+    {
+      "text": "plants",
+      "start": 0.869,
+      "end": 1.315
+    },
+    {
+      "text": "get",
+      "start": 1.39,
+      "end": 1.613
+    },
+    {
+      "text": "too",
+      "start": 1.687,
+      "end": 1.911
+    },
+    {
+      "text": "much",
+      "start": 1.985,
+      "end": 2.283
+    },
+    {
+      "text": "water,",
+      "start": 2.357,
+      "end": 2.804
+    },
+    {
+      "text": "not",
+      "start": 3.02,
+      "end": 3.243
+    },
+    {
+      "text": "too",
+      "start": 3.318,
+      "end": 3.541
+    },
+    {
+      "text": "little.",
+      "start": 3.616,
+      "end": 4.136
+    },
+    {
+      "text": "Many",
+      "start": 4.61,
+      "end": 4.908
+    },
+    {
+      "text": "plants",
+      "start": 4.982,
+      "end": 5.429
+    },
+    {
+      "text": "only",
+      "start": 5.503,
+      "end": 5.801
+    },
+    {
+      "text": "need",
+      "start": 5.876,
+      "end": 6.173
+    },
+    {
+      "text": "water",
+      "start": 6.248,
+      "end": 6.62
+    },
+    {
+      "text": "when",
+      "start": 6.694,
+      "end": 6.992
+    },
+    {
+      "text": "the",
+      "start": 7.066,
+      "end": 7.29
+    },
+    {
+      "text": "top",
+      "start": 7.364,
+      "end": 7.587
+    },
+    {
+      "text": "of",
+      "start": 7.662,
+      "end": 7.811
+    },
+    {
+      "text": "the",
+      "start": 7.885,
+      "end": 8.108
+    },
+    {
+      "text": "soil",
+      "start": 8.183,
+      "end": 8.48
+    },
+    {
+      "text": "is",
+      "start": 8.555,
+      "end": 8.704
+    },
+    {
+      "text": "dry.",
+      "start": 8.778,
+      "end": 9.076
+    },
+    {
+      "text": "Push",
+      "start": 9.408,
+      "end": 9.705
+    },
+    {
+      "text": "a",
+      "start": 9.78,
+      "end": 9.854
+    },
+    {
+      "text": "finger",
+      "start": 9.929,
+      "end": 10.375
+    },
+    {
+      "text": "into",
+      "start": 10.45,
+      "end": 10.747
+    },
+    {
+      "text": "the",
+      "start": 10.822,
+      "end": 11.045
+    },
+    {
+      "text": "soil.",
+      "start": 11.119,
+      "end": 11.492
+    },
+    {
+      "text": "Dry?",
+      "start": 11.887,
+      "end": 12.185
+    },
+    {
+      "text": "Water",
+      "start": 12.565,
+      "end": 12.937
+    },
+    {
+      "text": "it.",
+      "start": 13.012,
+      "end": 13.235
+    },
+    {
+      "text": "Damp?",
+      "start": 13.596,
+      "end": 13.968
+    },
+    {
+      "text": "Wait",
+      "start": 14.38,
+      "end": 14.677
+    },
+    {
+      "text": "a",
+      "start": 14.752,
+      "end": 14.826
+    },
+    {
+      "text": "few",
+      "start": 14.901,
+      "end": 15.124
+    },
+    {
+      "text": "days.",
+      "start": 15.198,
+      "end": 15.57
+    },
+    {
+      "text": "This",
+      "start": 16.031,
+      "end": 16.329
+    },
+    {
+      "text": "comes",
+      "start": 16.404,
+      "end": 16.776
+    },
+    {
+      "text": "from",
+      "start": 16.85,
+      "end": 17.148
+    },
+    {
+      "text": "Example",
+      "start": 17.222,
+      "end": 17.743
+    },
+    {
+      "text": "Source",
+      "start": 17.818,
+      "end": 18.264
+    },
+    {
+      "text": "13.",
+      "start": 18.339,
+      "end": 18.562
+    },
+    {
+      "text": "Which",
+      "start": 18.962,
+      "end": 19.334
+    },
+    {
+      "text": "plant",
+      "start": 19.409,
+      "end": 19.781
+    },
+    {
+      "text": "of",
+      "start": 19.855,
+      "end": 20.004
+    },
+    {
+      "text": "yours",
+      "start": 20.079,
+      "end": 20.451
+    },
+    {
+      "text": "always",
+      "start": 20.525,
+      "end": 20.972
+    },
+    {
+      "text": "looks",
+      "start": 21.046,
+      "end": 21.418
+    },
+    {
+      "text": "sad?",
+      "start": 21.493,
+      "end": 21.79
+    }
+  ],
+  "scenes": [
+    {
+      "index": 0,
+      "duration_s": 5.5,
+      "voice": {
+        "start": 0.05,
+        "end": 4.136
+      }
+    },
+    {
+      "index": 1,
+      "duration_s": 6,
+      "voice": {
+        "start": 4.61,
+        "end": 9.076
+      }
+    },
+    {
+      "index": 2,
+      "duration_s": 6.5,
+      "voice": {
+        "start": 9.408,
+        "end": 15.57
+      }
+    },
+    {
+      "index": 3,
+      "duration_s": 4,
+      "voice": {
+        "start": 16.031,
+        "end": 18.562
+      }
+    },
+    {
+      "index": 4,
+      "duration_s": 4.5,
+      "voice": {
+        "start": 18.962,
+        "end": 21.79
+      }
+    }
+  ]
+}

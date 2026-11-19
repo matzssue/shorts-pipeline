@@ -1,0 +1,84 @@
+{
+  "input": {
+    "kind": "topic",
+    "id": "shoe-rack-by-size"
+  },
+  "format": "F5",
+  "series": 1,
+  "angle": "Put everyday shoes at hand height",
+  "hooks": [
+    "The shoes you wear daily should not live at the bottom."
+  ],
+  "scenes": [
+    {
+      "kind": "video",
+      "duration_s": 5.5,
+      "visual": "Close-up that shows: Daily shoes, top shelf",
+      "prompt": "Vertical close-up, soft daylight, no people: daily shoes, top shelf",
+      "voiceover": "The shoes you wear daily should not live at the bottom.",
+      "on_screen_text": "Daily shoes, top shelf",
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 6,
+      "visual": "Hand height wins",
+      "prompt": "Vertical shot, hands only, no faces: hand height wins",
+      "voiceover": "Things at hand height are the quickest to grab and put back. It takes a minute.",
+      "on_screen_text": "Hand height wins",
+      "overlay": {
+        "type": "label",
+        "heading": "Top:",
+        "value": "daily pairs"
+      },
+      "claims": [
+        {
+          "text": "Items at hand height are the quickest to reach.",
+          "source": "reach_zone"
+        }
+      ]
+    },
+    {
+      "kind": "image",
+      "duration_s": 4.5,
+      "visual": "Rare shoes go low",
+      "prompt": "Still life, top view, no text: rare shoes go low",
+      "voiceover": "Boots you wear twice a year can go down low.",
+      "on_screen_text": "Rare shoes go low",
+      "claims": [
+        {
+          "text": "Rarely used items can go on the lowest shelf.",
+          "source": "rare_low"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 4,
+      "visual": "Source card",
+      "prompt": "",
+      "voiceover": "This comes from Example Source 15.",
+      "on_screen_text": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 15, example.com"
+      },
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 4.5,
+      "visual": "Wide shot of a tidy shelf",
+      "prompt": "Vertical wide shot of a tidy shelf, slow push-in, no people",
+      "voiceover": "How many pairs do you really wear?",
+      "on_screen_text": "Tell me below",
+      "claims": []
+    }
+  ],
+  "caption": "Put everyday shoes at hand height. Source: Example Source 15. Script and facts checked by a person; visuals and voice made with AI.",
+  "hashtags": [
+    "#hometips",
+    "#homeorganisation"
+  ],
+  "notes": ""
+}

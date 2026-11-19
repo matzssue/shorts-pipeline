@@ -1,0 +1,339 @@
+{
+  "series": 1,
+  "seriesTitle": "Quick tip",
+  "sourceLabel": "Source",
+  "audioSrc": "voice/narrator-a.mp3",
+  "scenes": [
+    {
+      "kind": "video",
+      "src": "scenes/01.mp4",
+      "from": 0,
+      "durationInFrames": 135,
+      "playbackRate": 1,
+      "headline": "Label the bag first",
+      "audio": {
+        "startFrom": 0,
+        "endAt": 110,
+        "delay": 18
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/02.mp4",
+      "from": 135,
+      "durationInFrames": 195,
+      "playbackRate": 1,
+      "headline": "Flat bag, clear writing",
+      "overlay": {
+        "type": "label",
+        "heading": "Write:",
+        "value": "name + date"
+      },
+      "audio": {
+        "startFrom": 110,
+        "endAt": 292,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "image",
+      "src": "scenes/03.png",
+      "from": 330,
+      "durationInFrames": 195,
+      "playbackRate": 1,
+      "headline": "Name plus date",
+      "audio": {
+        "startFrom": 292,
+        "endAt": 485,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "text",
+      "from": 525,
+      "durationInFrames": 105,
+      "playbackRate": 1,
+      "headline": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 3, example.com"
+      },
+      "audio": {
+        "startFrom": 485,
+        "endAt": 578,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/05.mp4",
+      "from": 630,
+      "durationInFrames": 150,
+      "playbackRate": 1,
+      "headline": "Tell me below",
+      "audio": {
+        "startFrom": 578,
+        "endAt": 721,
+        "delay": 0
+      }
+    }
+  ],
+  "words": [
+    {
+      "text": "Writing",
+      "from": 20,
+      "to": 37
+    },
+    {
+      "text": "on",
+      "from": 39,
+      "to": 44
+    },
+    {
+      "text": "a",
+      "from": 46,
+      "to": 49
+    },
+    {
+      "text": "full",
+      "from": 51,
+      "to": 61
+    },
+    {
+      "text": "freezer",
+      "from": 63,
+      "to": 80
+    },
+    {
+      "text": "bag",
+      "from": 83,
+      "to": 90
+    },
+    {
+      "text": "never",
+      "from": 92,
+      "to": 105
+    },
+    {
+      "text": "works.",
+      "from": 107,
+      "to": 122
+    },
+    {
+      "text": "Write",
+      "from": 141,
+      "to": 154
+    },
+    {
+      "text": "on",
+      "from": 156,
+      "to": 161
+    },
+    {
+      "text": "the",
+      "from": 163,
+      "to": 171
+    },
+    {
+      "text": "bag",
+      "from": 173,
+      "to": 180
+    },
+    {
+      "text": "while",
+      "from": 183,
+      "to": 195
+    },
+    {
+      "text": "it",
+      "from": 197,
+      "to": 202
+    },
+    {
+      "text": "is",
+      "from": 205,
+      "to": 209
+    },
+    {
+      "text": "flat",
+      "from": 212,
+      "to": 222
+    },
+    {
+      "text": "and",
+      "from": 224,
+      "to": 231
+    },
+    {
+      "text": "dry.",
+      "from": 234,
+      "to": 243
+    },
+    {
+      "text": "The",
+      "from": 256,
+      "to": 263
+    },
+    {
+      "text": "pen",
+      "from": 265,
+      "to": 273
+    },
+    {
+      "text": "actually",
+      "from": 275,
+      "to": 295
+    },
+    {
+      "text": "works.",
+      "from": 297,
+      "to": 312
+    },
+    {
+      "text": "Put",
+      "from": 336,
+      "to": 343
+    },
+    {
+      "text": "the",
+      "from": 345,
+      "to": 353
+    },
+    {
+      "text": "name",
+      "from": 355,
+      "to": 365
+    },
+    {
+      "text": "and",
+      "from": 367,
+      "to": 374
+    },
+    {
+      "text": "the",
+      "from": 377,
+      "to": 384
+    },
+    {
+      "text": "date.",
+      "from": 387,
+      "to": 399
+    },
+    {
+      "text": "Next",
+      "from": 413,
+      "to": 423
+    },
+    {
+      "text": "month",
+      "from": 425,
+      "to": 437
+    },
+    {
+      "text": "you",
+      "from": 440,
+      "to": 447
+    },
+    {
+      "text": "will",
+      "from": 449,
+      "to": 459
+    },
+    {
+      "text": "know",
+      "from": 462,
+      "to": 471
+    },
+    {
+      "text": "what",
+      "from": 474,
+      "to": 483
+    },
+    {
+      "text": "to",
+      "from": 486,
+      "to": 491
+    },
+    {
+      "text": "eat",
+      "from": 493,
+      "to": 500
+    },
+    {
+      "text": "first.",
+      "from": 503,
+      "to": 518
+    },
+    {
+      "text": "This",
+      "from": 531,
+      "to": 540
+    },
+    {
+      "text": "comes",
+      "from": 543,
+      "to": 555
+    },
+    {
+      "text": "from",
+      "from": 557,
+      "to": 567
+    },
+    {
+      "text": "Example",
+      "from": 569,
+      "to": 586
+    },
+    {
+      "text": "Source",
+      "from": 589,
+      "to": 604
+    },
+    {
+      "text": "3.",
+      "from": 606,
+      "to": 611
+    },
+    {
+      "text": "What",
+      "from": 637,
+      "to": 647
+    },
+    {
+      "text": "is",
+      "from": 649,
+      "to": 654
+    },
+    {
+      "text": "the",
+      "from": 656,
+      "to": 664
+    },
+    {
+      "text": "oldest",
+      "from": 666,
+      "to": 681
+    },
+    {
+      "text": "thing",
+      "from": 683,
+      "to": 695
+    },
+    {
+      "text": "in",
+      "from": 698,
+      "to": 703
+    },
+    {
+      "text": "your",
+      "from": 705,
+      "to": 715
+    },
+    {
+      "text": "freezer?",
+      "from": 717,
+      "to": 737
+    }
+  ],
+  "durationInFrames": 780
+}

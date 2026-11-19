@@ -1,0 +1,352 @@
+{
+  "series": 2,
+  "seriesTitle": "Myth or fact",
+  "sourceLabel": "Source",
+  "audioSrc": "voice/narrator-b.mp3",
+  "scenes": [
+    {
+      "kind": "video",
+      "src": "scenes/01.mp4",
+      "from": 0,
+      "durationInFrames": 165,
+      "playbackRate": 1,
+      "headline": "Stop balling your socks",
+      "audio": {
+        "startFrom": 0,
+        "endAt": 128,
+        "delay": 18
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/02.mp4",
+      "from": 165,
+      "durationInFrames": 210,
+      "playbackRate": 1,
+      "headline": "Balls stretch the cuff",
+      "overlay": {
+        "type": "label",
+        "heading": "Time:",
+        "value": "10 seconds a pair"
+      },
+      "audio": {
+        "startFrom": 128,
+        "endAt": 306,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "text",
+      "from": 375,
+      "durationInFrames": 225,
+      "playbackRate": 1,
+      "headline": "Fold in thirds, stand up",
+      "overlay": {
+        "type": "quiz",
+        "options": [
+          "Balls save space",
+          "Upright saves space"
+        ],
+        "countdown": 3,
+        "answer": 1
+      },
+      "audio": {
+        "startFrom": 306,
+        "endAt": 477,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "text",
+      "from": 600,
+      "durationInFrames": 105,
+      "playbackRate": 1,
+      "headline": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 2, example.com"
+      },
+      "audio": {
+        "startFrom": 477,
+        "endAt": 559,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/05.mp4",
+      "from": 705,
+      "durationInFrames": 105,
+      "playbackRate": 1,
+      "headline": "Tell me below",
+      "audio": {
+        "startFrom": 559,
+        "endAt": 656,
+        "delay": 0
+      }
+    }
+  ],
+  "words": [
+    {
+      "text": "Rolling",
+      "from": 20,
+      "to": 34
+    },
+    {
+      "text": "socks",
+      "from": 37,
+      "to": 47
+    },
+    {
+      "text": "into",
+      "from": 49,
+      "to": 58
+    },
+    {
+      "text": "balls",
+      "from": 60,
+      "to": 71
+    },
+    {
+      "text": "is",
+      "from": 73,
+      "to": 77
+    },
+    {
+      "text": "why",
+      "from": 79,
+      "to": 86
+    },
+    {
+      "text": "the",
+      "from": 88,
+      "to": 94
+    },
+    {
+      "text": "drawer",
+      "from": 96,
+      "to": 109
+    },
+    {
+      "text": "never",
+      "from": 111,
+      "to": 122
+    },
+    {
+      "text": "closes.",
+      "from": 124,
+      "to": 139
+    },
+    {
+      "text": "A",
+      "from": 172,
+      "to": 174
+    },
+    {
+      "text": "sock",
+      "from": 176,
+      "to": 185
+    },
+    {
+      "text": "ball",
+      "from": 187,
+      "to": 195
+    },
+    {
+      "text": "keeps",
+      "from": 198,
+      "to": 208
+    },
+    {
+      "text": "the",
+      "from": 210,
+      "to": 217
+    },
+    {
+      "text": "cuff",
+      "from": 219,
+      "to": 228
+    },
+    {
+      "text": "pulled",
+      "from": 230,
+      "to": 242
+    },
+    {
+      "text": "tight",
+      "from": 245,
+      "to": 255
+    },
+    {
+      "text": "the",
+      "from": 257,
+      "to": 264
+    },
+    {
+      "text": "whole",
+      "from": 266,
+      "to": 277
+    },
+    {
+      "text": "time",
+      "from": 279,
+      "to": 287
+    },
+    {
+      "text": "it",
+      "from": 289,
+      "to": 294
+    },
+    {
+      "text": "sits",
+      "from": 296,
+      "to": 304
+    },
+    {
+      "text": "in",
+      "from": 306,
+      "to": 311
+    },
+    {
+      "text": "the",
+      "from": 313,
+      "to": 319
+    },
+    {
+      "text": "drawer.",
+      "from": 321,
+      "to": 336
+    },
+    {
+      "text": "Fold",
+      "from": 382,
+      "to": 390
+    },
+    {
+      "text": "each",
+      "from": 393,
+      "to": 401
+    },
+    {
+      "text": "pair",
+      "from": 403,
+      "to": 412
+    },
+    {
+      "text": "in",
+      "from": 414,
+      "to": 418
+    },
+    {
+      "text": "thirds",
+      "from": 420,
+      "to": 433
+    },
+    {
+      "text": "and",
+      "from": 435,
+      "to": 442
+    },
+    {
+      "text": "stand",
+      "from": 444,
+      "to": 454
+    },
+    {
+      "text": "it",
+      "from": 457,
+      "to": 461
+    },
+    {
+      "text": "up.",
+      "from": 463,
+      "to": 469
+    },
+    {
+      "text": "You",
+      "from": 482,
+      "to": 488
+    },
+    {
+      "text": "see",
+      "from": 491,
+      "to": 497
+    },
+    {
+      "text": "every",
+      "from": 499,
+      "to": 510
+    },
+    {
+      "text": "pair",
+      "from": 512,
+      "to": 520
+    },
+    {
+      "text": "at",
+      "from": 523,
+      "to": 527
+    },
+    {
+      "text": "once.",
+      "from": 529,
+      "to": 540
+    },
+    {
+      "text": "This",
+      "from": 606,
+      "to": 615
+    },
+    {
+      "text": "comes",
+      "from": 617,
+      "to": 627
+    },
+    {
+      "text": "from",
+      "from": 630,
+      "to": 638
+    },
+    {
+      "text": "Example",
+      "from": 640,
+      "to": 655
+    },
+    {
+      "text": "Source",
+      "from": 657,
+      "to": 670
+    },
+    {
+      "text": "2.",
+      "from": 672,
+      "to": 677
+    },
+    {
+      "text": "Team",
+      "from": 710,
+      "to": 719
+    },
+    {
+      "text": "balls",
+      "from": 721,
+      "to": 732
+    },
+    {
+      "text": "or",
+      "from": 734,
+      "to": 738
+    },
+    {
+      "text": "team",
+      "from": 740,
+      "to": 749
+    },
+    {
+      "text": "thirds?",
+      "from": 751,
+      "to": 766
+    }
+  ],
+  "durationInFrames": 810
+}

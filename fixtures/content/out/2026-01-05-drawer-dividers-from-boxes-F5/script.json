@@ -1,0 +1,84 @@
+{
+  "input": {
+    "kind": "topic",
+    "id": "drawer-dividers-from-boxes"
+  },
+  "format": "F5",
+  "series": 1,
+  "angle": "Drawer dividers from old shoe boxes",
+  "hooks": [
+    "Your junk drawer needs walls, not a new drawer."
+  ],
+  "scenes": [
+    {
+      "kind": "video",
+      "duration_s": 5,
+      "visual": "Close-up that shows: Junk drawer fix for free",
+      "prompt": "Vertical close-up, soft daylight, no people: junk drawer fix for free",
+      "voiceover": "Your junk drawer needs walls, not a new drawer.",
+      "on_screen_text": "Junk drawer fix for free",
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 8,
+      "visual": "Lids become trays",
+      "prompt": "Vertical shot, hands only, no faces: lids become trays",
+      "voiceover": "Cut the lids off your old shoe boxes. They make shallow trays for batteries and keys.",
+      "on_screen_text": "Lids become trays",
+      "overlay": {
+        "type": "label",
+        "heading": "Cost:",
+        "value": "zero"
+      },
+      "claims": [
+        {
+          "text": "Shoe box lids work as shallow trays for small items.",
+          "source": "lids_as_trays"
+        }
+      ]
+    },
+    {
+      "kind": "image",
+      "duration_s": 7.5,
+      "visual": "Trim to drawer height",
+      "prompt": "Still life, top view, no text: trim to drawer height",
+      "voiceover": "Trim the sides to the height of the drawer, so it still closes without a fight.",
+      "on_screen_text": "Trim to drawer height",
+      "claims": [
+        {
+          "text": "Box sides can be cut down to the drawer height.",
+          "source": "cut_to_height"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 3.5,
+      "visual": "Source card",
+      "prompt": "",
+      "voiceover": "This comes from Example Source 1.",
+      "on_screen_text": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 1, example.com"
+      },
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 5,
+      "visual": "Wide shot of a tidy shelf",
+      "prompt": "Vertical wide shot of a tidy shelf, slow push-in, no people",
+      "voiceover": "What lives in your junk drawer right now?",
+      "on_screen_text": "Tell me below",
+      "claims": []
+    }
+  ],
+  "caption": "Drawer dividers from old shoe boxes. Source: Example Source 1. Script and facts checked by a person; visuals and voice made with AI.",
+  "hashtags": [
+    "#hometips",
+    "#homeorganisation"
+  ],
+  "notes": ""
+}

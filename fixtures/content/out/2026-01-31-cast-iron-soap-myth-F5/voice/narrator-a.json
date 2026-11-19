@@ -1,0 +1,328 @@
+{
+  "narrator": "narrator-a",
+  "provider": "mock",
+  "voiceId": "mock-voice-a",
+  "model": "eleven_v3",
+  "hash": "79a04d51c42c24ee",
+  "text": "Some say one drop of soap ruins a cast iron pan. A little mild dish soap does not strip a good seasoning layer. What matters more is drying the pan right away, so it does not rust. This comes from Example Source 11. Did you grow up with the no soap rule?",
+  "parts": [
+    "Some say one drop of soap ruins a cast iron pan.",
+    "A little mild dish soap does not strip a good seasoning layer.",
+    "What matters more is drying the pan right away, so it does not rust.",
+    "This comes from Example Source 11.",
+    "Did you grow up with the no soap rule?"
+  ],
+  "sources": [
+    "full recording",
+    "full recording",
+    "full recording",
+    "full recording",
+    "full recording"
+  ],
+  "duration_s": 20.102,
+  "billed_chars": 254,
+  "words": [
+    {
+      "text": "Some",
+      "start": 0.05,
+      "end": 0.345
+    },
+    {
+      "text": "say",
+      "start": 0.419,
+      "end": 0.64
+    },
+    {
+      "text": "one",
+      "start": 0.714,
+      "end": 0.935
+    },
+    {
+      "text": "drop",
+      "start": 1.009,
+      "end": 1.304
+    },
+    {
+      "text": "of",
+      "start": 1.378,
+      "end": 1.525
+    },
+    {
+      "text": "soap",
+      "start": 1.599,
+      "end": 1.894
+    },
+    {
+      "text": "ruins",
+      "start": 1.968,
+      "end": 2.336
+    },
+    {
+      "text": "a",
+      "start": 2.41,
+      "end": 2.484
+    },
+    {
+      "text": "cast",
+      "start": 2.558,
+      "end": 2.853
+    },
+    {
+      "text": "iron",
+      "start": 2.926,
+      "end": 3.221
+    },
+    {
+      "text": "pan.",
+      "start": 3.295,
+      "end": 3.59
+    },
+    {
+      "text": "A",
+      "start": 3.97,
+      "end": 4.044
+    },
+    {
+      "text": "little",
+      "start": 4.118,
+      "end": 4.56
+    },
+    {
+      "text": "mild",
+      "start": 4.634,
+      "end": 4.929
+    },
+    {
+      "text": "dish",
+      "start": 5.003,
+      "end": 5.298
+    },
+    {
+      "text": "soap",
+      "start": 5.372,
+      "end": 5.667
+    },
+    {
+      "text": "does",
+      "start": 5.74,
+      "end": 6.035
+    },
+    {
+      "text": "not",
+      "start": 6.109,
+      "end": 6.33
+    },
+    {
+      "text": "strip",
+      "start": 6.404,
+      "end": 6.773
+    },
+    {
+      "text": "a",
+      "start": 6.847,
+      "end": 6.92
+    },
+    {
+      "text": "good",
+      "start": 6.994,
+      "end": 7.289
+    },
+    {
+      "text": "seasoning",
+      "start": 7.363,
+      "end": 8.027
+    },
+    {
+      "text": "layer.",
+      "start": 8.1,
+      "end": 8.543
+    },
+    {
+      "text": "What",
+      "start": 8.891,
+      "end": 9.186
+    },
+    {
+      "text": "matters",
+      "start": 9.26,
+      "end": 9.776
+    },
+    {
+      "text": "more",
+      "start": 9.85,
+      "end": 10.145
+    },
+    {
+      "text": "is",
+      "start": 10.219,
+      "end": 10.366
+    },
+    {
+      "text": "drying",
+      "start": 10.44,
+      "end": 10.883
+    },
+    {
+      "text": "the",
+      "start": 10.956,
+      "end": 11.178
+    },
+    {
+      "text": "pan",
+      "start": 11.251,
+      "end": 11.473
+    },
+    {
+      "text": "right",
+      "start": 11.546,
+      "end": 11.915
+    },
+    {
+      "text": "away,",
+      "start": 11.989,
+      "end": 12.358
+    },
+    {
+      "text": "so",
+      "start": 12.586,
+      "end": 12.733
+    },
+    {
+      "text": "it",
+      "start": 12.807,
+      "end": 12.954
+    },
+    {
+      "text": "does",
+      "start": 13.028,
+      "end": 13.323
+    },
+    {
+      "text": "not",
+      "start": 13.397,
+      "end": 13.618
+    },
+    {
+      "text": "rust.",
+      "start": 13.692,
+      "end": 14.061
+    },
+    {
+      "text": "This",
+      "start": 14.414,
+      "end": 14.709
+    },
+    {
+      "text": "comes",
+      "start": 14.783,
+      "end": 15.151
+    },
+    {
+      "text": "from",
+      "start": 15.225,
+      "end": 15.52
+    },
+    {
+      "text": "Example",
+      "start": 15.594,
+      "end": 16.11
+    },
+    {
+      "text": "Source",
+      "start": 16.184,
+      "end": 16.627
+    },
+    {
+      "text": "11.",
+      "start": 16.7,
+      "end": 16.922
+    },
+    {
+      "text": "Did",
+      "start": 17.299,
+      "end": 17.52
+    },
+    {
+      "text": "you",
+      "start": 17.594,
+      "end": 17.815
+    },
+    {
+      "text": "grow",
+      "start": 17.889,
+      "end": 18.184
+    },
+    {
+      "text": "up",
+      "start": 18.258,
+      "end": 18.405
+    },
+    {
+      "text": "with",
+      "start": 18.479,
+      "end": 18.774
+    },
+    {
+      "text": "the",
+      "start": 18.848,
+      "end": 19.069
+    },
+    {
+      "text": "no",
+      "start": 19.143,
+      "end": 19.291
+    },
+    {
+      "text": "soap",
+      "start": 19.364,
+      "end": 19.659
+    },
+    {
+      "text": "rule?",
+      "start": 19.733,
+      "end": 20.102
+    }
+  ],
+  "scenes": [
+    {
+      "index": 0,
+      "duration_s": 5,
+      "voice": {
+        "start": 0.05,
+        "end": 3.59
+      }
+    },
+    {
+      "index": 1,
+      "duration_s": 6,
+      "voice": {
+        "start": 3.97,
+        "end": 8.543
+      }
+    },
+    {
+      "index": 2,
+      "duration_s": 7.5,
+      "voice": {
+        "start": 8.891,
+        "end": 14.061
+      }
+    },
+    {
+      "index": 3,
+      "duration_s": 4,
+      "voice": {
+        "start": 14.414,
+        "end": 16.922
+      }
+    },
+    {
+      "index": 4,
+      "duration_s": 4.5,
+      "voice": {
+        "start": 17.299,
+        "end": 20.102
+      }
+    }
+  ]
+}

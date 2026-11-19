@@ -1,0 +1,283 @@
+{
+  "narrator": "narrator-a",
+  "provider": "mock",
+  "voiceId": "mock-voice-a",
+  "model": "eleven_v3",
+  "hash": "9f2eee78c66bfe93",
+  "text": "A closed wet umbrella starts to smell. Open it up after the rain. It dries much faster that way. Just keep it out of strong sun for hours, or the fabric fades. This comes from Example Source 17. Where does your umbrella dry?",
+  "parts": [
+    "A closed wet umbrella starts to smell.",
+    "Open it up after the rain. It dries much faster that way.",
+    "Just keep it out of strong sun for hours, or the fabric fades.",
+    "This comes from Example Source 17.",
+    "Where does your umbrella dry?"
+  ],
+  "sources": [
+    "full recording",
+    "full recording",
+    "full recording",
+    "full recording",
+    "full recording"
+  ],
+  "duration_s": 19.449,
+  "billed_chars": 224,
+  "words": [
+    {
+      "text": "A",
+      "start": 0.05,
+      "end": 0.129
+    },
+    {
+      "text": "closed",
+      "start": 0.208,
+      "end": 0.681
+    },
+    {
+      "text": "wet",
+      "start": 0.76,
+      "end": 0.997
+    },
+    {
+      "text": "umbrella",
+      "start": 1.076,
+      "end": 1.707
+    },
+    {
+      "text": "starts",
+      "start": 1.786,
+      "end": 2.259
+    },
+    {
+      "text": "to",
+      "start": 2.338,
+      "end": 2.496
+    },
+    {
+      "text": "smell.",
+      "start": 2.575,
+      "end": 3.048
+    },
+    {
+      "text": "Open",
+      "start": 3.419,
+      "end": 3.735
+    },
+    {
+      "text": "it",
+      "start": 3.814,
+      "end": 3.972
+    },
+    {
+      "text": "up",
+      "start": 4.05,
+      "end": 4.208
+    },
+    {
+      "text": "after",
+      "start": 4.287,
+      "end": 4.682
+    },
+    {
+      "text": "the",
+      "start": 4.76,
+      "end": 4.997
+    },
+    {
+      "text": "rain.",
+      "start": 5.076,
+      "end": 5.47
+    },
+    {
+      "text": "It",
+      "start": 5.869,
+      "end": 6.027
+    },
+    {
+      "text": "dries",
+      "start": 6.106,
+      "end": 6.5
+    },
+    {
+      "text": "much",
+      "start": 6.579,
+      "end": 6.894
+    },
+    {
+      "text": "faster",
+      "start": 6.973,
+      "end": 7.447
+    },
+    {
+      "text": "that",
+      "start": 7.526,
+      "end": 7.841
+    },
+    {
+      "text": "way.",
+      "start": 7.92,
+      "end": 8.236
+    },
+    {
+      "text": "Just",
+      "start": 8.598,
+      "end": 8.914
+    },
+    {
+      "text": "keep",
+      "start": 8.993,
+      "end": 9.308
+    },
+    {
+      "text": "it",
+      "start": 9.387,
+      "end": 9.545
+    },
+    {
+      "text": "out",
+      "start": 9.624,
+      "end": 9.86
+    },
+    {
+      "text": "of",
+      "start": 9.939,
+      "end": 10.097
+    },
+    {
+      "text": "strong",
+      "start": 10.176,
+      "end": 10.649
+    },
+    {
+      "text": "sun",
+      "start": 10.728,
+      "end": 10.965
+    },
+    {
+      "text": "for",
+      "start": 11.044,
+      "end": 11.28
+    },
+    {
+      "text": "hours,",
+      "start": 11.359,
+      "end": 11.833
+    },
+    {
+      "text": "or",
+      "start": 12.071,
+      "end": 12.229
+    },
+    {
+      "text": "the",
+      "start": 12.307,
+      "end": 12.544
+    },
+    {
+      "text": "fabric",
+      "start": 12.623,
+      "end": 13.096
+    },
+    {
+      "text": "fades.",
+      "start": 13.175,
+      "end": 13.649
+    },
+    {
+      "text": "This",
+      "start": 14.008,
+      "end": 14.323
+    },
+    {
+      "text": "comes",
+      "start": 14.402,
+      "end": 14.796
+    },
+    {
+      "text": "from",
+      "start": 14.875,
+      "end": 15.191
+    },
+    {
+      "text": "Example",
+      "start": 15.27,
+      "end": 15.822
+    },
+    {
+      "text": "Source",
+      "start": 15.901,
+      "end": 16.374
+    },
+    {
+      "text": "17.",
+      "start": 16.453,
+      "end": 16.69
+    },
+    {
+      "text": "Where",
+      "start": 17.161,
+      "end": 17.555
+    },
+    {
+      "text": "does",
+      "start": 17.634,
+      "end": 17.95
+    },
+    {
+      "text": "your",
+      "start": 18.029,
+      "end": 18.344
+    },
+    {
+      "text": "umbrella",
+      "start": 18.423,
+      "end": 19.054
+    },
+    {
+      "text": "dry?",
+      "start": 19.133,
+      "end": 19.449
+    }
+  ],
+  "scenes": [
+    {
+      "index": 0,
+      "duration_s": 4,
+      "voice": {
+        "start": 0.05,
+        "end": 3.048
+      }
+    },
+    {
+      "index": 1,
+      "duration_s": 5.5,
+      "voice": {
+        "start": 3.419,
+        "end": 8.236
+      }
+    },
+    {
+      "index": 2,
+      "duration_s": 7,
+      "voice": {
+        "start": 8.598,
+        "end": 13.649
+      }
+    },
+    {
+      "index": 3,
+      "duration_s": 4,
+      "voice": {
+        "start": 14.008,
+        "end": 16.69
+      }
+    },
+    {
+      "index": 4,
+      "duration_s": 4,
+      "voice": {
+        "start": 17.161,
+        "end": 19.449
+      }
+    }
+  ]
+}

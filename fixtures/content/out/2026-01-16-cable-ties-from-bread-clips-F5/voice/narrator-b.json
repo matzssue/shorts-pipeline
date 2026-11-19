@@ -1,0 +1,293 @@
+{
+  "narrator": "narrator-b",
+  "provider": "mock",
+  "voiceId": "mock-voice-b",
+  "model": "eleven_multilingual_v2",
+  "hash": "5a08c1c2b5341501",
+  "text": "Every charger in the drawer looks the same. A bread bag clip snaps right around a charging cable and stays put. Write the device name on the flat side with a marker. This comes from Example Source 6. How many mystery chargers do you have?",
+  "parts": [
+    "Every charger in the drawer looks the same.",
+    "A bread bag clip snaps right around a charging cable and stays put.",
+    "Write the device name on the flat side with a marker.",
+    "This comes from Example Source 6.",
+    "How many mystery chargers do you have?"
+  ],
+  "sources": [
+    "full recording",
+    "full recording",
+    "full recording",
+    "full recording",
+    "full recording"
+  ],
+  "duration_s": 19.305,
+  "billed_chars": 238,
+  "words": [
+    {
+      "text": "Every",
+      "start": 0.05,
+      "end": 0.425
+    },
+    {
+      "text": "charger",
+      "start": 0.5,
+      "end": 1.024
+    },
+    {
+      "text": "in",
+      "start": 1.099,
+      "end": 1.249
+    },
+    {
+      "text": "the",
+      "start": 1.324,
+      "end": 1.548
+    },
+    {
+      "text": "drawer",
+      "start": 1.623,
+      "end": 2.073
+    },
+    {
+      "text": "looks",
+      "start": 2.148,
+      "end": 2.522
+    },
+    {
+      "text": "the",
+      "start": 2.597,
+      "end": 2.822
+    },
+    {
+      "text": "same.",
+      "start": 2.897,
+      "end": 3.272
+    },
+    {
+      "text": "A",
+      "start": 3.721,
+      "end": 3.796
+    },
+    {
+      "text": "bread",
+      "start": 3.871,
+      "end": 4.245
+    },
+    {
+      "text": "bag",
+      "start": 4.32,
+      "end": 4.545
+    },
+    {
+      "text": "clip",
+      "start": 4.62,
+      "end": 4.92
+    },
+    {
+      "text": "snaps",
+      "start": 4.995,
+      "end": 5.369
+    },
+    {
+      "text": "right",
+      "start": 5.444,
+      "end": 5.819
+    },
+    {
+      "text": "around",
+      "start": 5.894,
+      "end": 6.343
+    },
+    {
+      "text": "a",
+      "start": 6.418,
+      "end": 6.493
+    },
+    {
+      "text": "charging",
+      "start": 6.568,
+      "end": 7.167
+    },
+    {
+      "text": "cable",
+      "start": 7.242,
+      "end": 7.617
+    },
+    {
+      "text": "and",
+      "start": 7.692,
+      "end": 7.916
+    },
+    {
+      "text": "stays",
+      "start": 7.991,
+      "end": 8.366
+    },
+    {
+      "text": "put.",
+      "start": 8.441,
+      "end": 8.741
+    },
+    {
+      "text": "Write",
+      "start": 9.118,
+      "end": 9.493
+    },
+    {
+      "text": "the",
+      "start": 9.568,
+      "end": 9.793
+    },
+    {
+      "text": "device",
+      "start": 9.868,
+      "end": 10.317
+    },
+    {
+      "text": "name",
+      "start": 10.392,
+      "end": 10.692
+    },
+    {
+      "text": "on",
+      "start": 10.767,
+      "end": 10.916
+    },
+    {
+      "text": "the",
+      "start": 10.991,
+      "end": 11.216
+    },
+    {
+      "text": "flat",
+      "start": 11.291,
+      "end": 11.591
+    },
+    {
+      "text": "side",
+      "start": 11.666,
+      "end": 11.965
+    },
+    {
+      "text": "with",
+      "start": 12.04,
+      "end": 12.34
+    },
+    {
+      "text": "a",
+      "start": 12.415,
+      "end": 12.49
+    },
+    {
+      "text": "marker.",
+      "start": 12.565,
+      "end": 13.089
+    },
+    {
+      "text": "This",
+      "start": 13.553,
+      "end": 13.853
+    },
+    {
+      "text": "comes",
+      "start": 13.927,
+      "end": 14.302
+    },
+    {
+      "text": "from",
+      "start": 14.377,
+      "end": 14.677
+    },
+    {
+      "text": "Example",
+      "start": 14.752,
+      "end": 15.276
+    },
+    {
+      "text": "Source",
+      "start": 15.351,
+      "end": 15.8
+    },
+    {
+      "text": "6.",
+      "start": 15.875,
+      "end": 16.025
+    },
+    {
+      "text": "How",
+      "start": 16.458,
+      "end": 16.683
+    },
+    {
+      "text": "many",
+      "start": 16.758,
+      "end": 17.057
+    },
+    {
+      "text": "mystery",
+      "start": 17.132,
+      "end": 17.657
+    },
+    {
+      "text": "chargers",
+      "start": 17.732,
+      "end": 18.331
+    },
+    {
+      "text": "do",
+      "start": 18.406,
+      "end": 18.556
+    },
+    {
+      "text": "you",
+      "start": 18.631,
+      "end": 18.855
+    },
+    {
+      "text": "have?",
+      "start": 18.93,
+      "end": 19.305
+    }
+  ],
+  "scenes": [
+    {
+      "index": 0,
+      "duration_s": 4.5,
+      "voice": {
+        "start": 0.05,
+        "end": 3.272
+      }
+    },
+    {
+      "index": 1,
+      "duration_s": 6.5,
+      "voice": {
+        "start": 3.721,
+        "end": 8.741
+      }
+    },
+    {
+      "index": 2,
+      "duration_s": 5.5,
+      "voice": {
+        "start": 9.118,
+        "end": 13.089
+      }
+    },
+    {
+      "index": 3,
+      "duration_s": 3.5,
+      "voice": {
+        "start": 13.553,
+        "end": 16.025
+      }
+    },
+    {
+      "index": 4,
+      "duration_s": 4.5,
+      "voice": {
+        "start": 16.458,
+        "end": 19.305
+      }
+    }
+  ]
+}

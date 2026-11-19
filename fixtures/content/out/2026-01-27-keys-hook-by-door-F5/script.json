@@ -1,0 +1,84 @@
+{
+  "input": {
+    "kind": "topic",
+    "id": "keys-hook-by-door"
+  },
+  "format": "F5",
+  "series": 1,
+  "angle": "One hook by the door ends the morning key hunt",
+  "hooks": [
+    "The key hunt starts the day badly."
+  ],
+  "scenes": [
+    {
+      "kind": "video",
+      "duration_s": 4,
+      "visual": "Close-up that shows: One hook, no hunt",
+      "prompt": "Vertical close-up, soft daylight, no people: one hook, no hunt",
+      "voiceover": "The key hunt starts the day badly.",
+      "on_screen_text": "One hook, no hunt",
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 6.5,
+      "visual": "One fixed place",
+      "prompt": "Vertical shot, hands only, no faces: one fixed place",
+      "voiceover": "Things with one fixed place are faster to find. Keys are no exception.",
+      "on_screen_text": "One fixed place",
+      "overlay": {
+        "type": "label",
+        "heading": "Place:",
+        "value": "by the door"
+      },
+      "claims": [
+        {
+          "text": "Keeping an item in one fixed place makes it faster to find.",
+          "source": "fixed_place"
+        }
+      ]
+    },
+    {
+      "kind": "image",
+      "duration_s": 7.5,
+      "visual": "Right by the door",
+      "prompt": "Still life, top view, no text: right by the door",
+      "voiceover": "Put the hook right by the door, where your hand already is when you come home.",
+      "on_screen_text": "Right by the door",
+      "claims": [
+        {
+          "text": "A hook next to the door is on the way in and out.",
+          "source": "by_the_door"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 4,
+      "visual": "Source card",
+      "prompt": "",
+      "voiceover": "This comes from Example Source 10.",
+      "on_screen_text": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 10, example.com"
+      },
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 4.5,
+      "visual": "Wide shot of a tidy shelf",
+      "prompt": "Vertical wide shot of a tidy shelf, slow push-in, no people",
+      "voiceover": "Where did you last lose your keys?",
+      "on_screen_text": "Tell me below",
+      "claims": []
+    }
+  ],
+  "caption": "One hook by the door ends the morning key hunt. Source: Example Source 10. Script and facts checked by a person; visuals and voice made with AI.",
+  "hashtags": [
+    "#hometips",
+    "#homeorganisation"
+  ],
+  "notes": ""
+}

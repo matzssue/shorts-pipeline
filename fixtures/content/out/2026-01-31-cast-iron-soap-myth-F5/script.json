@@ -1,0 +1,93 @@
+{
+  "input": {
+    "kind": "topic",
+    "id": "cast-iron-soap-myth"
+  },
+  "format": "F5",
+  "series": 2,
+  "angle": "Can you wash a cast iron pan with soap?",
+  "hooks": [
+    "Some say one drop of soap ruins a cast iron pan."
+  ],
+  "scenes": [
+    {
+      "kind": "video",
+      "duration_s": 5,
+      "visual": "Close-up that shows: Soap on cast iron?",
+      "prompt": "Vertical close-up, soft daylight, no people: soap on cast iron?",
+      "voiceover": "Some say one drop of soap ruins a cast iron pan.",
+      "on_screen_text": "Soap on cast iron?",
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 6,
+      "visual": "Mild soap is fine",
+      "prompt": "Vertical shot, hands only, no faces: mild soap is fine",
+      "voiceover": "A little mild dish soap does not strip a good seasoning layer.",
+      "on_screen_text": "Mild soap is fine",
+      "overlay": {
+        "type": "label",
+        "heading": "After washing:",
+        "value": "dry at once"
+      },
+      "claims": [
+        {
+          "text": "A little mild dish soap does not remove a well-built seasoning layer.",
+          "source": "mild_soap_ok"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 7.5,
+      "visual": "Quiz card",
+      "prompt": "",
+      "voiceover": "What matters more is drying the pan right away, so it does not rust.",
+      "on_screen_text": "Dry it right away",
+      "overlay": {
+        "type": "quiz",
+        "options": [
+          "Soap ruins it",
+          "A little soap is fine"
+        ],
+        "countdown": 3,
+        "answer": 1
+      },
+      "claims": [
+        {
+          "text": "Drying the pan right after washing helps prevent rust.",
+          "source": "dry_right_away"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 4,
+      "visual": "Source card",
+      "prompt": "",
+      "voiceover": "This comes from Example Source 11.",
+      "on_screen_text": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 11, example.com"
+      },
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 4.5,
+      "visual": "Wide shot of a tidy shelf",
+      "prompt": "Vertical wide shot of a tidy shelf, slow push-in, no people",
+      "voiceover": "Did you grow up with the no soap rule?",
+      "on_screen_text": "Tell me below",
+      "claims": []
+    }
+  ],
+  "caption": "Can you wash a cast iron pan with soap?. Source: Example Source 11. Script and facts checked by a person; visuals and voice made with AI.",
+  "hashtags": [
+    "#hometips",
+    "#kitchenfacts"
+  ],
+  "notes": ""
+}

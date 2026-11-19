@@ -1,0 +1,303 @@
+{
+  "narrator": "narrator-b",
+  "provider": "mock",
+  "voiceId": "mock-voice-b",
+  "model": "eleven_multilingual_v2",
+  "hash": "070f4842f4bfff75",
+  "text": "Stop digging for the matching sheet. Fold the sheets and slide the whole set into one of its pillowcases. Now the shelf holds whole sets. You grab one bundle and you are done. This comes from Example Source 4. How many sheet sets do you actually use?",
+  "parts": [
+    "Stop digging for the matching sheet.",
+    "Fold the sheets and slide the whole set into one of its pillowcases.",
+    "Now the shelf holds whole sets. You grab one bundle and you are done.",
+    "This comes from Example Source 4.",
+    "How many sheet sets do you actually use?"
+  ],
+  "sources": [
+    "full recording",
+    "full recording",
+    "voice/takes/narrator-b-scene-03/take-2",
+    "full recording",
+    "full recording"
+  ],
+  "duration_s": 19.963,
+  "billed_chars": 250,
+  "words": [
+    {
+      "text": "Stop",
+      "start": 0.05,
+      "end": 0.344
+    },
+    {
+      "text": "digging",
+      "start": 0.417,
+      "end": 0.932
+    },
+    {
+      "text": "for",
+      "start": 1.005,
+      "end": 1.226
+    },
+    {
+      "text": "the",
+      "start": 1.299,
+      "end": 1.52
+    },
+    {
+      "text": "matching",
+      "start": 1.593,
+      "end": 2.181
+    },
+    {
+      "text": "sheet.",
+      "start": 2.255,
+      "end": 2.696
+    },
+    {
+      "text": "Fold",
+      "start": 3.057,
+      "end": 3.351
+    },
+    {
+      "text": "the",
+      "start": 3.424,
+      "end": 3.645
+    },
+    {
+      "text": "sheets",
+      "start": 3.718,
+      "end": 4.159
+    },
+    {
+      "text": "and",
+      "start": 4.233,
+      "end": 4.453
+    },
+    {
+      "text": "slide",
+      "start": 4.527,
+      "end": 4.894
+    },
+    {
+      "text": "the",
+      "start": 4.968,
+      "end": 5.188
+    },
+    {
+      "text": "whole",
+      "start": 5.262,
+      "end": 5.629
+    },
+    {
+      "text": "set",
+      "start": 5.703,
+      "end": 5.923
+    },
+    {
+      "text": "into",
+      "start": 5.997,
+      "end": 6.291
+    },
+    {
+      "text": "one",
+      "start": 6.364,
+      "end": 6.585
+    },
+    {
+      "text": "of",
+      "start": 6.658,
+      "end": 6.805
+    },
+    {
+      "text": "its",
+      "start": 6.879,
+      "end": 7.099
+    },
+    {
+      "text": "pillowcases.",
+      "start": 7.173,
+      "end": 8.055
+    },
+    {
+      "text": "Now",
+      "start": 8.507,
+      "end": 8.728
+    },
+    {
+      "text": "the",
+      "start": 8.801,
+      "end": 9.022
+    },
+    {
+      "text": "shelf",
+      "start": 9.095,
+      "end": 9.463
+    },
+    {
+      "text": "holds",
+      "start": 9.536,
+      "end": 9.904
+    },
+    {
+      "text": "whole",
+      "start": 9.977,
+      "end": 10.345
+    },
+    {
+      "text": "sets.",
+      "start": 10.418,
+      "end": 10.786
+    },
+    {
+      "text": "You",
+      "start": 11.185,
+      "end": 11.405
+    },
+    {
+      "text": "grab",
+      "start": 11.479,
+      "end": 11.773
+    },
+    {
+      "text": "one",
+      "start": 11.846,
+      "end": 12.067
+    },
+    {
+      "text": "bundle",
+      "start": 12.14,
+      "end": 12.581
+    },
+    {
+      "text": "and",
+      "start": 12.655,
+      "end": 12.875
+    },
+    {
+      "text": "you",
+      "start": 12.949,
+      "end": 13.169
+    },
+    {
+      "text": "are",
+      "start": 13.243,
+      "end": 13.463
+    },
+    {
+      "text": "done.",
+      "start": 13.537,
+      "end": 13.904
+    },
+    {
+      "text": "This",
+      "start": 14.235,
+      "end": 14.529
+    },
+    {
+      "text": "comes",
+      "start": 14.602,
+      "end": 14.97
+    },
+    {
+      "text": "from",
+      "start": 15.043,
+      "end": 15.337
+    },
+    {
+      "text": "Example",
+      "start": 15.411,
+      "end": 15.925
+    },
+    {
+      "text": "Source",
+      "start": 15.999,
+      "end": 16.44
+    },
+    {
+      "text": "4.",
+      "start": 16.513,
+      "end": 16.66
+    },
+    {
+      "text": "How",
+      "start": 17.023,
+      "end": 17.244
+    },
+    {
+      "text": "many",
+      "start": 17.317,
+      "end": 17.611
+    },
+    {
+      "text": "sheet",
+      "start": 17.685,
+      "end": 18.052
+    },
+    {
+      "text": "sets",
+      "start": 18.126,
+      "end": 18.42
+    },
+    {
+      "text": "do",
+      "start": 18.493,
+      "end": 18.64
+    },
+    {
+      "text": "you",
+      "start": 18.714,
+      "end": 18.934
+    },
+    {
+      "text": "actually",
+      "start": 19.008,
+      "end": 19.596
+    },
+    {
+      "text": "use?",
+      "start": 19.669,
+      "end": 19.963
+    }
+  ],
+  "scenes": [
+    {
+      "index": 0,
+      "duration_s": 4,
+      "voice": {
+        "start": 0.05,
+        "end": 2.696
+      }
+    },
+    {
+      "index": 1,
+      "duration_s": 6.5,
+      "voice": {
+        "start": 3.057,
+        "end": 8.055
+      }
+    },
+    {
+      "index": 2,
+      "duration_s": 6.5,
+      "voice": {
+        "start": 8.507,
+        "end": 13.904
+      }
+    },
+    {
+      "index": 3,
+      "duration_s": 3.5,
+      "voice": {
+        "start": 14.235,
+        "end": 16.66
+      }
+    },
+    {
+      "index": 4,
+      "duration_s": 4.5,
+      "voice": {
+        "start": 17.023,
+        "end": 19.963
+      }
+    }
+  ]
+}

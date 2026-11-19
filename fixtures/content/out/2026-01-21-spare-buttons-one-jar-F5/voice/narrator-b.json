@@ -1,0 +1,363 @@
+{
+  "narrator": "narrator-b",
+  "provider": "mock",
+  "voiceId": "mock-voice-b",
+  "model": "eleven_multilingual_v2",
+  "hash": "fa0b6e968661c29f",
+  "text": "That tiny bag of spare buttons has a better home. The spare buttons from a new coat are an exact match, which is hard to find later. Drop every spare button into one small jar. When one falls off, you know where to look. This comes from Example Source 8. Have you ever needed one of those spare buttons?",
+  "parts": [
+    "That tiny bag of spare buttons has a better home.",
+    "The spare buttons from a new coat are an exact match, which is hard to find later.",
+    "Drop every spare button into one small jar. When one falls off, you know where to look.",
+    "This comes from Example Source 8.",
+    "Have you ever needed one of those spare buttons?"
+  ],
+  "sources": [
+    "full recording",
+    "full recording",
+    "full recording",
+    "full recording",
+    "full recording"
+  ],
+  "duration_s": 26.254,
+  "billed_chars": 303,
+  "words": [
+    {
+      "text": "That",
+      "start": 0.05,
+      "end": 0.37
+    },
+    {
+      "text": "tiny",
+      "start": 0.45,
+      "end": 0.77
+    },
+    {
+      "text": "bag",
+      "start": 0.85,
+      "end": 1.09
+    },
+    {
+      "text": "of",
+      "start": 1.17,
+      "end": 1.33
+    },
+    {
+      "text": "spare",
+      "start": 1.41,
+      "end": 1.81
+    },
+    {
+      "text": "buttons",
+      "start": 1.89,
+      "end": 2.45
+    },
+    {
+      "text": "has",
+      "start": 2.53,
+      "end": 2.77
+    },
+    {
+      "text": "a",
+      "start": 2.85,
+      "end": 2.93
+    },
+    {
+      "text": "better",
+      "start": 3.01,
+      "end": 3.49
+    },
+    {
+      "text": "home.",
+      "start": 3.57,
+      "end": 3.97
+    },
+    {
+      "text": "The",
+      "start": 4.431,
+      "end": 4.672
+    },
+    {
+      "text": "spare",
+      "start": 4.752,
+      "end": 5.152
+    },
+    {
+      "text": "buttons",
+      "start": 5.232,
+      "end": 5.792
+    },
+    {
+      "text": "from",
+      "start": 5.872,
+      "end": 6.192
+    },
+    {
+      "text": "a",
+      "start": 6.272,
+      "end": 6.352
+    },
+    {
+      "text": "new",
+      "start": 6.432,
+      "end": 6.672
+    },
+    {
+      "text": "coat",
+      "start": 6.752,
+      "end": 7.072
+    },
+    {
+      "text": "are",
+      "start": 7.152,
+      "end": 7.392
+    },
+    {
+      "text": "an",
+      "start": 7.472,
+      "end": 7.632
+    },
+    {
+      "text": "exact",
+      "start": 7.712,
+      "end": 8.112
+    },
+    {
+      "text": "match,",
+      "start": 8.192,
+      "end": 8.672
+    },
+    {
+      "text": "which",
+      "start": 8.878,
+      "end": 9.278
+    },
+    {
+      "text": "is",
+      "start": 9.358,
+      "end": 9.518
+    },
+    {
+      "text": "hard",
+      "start": 9.598,
+      "end": 9.918
+    },
+    {
+      "text": "to",
+      "start": 9.998,
+      "end": 10.158
+    },
+    {
+      "text": "find",
+      "start": 10.238,
+      "end": 10.558
+    },
+    {
+      "text": "later.",
+      "start": 10.638,
+      "end": 11.118
+    },
+    {
+      "text": "Drop",
+      "start": 11.489,
+      "end": 11.809
+    },
+    {
+      "text": "every",
+      "start": 11.889,
+      "end": 12.289
+    },
+    {
+      "text": "spare",
+      "start": 12.369,
+      "end": 12.769
+    },
+    {
+      "text": "button",
+      "start": 12.849,
+      "end": 13.329
+    },
+    {
+      "text": "into",
+      "start": 13.409,
+      "end": 13.729
+    },
+    {
+      "text": "one",
+      "start": 13.809,
+      "end": 14.049
+    },
+    {
+      "text": "small",
+      "start": 14.129,
+      "end": 14.529
+    },
+    {
+      "text": "jar.",
+      "start": 14.609,
+      "end": 14.929
+    },
+    {
+      "text": "When",
+      "start": 15.3,
+      "end": 15.62
+    },
+    {
+      "text": "one",
+      "start": 15.7,
+      "end": 15.94
+    },
+    {
+      "text": "falls",
+      "start": 16.02,
+      "end": 16.42
+    },
+    {
+      "text": "off,",
+      "start": 16.5,
+      "end": 16.82
+    },
+    {
+      "text": "you",
+      "start": 17.009,
+      "end": 17.249
+    },
+    {
+      "text": "know",
+      "start": 17.329,
+      "end": 17.649
+    },
+    {
+      "text": "where",
+      "start": 17.729,
+      "end": 18.129
+    },
+    {
+      "text": "to",
+      "start": 18.209,
+      "end": 18.369
+    },
+    {
+      "text": "look.",
+      "start": 18.449,
+      "end": 18.849
+    },
+    {
+      "text": "This",
+      "start": 19.305,
+      "end": 19.625
+    },
+    {
+      "text": "comes",
+      "start": 19.705,
+      "end": 20.105
+    },
+    {
+      "text": "from",
+      "start": 20.185,
+      "end": 20.505
+    },
+    {
+      "text": "Example",
+      "start": 20.585,
+      "end": 21.146
+    },
+    {
+      "text": "Source",
+      "start": 21.226,
+      "end": 21.706
+    },
+    {
+      "text": "8.",
+      "start": 21.786,
+      "end": 21.946
+    },
+    {
+      "text": "Have",
+      "start": 22.414,
+      "end": 22.734
+    },
+    {
+      "text": "you",
+      "start": 22.814,
+      "end": 23.054
+    },
+    {
+      "text": "ever",
+      "start": 23.134,
+      "end": 23.454
+    },
+    {
+      "text": "needed",
+      "start": 23.534,
+      "end": 24.014
+    },
+    {
+      "text": "one",
+      "start": 24.094,
+      "end": 24.334
+    },
+    {
+      "text": "of",
+      "start": 24.414,
+      "end": 24.574
+    },
+    {
+      "text": "those",
+      "start": 24.654,
+      "end": 25.054
+    },
+    {
+      "text": "spare",
+      "start": 25.134,
+      "end": 25.534
+    },
+    {
+      "text": "buttons?",
+      "start": 25.614,
+      "end": 26.254
+    }
+  ],
+  "scenes": [
+    {
+      "index": 0,
+      "duration_s": 5,
+      "voice": {
+        "start": 0.05,
+        "end": 3.97
+      }
+    },
+    {
+      "index": 1,
+      "duration_s": 7.5,
+      "voice": {
+        "start": 4.431,
+        "end": 11.118
+      }
+    },
+    {
+      "index": 2,
+      "duration_s": 9,
+      "voice": {
+        "start": 11.489,
+        "end": 18.849
+      }
+    },
+    {
+      "index": 3,
+      "duration_s": 3.5,
+      "voice": {
+        "start": 19.305,
+        "end": 21.946
+      }
+    },
+    {
+      "index": 4,
+      "duration_s": 5.5,
+      "voice": {
+        "start": 22.414,
+        "end": 26.254
+      }
+    }
+  ]
+}

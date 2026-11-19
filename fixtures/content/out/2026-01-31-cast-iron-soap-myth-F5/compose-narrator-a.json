@@ -1,0 +1,352 @@
+{
+  "series": 2,
+  "seriesTitle": "Myth or fact",
+  "sourceLabel": "Source",
+  "audioSrc": "voice/narrator-a.mp3",
+  "scenes": [
+    {
+      "kind": "video",
+      "src": "scenes/01.mp4",
+      "from": 0,
+      "durationInFrames": 150,
+      "playbackRate": 1,
+      "headline": "Soap on cast iron?",
+      "audio": {
+        "startFrom": 0,
+        "endAt": 113,
+        "delay": 18
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/02.mp4",
+      "from": 150,
+      "durationInFrames": 180,
+      "playbackRate": 1,
+      "headline": "Mild soap is fine",
+      "overlay": {
+        "type": "label",
+        "heading": "After washing:",
+        "value": "dry at once"
+      },
+      "audio": {
+        "startFrom": 113,
+        "endAt": 262,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "text",
+      "from": 330,
+      "durationInFrames": 225,
+      "playbackRate": 1,
+      "headline": "Dry it right away",
+      "overlay": {
+        "type": "quiz",
+        "options": [
+          "Soap ruins it",
+          "A little soap is fine"
+        ],
+        "countdown": 3,
+        "answer": 1
+      },
+      "audio": {
+        "startFrom": 262,
+        "endAt": 427,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "text",
+      "from": 555,
+      "durationInFrames": 120,
+      "playbackRate": 1,
+      "headline": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 11, example.com"
+      },
+      "audio": {
+        "startFrom": 427,
+        "endAt": 513,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/05.mp4",
+      "from": 675,
+      "durationInFrames": 135,
+      "playbackRate": 1,
+      "headline": "Tell me below",
+      "audio": {
+        "startFrom": 513,
+        "endAt": 639,
+        "delay": 0
+      }
+    }
+  ],
+  "words": [
+    {
+      "text": "Some",
+      "from": 20,
+      "to": 28
+    },
+    {
+      "text": "say",
+      "from": 31,
+      "to": 37
+    },
+    {
+      "text": "one",
+      "from": 39,
+      "to": 46
+    },
+    {
+      "text": "drop",
+      "from": 48,
+      "to": 57
+    },
+    {
+      "text": "of",
+      "from": 59,
+      "to": 64
+    },
+    {
+      "text": "soap",
+      "from": 66,
+      "to": 75
+    },
+    {
+      "text": "ruins",
+      "from": 77,
+      "to": 88
+    },
+    {
+      "text": "a",
+      "from": 90,
+      "to": 93
+    },
+    {
+      "text": "cast",
+      "from": 95,
+      "to": 104
+    },
+    {
+      "text": "iron",
+      "from": 106,
+      "to": 115
+    },
+    {
+      "text": "pan.",
+      "from": 117,
+      "to": 126
+    },
+    {
+      "text": "A",
+      "from": 156,
+      "to": 158
+    },
+    {
+      "text": "little",
+      "from": 160,
+      "to": 173
+    },
+    {
+      "text": "mild",
+      "from": 176,
+      "to": 184
+    },
+    {
+      "text": "dish",
+      "from": 187,
+      "to": 196
+    },
+    {
+      "text": "soap",
+      "from": 198,
+      "to": 207
+    },
+    {
+      "text": "does",
+      "from": 209,
+      "to": 218
+    },
+    {
+      "text": "not",
+      "from": 220,
+      "to": 227
+    },
+    {
+      "text": "strip",
+      "from": 229,
+      "to": 240
+    },
+    {
+      "text": "a",
+      "from": 242,
+      "to": 244
+    },
+    {
+      "text": "good",
+      "from": 246,
+      "to": 255
+    },
+    {
+      "text": "seasoning",
+      "from": 257,
+      "to": 277
+    },
+    {
+      "text": "layer.",
+      "from": 280,
+      "to": 293
+    },
+    {
+      "text": "What",
+      "from": 335,
+      "to": 344
+    },
+    {
+      "text": "matters",
+      "from": 346,
+      "to": 362
+    },
+    {
+      "text": "more",
+      "from": 364,
+      "to": 373
+    },
+    {
+      "text": "is",
+      "from": 375,
+      "to": 379
+    },
+    {
+      "text": "drying",
+      "from": 382,
+      "to": 395
+    },
+    {
+      "text": "the",
+      "from": 397,
+      "to": 404
+    },
+    {
+      "text": "pan",
+      "from": 406,
+      "to": 413
+    },
+    {
+      "text": "right",
+      "from": 415,
+      "to": 426
+    },
+    {
+      "text": "away,",
+      "from": 428,
+      "to": 439
+    },
+    {
+      "text": "so",
+      "from": 446,
+      "to": 450
+    },
+    {
+      "text": "it",
+      "from": 453,
+      "to": 457
+    },
+    {
+      "text": "does",
+      "from": 459,
+      "to": 468
+    },
+    {
+      "text": "not",
+      "from": 470,
+      "to": 477
+    },
+    {
+      "text": "rust.",
+      "from": 479,
+      "to": 490
+    },
+    {
+      "text": "This",
+      "from": 560,
+      "to": 569
+    },
+    {
+      "text": "comes",
+      "from": 571,
+      "to": 582
+    },
+    {
+      "text": "from",
+      "from": 585,
+      "to": 593
+    },
+    {
+      "text": "Example",
+      "from": 596,
+      "to": 611
+    },
+    {
+      "text": "Source",
+      "from": 613,
+      "to": 627
+    },
+    {
+      "text": "11.",
+      "from": 629,
+      "to": 636
+    },
+    {
+      "text": "Did",
+      "from": 681,
+      "to": 687
+    },
+    {
+      "text": "you",
+      "from": 690,
+      "to": 696
+    },
+    {
+      "text": "grow",
+      "from": 698,
+      "to": 707
+    },
+    {
+      "text": "up",
+      "from": 709,
+      "to": 714
+    },
+    {
+      "text": "with",
+      "from": 716,
+      "to": 725
+    },
+    {
+      "text": "the",
+      "from": 727,
+      "to": 734
+    },
+    {
+      "text": "no",
+      "from": 736,
+      "to": 740
+    },
+    {
+      "text": "soap",
+      "from": 743,
+      "to": 751
+    },
+    {
+      "text": "rule?",
+      "from": 754,
+      "to": 765
+    }
+  ],
+  "durationInFrames": 810
+}
