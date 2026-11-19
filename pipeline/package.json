@@ -20,7 +20,7 @@
     "yt-auth": "tsx src/yt-auth.ts",
     "yt-publish": "tsx src/yt-publish.ts",
     "stats": "tsx src/stats.ts",
-    "test": "node --import tsx --test test/product.test.ts test/topic.test.ts test/script.test.ts test/voice.test.ts test/compose.test.ts test/voice-fix.test.ts test/qa.test.ts test/flow.test.ts test/ig-publish.test.ts test/yt-publish.test.ts test/stats.test.ts test/examples.test.ts",
+    "test": "node --import tsx --test test/product.test.ts test/topic.test.ts test/script.test.ts test/voice.test.ts test/compose.test.ts test/voice-fix.test.ts test/qa.test.ts test/flow.test.ts test/ig-publish.test.ts test/yt-publish.test.ts test/stats.test.ts test/examples.test.ts test/outputs.test.ts",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "@shorts/schema": "workspace:*",
+    "@shorts/timeline": "workspace:*",
     "@elevenlabs/elevenlabs-js": "~2.77.0",
     "@remotion/bundler": "4.0.541",
     "@remotion/cli": "4.0.541",

@@ -8,6 +8,7 @@ import { buildComposeProps } from "./compose/props.js";
 import { FPS } from "./compose/types.js";
 import { formatCheck } from "./lib/cards.js";
 import { loadConfig } from "./lib/config.js";
+import { writeComposeJson } from "./lib/outputs.js";
 import { FORMATS, type Format } from "@shorts/schema";
 import { mp4Duration } from "./lib/mp4.js";
 import { narratorChoices, narratorIds, parseNarratorArg } from "./lib/narrators.js";
@@ -119,6 +120,7 @@ async function main(argv: string[]): Promise<number> {
       sourceLabel: loadConfig().sourceLabel,
     });
     for (const w of warnings) console.log(`  ! ${w}`);
+    writeComposeJson(dir, id, props);
 
     const composition = await selectComposition({ serveUrl, id: "FilmF5", inputProps: props });
     if (stills) {

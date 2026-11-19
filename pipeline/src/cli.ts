@@ -6,6 +6,7 @@ import { formatCheck, type CardCheck } from "./lib/cards.js";
 import { loadEnv } from "./lib/env.js";
 import { FORMATS, PRODUCT_FORMATS, PRODUCT_ID_RE, TOPIC_FORMATS, type Format } from "@shorts/schema";
 import { getNarrator, narratorChoices, narratorIds, parseNarratorArg, type NarratorId } from "./lib/narrators.js";
+import { appendVoiceLedger, today } from "./lib/outputs.js";
 import { rel } from "./lib/paths.js";
 import { checkProduct } from "./lib/products.js";
 import {
@@ -184,6 +185,7 @@ async function main(argv: string[]): Promise<number> {
     for (const id of narrators) {
       const n = getNarrator(id);
       const { timings, cached } = await runVoice(dir, script, n, tts);
+      appendVoiceLedger([{ date: today(), film: `${input.id}/${format}`, narrator: n.id, model: n.model, kind: cached ? "cache" : "full", chars: cached ? 0 : (timings.billed_chars ?? timings.text.length) }]);
       const files = voiceFiles(dir, id);
       const cost = cached ? "from cache, no cost" : `characters: ${timings.billed_chars ?? "?"}`;
       console.log(`Narrator ${n.name}: ${rel(files.audio)} · ${timings.duration_s.toFixed(1)} s · ${cost}`);

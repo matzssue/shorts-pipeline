@@ -1,7 +1,11 @@
 import assert from "node:assert/strict";
+import { mkdtempSync, readFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import path from "node:path";
 import { describe, it } from "node:test";
 import { buildComposeProps, formatDate, MIN_PLAYBACK_RATE } from "../src/compose/props.js";
-import type { Script } from "@shorts/schema";
+import { composePropsSchema, type Script } from "@shorts/schema";
+import { writeComposeJson } from "../src/lib/outputs.js";
 import type { VoiceTimings } from "../src/steps/voice.js";
 
 const base = { visual: "v", on_screen_text: "Headline", claims: [] };
@@ -77,5 +81,14 @@ describe("buildComposeProps", () => {
     const { warnings } = buildComposeProps({ ...input, clipDurations: { "scenes/01.mp4": 2 } });
     assert.ok(warnings.some((w) => w.includes("generate a longer one")));
     assert.throws(() => buildComposeProps({ ...input, clipDurations: {} }), /missing clip scenes\/01.mp4/);
+  });
+
+  it("compose-<narrator>.json holds exactly the props the video is rendered from", () => {
+    const { props } = buildComposeProps(input);
+    assert.equal(composePropsSchema.safeParse(props).success, true);
+    const dir = mkdtempSync(path.join(tmpdir(), "compose-"));
+    const file = writeComposeJson(dir, "narrator-a", props);
+    assert.equal(path.basename(file), "compose-narrator-a.json");
+    assert.deepEqual(JSON.parse(readFileSync(file, "utf8")), JSON.parse(JSON.stringify(props)));
   });
 });
