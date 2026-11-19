@@ -69,7 +69,7 @@ test("charts read the same without JavaScript: lines, labels, axes and the table
   await expect(yt.locator("path.g-med")).toHaveCount(1);
   await expect(yt.locator("path.g-top")).toHaveCount(1);
   expect(await yt.locator("path.g-ctx").count()).toBeGreaterThan(5);
-  await expect(yt.locator(".tag.hl")).toHaveText(/^\d\d Â· [\d,]+$/);
+  await expect(yt.locator(".tag.hl")).toHaveText(/^\d\d · [\d,]+$/);
   await expect(yt.locator(".tag:not(.hl)")).toHaveText(/^median [\d,]+$/);
   await expect(yt.getByRole("img")).toHaveAttribute("aria-label", /Median on day 14: [\d,]+\. Best start: video \d\d, [\d,]+ views\./);
   // the crosshair is an addition, so it is absent here
@@ -86,7 +86,7 @@ test("the table twin holds the numbers the chart labels show", async ({ page }) 
   await page.goto("patterns/");
   const yt = page.locator("figure").first();
   const median = (await yt.locator(".tag:not(.hl)").textContent())!.replace("median ", "");
-  const best = (await yt.locator(".tag.hl").textContent())!.split(" Â· ")[1];
+  const best = (await yt.locator(".tag.hl").textContent())!.split(" · ")[1];
   const twin = page.locator("details.twin").first();
   await twin.locator("summary").click();
   const day14 = twin.locator("tbody tr").last();
@@ -108,12 +108,12 @@ test("edge cases: empty range says so, one video keeps its line without a median
 test("limit meter states the overrun in words", async ({ page }) => {
   await page.goto("patterns/");
   const meters = page.locator(".limit-track");
-  await expect(meters.nth(0)).toHaveAttribute("aria-valuetext", /^[\d,]+ of [\d,]+ characters Â· \d+%$/);
+  await expect(meters.nth(0)).toHaveAttribute("aria-valuetext", /^[\d,]+ of [\d,]+ characters · \d+%$/);
   await expect(meters.nth(1)).toHaveAttribute("aria-valuetext", /over the limit$/);
 });
 
 /**
- * Reference screenshots of the pattern page, two themes Ă— two widths (desktop and phone projects).
+ * Reference screenshots of the pattern page, two themes × two widths (desktop and phone projects).
  * Fonts render differently per OS, so a baseline is kept per platform; a platform without one skips.
  */
 for (const scheme of ["light", "dark"] as const) {
