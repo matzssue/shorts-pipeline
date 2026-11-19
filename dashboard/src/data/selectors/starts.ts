@@ -28,7 +28,7 @@ export interface Starts {
  * How videos start on one platform: views in the first `days` days, aligned to the day of
  * publishing, so an old video and a new one compare fairly.
  */
-export function starts(films: Film[], platform: Platform, days = 14): Starts {
+export function starts(films: Pick<Film, "id" | "number" | "title" | "daily">[], platform: Platform, days = 14): Starts {
   const lines: StartLine[] = [];
   for (const f of films) {
     const pts = f.daily.filter((d) => d.platform === platform && d.day >= 0 && d.day <= days);

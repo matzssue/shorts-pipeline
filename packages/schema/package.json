@@ -7,6 +7,7 @@
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
+    "./formats": "./src/formats.ts",
     "./video": "./src/video.ts"
   },
   "scripts": {

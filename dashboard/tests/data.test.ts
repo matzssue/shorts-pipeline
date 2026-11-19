@@ -6,7 +6,7 @@ import { beforeAll, describe, expect, it } from "vitest";
 import { buildFilms, daysBetween, filmViews, type Film } from "@/data/join";
 import { contentDir, DataError, loadCatalog, type Catalog } from "@/data/load";
 import { filmRows } from "@/data/selectors/films";
-import { lead, median, notes, stages } from "@/data/selectors/overview";
+import { inRange, lead, median, notes, seasonRange, stages, toOverview } from "@/data/selectors/overview";
 
 const FIXTURES = path.resolve(import.meta.dirname, "../../fixtures/content");
 const tmp = () => mkdtempSync(path.join(tmpdir(), "dash-"));
@@ -141,12 +141,19 @@ describe("full mock season", () => {
   const catalog = loadCatalog(FIXTURES);
   const films = buildFilms(catalog);
   const rows = filmRows(films);
-  const l = lead(catalog, films);
+  const input = toOverview(catalog, films);
+  const season = seasonRange(input);
+  const inSeason = input.films.filter(inRange(season));
+  const l = lead(input, inSeason, season);
 
   it("has every stage the generator planned", () => {
     const count = (s: string) => films.filter((f) => f.stage === s).length;
     expect(films).toHaveLength(18);
     expect([count("published"), count("qaFailed"), count("qaPassed"), count("narrated"), count("scripted")]).toEqual([14, 1, 1, 1, 1]);
+  });
+
+  it("the whole season holds every video", () => {
+    expect(inSeason).toHaveLength(films.length);
   });
 
   it("the opening sentence agrees with the table", () => {
@@ -160,12 +167,12 @@ describe("full mock season", () => {
   });
 
   it("each step of the funnel holds at most as many videos as the one before", () => {
-    const counts = stages(catalog, films).slice(1).map((s) => s.count);
+    const counts = stages(input, inSeason).slice(1).map((s) => s.count);
     for (let i = 1; i < counts.length; i++) expect(counts[i]).toBeLessThanOrEqual(counts[i - 1]!);
   });
 
   it("measurement notes name the gaps", () => {
-    expect(notes(catalog, films).map((n) => n.kind)).toEqual(expect.arrayContaining(["analyticsDelay", "missingPlatform", "noApi"]));
+    expect(notes(input, inSeason).map((n) => n.kind)).toEqual(expect.arrayContaining(["analyticsDelay", "missingPlatform", "noApi"]));
   });
 
   it("median handles even and empty lists", () => {
