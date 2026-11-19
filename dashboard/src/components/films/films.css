@@ -81,6 +81,13 @@
     font-size: 0.8125rem;
     min-height: 28px;
   }
+  /* a 24px box per checkbox: big enough to hit, the label stays the larger target */
+  .fbar .cols input {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    flex: none;
+  }
   .fbar .clear {
     font-size: 0.8125rem;
     font-weight: 600;
