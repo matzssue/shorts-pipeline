@@ -20,13 +20,23 @@ The engine is generic. Everything specific to a channel – channel list, narrat
 - ffmpeg on `PATH` (audio checks, flow clips)
 - Optional, per step: ElevenLabs API key, a Google OAuth client (YouTube), an Instagram system-user token
 
+## Repository layout
+
+A pnpm workspace:
+
+```
+pipeline/            the CLI (this README)
+packages/            shared packages (coming: schema, timeline, mock data)
+dashboard/           Next.js dashboard on mock data (coming)
+```
+
 ## Quick start
 
 ```sh
+pnpm install           # from the repo root
+pnpm typecheck         # all packages
+pnpm test              # all packages
 cd pipeline
-pnpm install
-pnpm typecheck
-pnpm test
 pnpm validate          # checks every card in the content directory
 ```
 
