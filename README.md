@@ -30,7 +30,15 @@ packages/schema/     Zod schemas, types and video constants shared by every pack
 packages/timeline/   pure timeline functions: caption lines, timecode, scene lookup
 packages/mock/       deterministic mock content generator (seeded, no real data)
 fixtures/content/    its output: a complete example content directory, committed
-dashboard/           Next.js dashboard on mock data (coming)
+dashboard/           Stykówka: static Next.js dashboard on the mock data (in progress)
+```
+
+**Stykówka** (Polish for *contact sheet*: one sheet with every frame of a film roll) is the dashboard. Next.js 16 static export, Tailwind 4 with its default theme switched off in favour of its own tokens, self-hosted fonts, light and dark themes. Playwright with axe checks every view in both themes and at phone width.
+
+```sh
+pnpm --filter @shorts/dashboard dev     # http://localhost:3000
+pnpm --filter @shorts/dashboard build   # static site in dashboard/out
+pnpm --filter @shorts/dashboard e2e     # end-to-end tests on the built site
 ```
 
 `pnpm mock` regenerates `fixtures/content/`: 17 topic videos and a product video over a six-week season, with scripts, narration timings, timelines, QA results, publications, daily stats snapshots and the voice ledger. The scripts, timelines and QA results are produced by the pipeline's own functions; only the TTS and the platform numbers are simulated. The same seed always gives byte-identical files, and a test fails when the committed fixtures are out of date.
