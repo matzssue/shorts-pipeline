@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "../components/charts/charts.css";
 @import "../components/overview/overview.css";
+@import "../components/films/films.css";
 
 /*
  * Tailwind with its default look switched off: no palette, no radii, no shadows.

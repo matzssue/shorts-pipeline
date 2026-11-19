@@ -5,7 +5,7 @@ import type { OvFilm } from "@/data/selectors/overview";
 import { messages } from "@/lib/messages.en";
 
 /** A 9:16 thumbnail in the series palette; a video without a render is an empty frame with its number. */
-export function Thumb({ film }: { film: OvFilm }) {
+export function Thumb({ film }: { film: Pick<OvFilm, "durationS" | "number" | "series"> }) {
   if (film.durationS === undefined)
     return (
       <span className="th none" aria-hidden="true">
@@ -22,7 +22,7 @@ export function Thumb({ film }: { film: OvFilm }) {
 }
 
 /** QA result as a word in one of three weights: quiet OK, outlined warning, filled error. */
-export function QaWord({ film }: { film: OvFilm }) {
+export function QaWord({ film }: { film: { qa?: Pick<NonNullable<OvFilm["qa"]>, "passed" | "warnings" | "errors"> } }) {
   const s = messages.status;
   if (!film.qa) return <span className="mute">–</span>;
   if (film.qa.errors || !film.qa.passed) return <span className="lv lv-err">{s.error}</span>;
