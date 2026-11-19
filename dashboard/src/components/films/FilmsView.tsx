@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { StateLink } from "@/lib/StateLink";
 import type { ReactNode } from "react";
 import { filmNo, fmtDay, fmtInt, fmtPct, fmtSec } from "@/charts/format";
 import { Meter } from "@/components/charts/Meter";
@@ -77,14 +78,14 @@ function SortHead({ label, sort, query, num, onChange }: { label: string; sort?:
   );
 }
 
-function Empty({ pathname, query }: { pathname?: string; query: FilmQuery }) {
+function Empty({ pathname, query, onChange }: { pathname?: string; query: FilmQuery; onChange?: (q: FilmQuery) => void }) {
   return (
     <p className="mt-6 text-ink-2" data-testid="films-empty">
       {t.empty}{" "}
       {pathname ? (
-        <Link href={`${pathname}${toSearch({ ...DEFAULT_QUERY, view: query.view, cols: query.cols })}`} scroll={false}>
+        <StateLink href={`${pathname}${toSearch({ ...DEFAULT_QUERY, view: query.view, cols: query.cols })}`} onGo={() => onChange?.({ ...DEFAULT_QUERY, view: query.view, cols: query.cols })}>
           {t.clear}
-        </Link>
+        </StateLink>
       ) : null}
     </p>
   );
@@ -96,6 +97,7 @@ export function FilmsView({
   query,
   onChange,
   pathname,
+  ready = true,
 }: {
   rows: FilmRow[];
   /** First day of the season, for the contact sheet's week strips. */
@@ -103,6 +105,8 @@ export function FilmsView({
   query: FilmQuery;
   onChange?: (q: FilmQuery) => void;
   pathname?: string;
+  /** False in the static HTML: the filter bar is drawn but inert, and hidden when JavaScript is off. */
+  ready?: boolean;
 }) {
   const shown = applyQuery(rows, query);
   const cols = COLUMNS.filter((c) => query.cols.includes(c));
@@ -117,10 +121,14 @@ export function FilmsView({
             {t.shown(shown.length, rows.length)}
           </p>
         </div>
-        {onChange && pathname !== undefined ? <FilterBar rows={rows} query={query} onChange={onChange} pathname={pathname} /> : null}
+        {onChange && pathname !== undefined ? (
+          <div className={ready ? undefined : "js-only"}>
+            <FilterBar rows={rows} query={query} onChange={onChange} pathname={pathname} />
+          </div>
+        ) : null}
 
         {!shown.length ? (
-          <Empty pathname={pathname} query={query} />
+          <Empty pathname={pathname} query={query} onChange={ready ? onChange : undefined} />
         ) : query.view === "sheet" ? (
           <div data-testid="sheet">
             {weeks(shown, start).map((w) => (
@@ -152,11 +160,11 @@ export function FilmsView({
                   <th scope="col">
                     <span className="sr-only">Frame</span>
                   </th>
-                  <SortHead label={t.cols.video} sort="title" query={query} onChange={onChange} />
+                  <SortHead label={t.cols.video} sort="title" query={query} onChange={ready ? onChange : undefined} />
                   {cols.map((c) => (
-                    <SortHead key={c} label={t.cols[c]} sort={COL[c].sort} num={COL[c].num} query={query} onChange={onChange} />
+                    <SortHead key={c} label={t.cols[c]} sort={COL[c].sort} num={COL[c].num} query={query} onChange={ready ? onChange : undefined} />
                   ))}
-                  <SortHead label={t.cols.views} sort="views" num query={query} onChange={onChange} />
+                  <SortHead label={t.cols.views} sort="views" num query={query} onChange={ready ? onChange : undefined} />
                 </tr>
               </thead>
               <tbody>

@@ -97,7 +97,20 @@ const platformCell = (f: OvFilm, p: "youtube" | "instagram") => {
   return dash;
 };
 
-export function OverviewView({ input, range, href, onChange }: { input: OverviewInput; range: Range; href?: (r: Range) => string; onChange?: (r: Range) => void }) {
+export function OverviewView({
+  input,
+  range,
+  href,
+  onChange,
+  ready = true,
+}: {
+  input: OverviewInput;
+  range: Range;
+  href?: (r: Range) => string;
+  onChange?: (r: Range) => void;
+  /** False in the static HTML: the range controls are drawn but inert, and hidden when JavaScript is off. */
+  ready?: boolean;
+}) {
   const films = input.films.filter(inRange(range));
   const l = lead(input, films, range);
   const st = stages(input, films);
@@ -116,7 +129,7 @@ export function OverviewView({ input, range, href, onChange }: { input: Overview
 
   return (
     <>
-      <RangeRuler input={input} range={range} films={films} href={href} onChange={onChange} />
+      <RangeRuler input={input} range={range} films={films} href={href} onChange={onChange} ready={ready} />
 
       <div className="page">
         <section className="lead-sec" aria-label="Summary">
