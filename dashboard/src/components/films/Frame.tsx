@@ -4,7 +4,7 @@ import { paletteFor } from "@shorts/schema/video";
 import { filmNo } from "@/charts/format";
 
 // The videos' own typeface, used only inside a frame: the frame is a preview of the video, not interface.
-const grotesk = Space_Grotesk({ subsets: ["latin", "latin-ext"], weight: ["700"], display: "swap" });
+export const grotesk = Space_Grotesk({ subsets: ["latin", "latin-ext"], weight: ["700"], display: "swap" });
 
 /**
  * A video as a 9:16 frame in its series palette: number, first text on screen, a caption bar.

@@ -44,3 +44,23 @@ export function timecode(frame: number, fps: number): string {
 export function sceneAt(scenes: Pick<ComposeScene, "from" | "durationInFrames">[], frame: number): number {
   return scenes.findIndex((s) => frame >= s.from && frame < s.from + s.durationInFrames);
 }
+
+export interface CaptionState {
+  chunk: CaptionChunk;
+  /** Index of the chunk in the list. */
+  index: number;
+  /** Per word of the chunk: is it being spoken now (it sits on the accent box)? */
+  active: boolean[];
+}
+
+/**
+ * The caption line on screen at `frame` and which of its words is spoken: the rule the video uses
+ * (a line stays until the next one starts, or half a second after its last word; it is gone 0.6 s
+ * after that word). Shared by the render and the dashboard preview, so both show the same thing.
+ */
+export function captionAt(chunks: CaptionChunk[], frame: number, fps: number): CaptionState | undefined {
+  const index = chunks.findIndex((c, i) => frame >= c.from && frame < (chunks[i + 1]?.from ?? c.to + fps * 0.5));
+  const chunk = chunks[index];
+  if (!chunk || frame > chunk.to + fps * 0.6) return undefined;
+  return { chunk, index, active: chunk.words.map((w) => frame >= w.from && frame < w.to + 2) };
+}

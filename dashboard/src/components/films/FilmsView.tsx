@@ -130,10 +130,10 @@ export function FilmsView({
                   {w.rows.map((r) => (
                     <li key={r.id}>
                       <Frame number={r.number} series={r.series} firstText={r.firstText} rendered={r.durationS !== undefined} />
-                      <span className="f-title">
+                      <Link className="f-title" href={`/films/${r.id}/`}>
                         <span className="sr-only">{filmNo(r.number)} </span>
                         {r.title}
-                      </span>
+                      </Link>
                       <span className="m">
                         <span>{r.stage === "published" ? fmtInt(r.views) : releaseWord(r)}</span>
                         <QaWord film={r} />
@@ -166,7 +166,9 @@ export function FilmsView({
                       <Thumb film={r} />
                     </td>
                     <td className="video">
-                      <span className="f-title">{r.title}</span>
+                      <Link className="f-title" href={`/films/${r.id}/`}>
+                        {r.title}
+                      </Link>
                       <span className="f-id">{r.folder}</span>
                     </td>
                     {cols.map((c) => (
@@ -183,7 +185,9 @@ export function FilmsView({
               {shown.map((r) => (
                 <li key={r.id}>
                   <Thumb film={r} />
-                  <span className="f-title">{r.title}</span>
+                  <Link className="f-title" href={`/films/${r.id}/`}>
+                        {r.title}
+                      </Link>
                   <QaWord film={r} />
                   <span className="m">
                     {[
