@@ -28,9 +28,12 @@ A pnpm workspace:
 pipeline/            the CLI (this README)
 packages/schema/     Zod schemas, types and video constants shared by every package
 packages/timeline/   pure timeline functions: caption lines, timecode, scene lookup
-packages/            more shared packages (coming: mock data)
+packages/mock/       deterministic mock content generator (seeded, no real data)
+fixtures/content/    its output: a complete example content directory, committed
 dashboard/           Next.js dashboard on mock data (coming)
 ```
+
+`pnpm mock` regenerates `fixtures/content/`: 17 topic videos and a product video over a six-week season, with scripts, narration timings, timelines, QA results, publications, daily stats snapshots and the voice ledger. The scripts, timelines and QA results are produced by the pipeline's own functions; only the TTS and the platform numbers are simulated. The same seed always gives byte-identical files, and a test fails when the committed fixtures are out of date.
 
 ## Quick start
 
@@ -66,8 +69,8 @@ Besides videos and Markdown reports, the pipeline writes machine-readable files 
 
 | File | Written by | Contents |
 | --- | --- | --- |
-| `out/<id>/<format>/compose-<narrator>.json` | `pnpm compose` | the timeline the video is rendered from: scenes and caption words in frames |
-| `out/<id>/<format>/qa-<narrator>.json` | `pnpm qa` | QA checks (`ok` / `warning` / `error`), manual checklist, pass flag |
+| `out/<date>-<id>-<format>/compose-<narrator>.json` | `pnpm compose` | the timeline the video is rendered from: scenes and caption words in frames |
+| `out/<date>-<id>-<format>/qa-<narrator>.json` | `pnpm qa` | QA checks (`ok` / `warning` / `error`), manual checklist, pass flag |
 | `data/voice-ledger.csv` | `pnpm make --narrator`, `pnpm voice-fix --takes` | characters per narration request: `date, film, narrator, model, kind (full/take/cache), scene, chars` |
 | `data/stats/<date>.json` | `pnpm stats --save` | account and per-video stats snapshot |
 

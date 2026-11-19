@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "level": "ok",
+      "text": "length 29.0 s (format F5: 20–45 s)"
+    },
+    {
+      "level": "ok",
+      "text": "frame 1080×1920"
+    },
+    {
+      "level": "ok",
+      "text": "narration matches the script"
+    },
+    {
+      "level": "ok",
+      "text": "captions: 55 narration words"
+    },
+    {
+      "level": "ok",
+      "text": "no forbidden words"
+    },
+    {
+      "level": "ok",
+      "text": "no typical AI phrases"
+    },
+    {
+      "level": "ok",
+      "text": "2 claims, each with a source in the topic card"
+    },
+    {
+      "level": "ok",
+      "text": "first frame: \"Junk drawer fix for free\""
+    },
+    {
+      "level": "ok",
+      "text": "motion: video for 62% of the time"
+    },
+    {
+      "level": "ok",
+      "text": "source shown on screen"
+    },
+    {
+      "level": "ok",
+      "text": "last scene asks the viewer a question"
+    },
+    {
+      "level": "ok",
+      "text": "description discloses the human and AI parts"
+    },
+    {
+      "level": "ok",
+      "text": "description names a source"
+    }
+  ],
+  "manual": [
+    "Listen: the narration is clear the first time, facts and on-screen text are pronounced clearly.",
+    "Captions are in sync with the voice; readable, nothing under the platform buttons.",
+    "Clips: no faces, no readable text or logos, no AI artefacts (floating objects, odd hands).",
+    "Overlays: the {yesterday} date matches the publish day (compose --publish).",
+    "No sped-up effects and no before/after without proof.",
+    "No AI doctors or experts; no health, finance or legal advice.",
+    "No face or voice of a real person without consent.",
+    "Music (if any) has a commercial licence.",
+    "AI label when publishing: TikTok – AI-generated content; YouTube Studio – altered or synthetic content = Yes.",
+    "This is not a re-upload of the same video (also after small changes).",
+    "Topic card – we do not say: Numbers that are not in the facts."
+  ],
+  "passed": true
+}

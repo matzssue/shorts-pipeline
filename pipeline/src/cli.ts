@@ -185,7 +185,7 @@ async function main(argv: string[]): Promise<number> {
     for (const id of narrators) {
       const n = getNarrator(id);
       const { timings, cached } = await runVoice(dir, script, n, tts);
-      appendVoiceLedger([{ date: today(), film: `${input.id}/${format}`, narrator: n.id, model: n.model, kind: cached ? "cache" : "full", chars: cached ? 0 : (timings.billed_chars ?? timings.text.length) }]);
+      appendVoiceLedger([{ date: today(), film: path.basename(dir), narrator: n.id, model: n.model, kind: cached ? "cache" : "full", chars: cached ? 0 : (timings.billed_chars ?? timings.text.length) }]);
       const files = voiceFiles(dir, id);
       const cost = cached ? "from cache, no cost" : `characters: ${timings.billed_chars ?? "?"}`;
       console.log(`Narrator ${n.name}: ${rel(files.audio)} · ${timings.duration_s.toFixed(1)} s · ${cost}`);

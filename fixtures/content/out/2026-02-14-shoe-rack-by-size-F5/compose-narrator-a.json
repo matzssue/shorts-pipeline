@@ -1,0 +1,314 @@
+{
+  "series": 1,
+  "seriesTitle": "Quick tip",
+  "sourceLabel": "Source",
+  "audioSrc": "voice/narrator-a.mp3",
+  "scenes": [
+    {
+      "kind": "video",
+      "src": "scenes/01.mp4",
+      "from": 0,
+      "durationInFrames": 165,
+      "playbackRate": 1,
+      "headline": "Daily shoes, top shelf",
+      "audio": {
+        "startFrom": 0,
+        "endAt": 132,
+        "delay": 18
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/02.mp4",
+      "from": 165,
+      "durationInFrames": 180,
+      "playbackRate": 1,
+      "headline": "Hand height wins",
+      "overlay": {
+        "type": "label",
+        "heading": "Top:",
+        "value": "daily pairs"
+      },
+      "audio": {
+        "startFrom": 132,
+        "endAt": 279,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "image",
+      "src": "scenes/03.png",
+      "from": 345,
+      "durationInFrames": 135,
+      "playbackRate": 1,
+      "headline": "Rare shoes go low",
+      "audio": {
+        "startFrom": 279,
+        "endAt": 391,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "text",
+      "from": 480,
+      "durationInFrames": 120,
+      "playbackRate": 1,
+      "headline": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 15, example.com"
+      },
+      "audio": {
+        "startFrom": 391,
+        "endAt": 481,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/05.mp4",
+      "from": 600,
+      "durationInFrames": 135,
+      "playbackRate": 1,
+      "headline": "Tell me below",
+      "audio": {
+        "startFrom": 481,
+        "endAt": 600,
+        "delay": 0
+      }
+    }
+  ],
+  "words": [
+    {
+      "text": "The",
+      "from": 20,
+      "to": 26
+    },
+    {
+      "text": "shoes",
+      "from": 29,
+      "to": 40
+    },
+    {
+      "text": "you",
+      "from": 42,
+      "to": 49
+    },
+    {
+      "text": "wear",
+      "from": 51,
+      "to": 60
+    },
+    {
+      "text": "daily",
+      "from": 62,
+      "to": 74
+    },
+    {
+      "text": "should",
+      "from": 76,
+      "to": 89
+    },
+    {
+      "text": "not",
+      "from": 92,
+      "to": 98
+    },
+    {
+      "text": "live",
+      "from": 101,
+      "to": 110
+    },
+    {
+      "text": "at",
+      "from": 112,
+      "to": 116
+    },
+    {
+      "text": "the",
+      "from": 119,
+      "to": 125
+    },
+    {
+      "text": "bottom.",
+      "from": 128,
+      "to": 144
+    },
+    {
+      "text": "Things",
+      "from": 172,
+      "to": 185
+    },
+    {
+      "text": "at",
+      "from": 187,
+      "to": 192
+    },
+    {
+      "text": "hand",
+      "from": 194,
+      "to": 203
+    },
+    {
+      "text": "height",
+      "from": 205,
+      "to": 219
+    },
+    {
+      "text": "are",
+      "from": 221,
+      "to": 228
+    },
+    {
+      "text": "the",
+      "from": 230,
+      "to": 237
+    },
+    {
+      "text": "quickest",
+      "from": 239,
+      "to": 257
+    },
+    {
+      "text": "to",
+      "from": 260,
+      "to": 264
+    },
+    {
+      "text": "grab",
+      "from": 266,
+      "to": 275
+    },
+    {
+      "text": "and",
+      "from": 278,
+      "to": 284
+    },
+    {
+      "text": "put",
+      "from": 287,
+      "to": 293
+    },
+    {
+      "text": "back.",
+      "from": 296,
+      "to": 307
+    },
+    {
+      "text": "Boots",
+      "from": 350,
+      "to": 361
+    },
+    {
+      "text": "you",
+      "from": 364,
+      "to": 370
+    },
+    {
+      "text": "wear",
+      "from": 373,
+      "to": 382
+    },
+    {
+      "text": "twice",
+      "from": 384,
+      "to": 395
+    },
+    {
+      "text": "a",
+      "from": 397,
+      "to": 400
+    },
+    {
+      "text": "year",
+      "from": 402,
+      "to": 411
+    },
+    {
+      "text": "can",
+      "from": 413,
+      "to": 420
+    },
+    {
+      "text": "go",
+      "from": 422,
+      "to": 427
+    },
+    {
+      "text": "down",
+      "from": 429,
+      "to": 438
+    },
+    {
+      "text": "low.",
+      "from": 440,
+      "to": 449
+    },
+    {
+      "text": "This",
+      "from": 487,
+      "to": 496
+    },
+    {
+      "text": "comes",
+      "from": 498,
+      "to": 510
+    },
+    {
+      "text": "from",
+      "from": 512,
+      "to": 521
+    },
+    {
+      "text": "Example",
+      "from": 523,
+      "to": 539
+    },
+    {
+      "text": "Source",
+      "from": 541,
+      "to": 555
+    },
+    {
+      "text": "15.",
+      "from": 557,
+      "to": 564
+    },
+    {
+      "text": "How",
+      "from": 606,
+      "to": 613
+    },
+    {
+      "text": "many",
+      "from": 615,
+      "to": 624
+    },
+    {
+      "text": "pairs",
+      "from": 627,
+      "to": 638
+    },
+    {
+      "text": "do",
+      "from": 640,
+      "to": 645
+    },
+    {
+      "text": "you",
+      "from": 647,
+      "to": 654
+    },
+    {
+      "text": "really",
+      "from": 656,
+      "to": 670
+    },
+    {
+      "text": "wear?",
+      "from": 672,
+      "to": 683
+    }
+  ],
+  "durationInFrames": 735
+}

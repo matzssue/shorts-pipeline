@@ -1,0 +1,93 @@
+{
+  "input": {
+    "kind": "topic",
+    "id": "spare-buttons-one-jar"
+  },
+  "format": "F5",
+  "series": 2,
+  "angle": "Why the spare buttons that come with a new coat are worth keeping in one small labelled jar on the hallway shelf",
+  "hooks": [
+    "That tiny bag of spare buttons has a better home."
+  ],
+  "scenes": [
+    {
+      "kind": "video",
+      "duration_s": 5,
+      "visual": "Close-up that shows: Spare buttons, one jar",
+      "prompt": "Vertical close-up, soft daylight, no people: spare buttons, one jar",
+      "voiceover": "That tiny bag of spare buttons has a better home.",
+      "on_screen_text": "Spare buttons, one jar",
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 7.5,
+      "visual": "Exact match",
+      "prompt": "Vertical shot, hands only, no faces: exact match",
+      "voiceover": "The spare buttons from a new coat are an exact match, which is hard to find later.",
+      "on_screen_text": "Exact match",
+      "overlay": {
+        "type": "label",
+        "heading": "Label:",
+        "value": "spare buttons"
+      },
+      "claims": [
+        {
+          "text": "Spare buttons sewn into a new coat match it exactly.",
+          "source": "buttons_match"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 9,
+      "visual": "Quiz card",
+      "prompt": "",
+      "voiceover": "Drop every spare button into one small jar. When one falls off, you know where to look.",
+      "on_screen_text": "One jar for all",
+      "overlay": {
+        "type": "quiz",
+        "options": [
+          "Throw them away",
+          "Keep them in one jar"
+        ],
+        "countdown": 3,
+        "answer": 1
+      },
+      "claims": [
+        {
+          "text": "Keeping all spare buttons in one jar makes them easy to find.",
+          "source": "one_jar"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 3.5,
+      "visual": "Source card",
+      "prompt": "",
+      "voiceover": "This comes from Example Source 8.",
+      "on_screen_text": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 8, example.com"
+      },
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 5.5,
+      "visual": "Wide shot of a tidy shelf",
+      "prompt": "Vertical wide shot of a tidy shelf, slow push-in, no people",
+      "voiceover": "Have you ever needed one of those spare buttons?",
+      "on_screen_text": "Tell me below",
+      "claims": []
+    }
+  ],
+  "caption": "Why the spare buttons that come with a new coat are worth keeping in one small labelled jar on the hallway shelf. Source: Example Source 8. Script and facts checked by a person; visuals and voice made with AI.",
+  "hashtags": [
+    "#hometips",
+    "#homeorganisation"
+  ],
+  "notes": ""
+}

@@ -5,6 +5,12 @@
   "description": "CLI pipeline that turns fact-checked topic cards into vertical short videos: script validation, TTS narration with word timings, Remotion render, QA and publishing to YouTube Shorts and Instagram Reels.",
   "license": "MIT",
   "type": "module",
+  "exports": {
+    "./compose-props": "./src/compose/props.ts",
+    "./narrators": "./src/lib/narrators.ts",
+    "./qa": "./src/steps/qa.ts",
+    "./voice": "./src/steps/voice.ts"
+  },
   "engines": {
     "node": ">=20.12"
   },

@@ -1,0 +1,329 @@
+{
+  "series": 1,
+  "seriesTitle": "Quick tip",
+  "sourceLabel": "Source",
+  "audioSrc": "voice/narrator-b.mp3",
+  "scenes": [
+    {
+      "kind": "video",
+      "src": "scenes/01.mp4",
+      "from": 0,
+      "durationInFrames": 120,
+      "playbackRate": 1,
+      "headline": "One hook, no hunt",
+      "audio": {
+        "startFrom": 0,
+        "endAt": 95,
+        "delay": 18
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/02.mp4",
+      "from": 120,
+      "durationInFrames": 201,
+      "playbackRate": 1,
+      "headline": "One fixed place",
+      "overlay": {
+        "type": "label",
+        "heading": "Place:",
+        "value": "by the door"
+      },
+      "audio": {
+        "startFrom": 95,
+        "endAt": 297,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "image",
+      "src": "scenes/03.png",
+      "from": 321,
+      "durationInFrames": 225,
+      "playbackRate": 1,
+      "headline": "Right by the door",
+      "audio": {
+        "startFrom": 297,
+        "endAt": 512,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "text",
+      "from": 546,
+      "durationInFrames": 120,
+      "playbackRate": 1,
+      "headline": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 10, example.com"
+      },
+      "audio": {
+        "startFrom": 512,
+        "endAt": 612,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/05.mp4",
+      "from": 666,
+      "durationInFrames": 135,
+      "playbackRate": 1,
+      "headline": "Tell me below",
+      "audio": {
+        "startFrom": 612,
+        "endAt": 741,
+        "delay": 0
+      }
+    }
+  ],
+  "words": [
+    {
+      "text": "The",
+      "from": 20,
+      "to": 27
+    },
+    {
+      "text": "key",
+      "from": 30,
+      "to": 37
+    },
+    {
+      "text": "hunt",
+      "from": 40,
+      "to": 50
+    },
+    {
+      "text": "starts",
+      "from": 53,
+      "to": 68
+    },
+    {
+      "text": "the",
+      "from": 71,
+      "to": 78
+    },
+    {
+      "text": "day",
+      "from": 81,
+      "to": 89
+    },
+    {
+      "text": "badly.",
+      "from": 91,
+      "to": 107
+    },
+    {
+      "text": "Things",
+      "from": 127,
+      "to": 142
+    },
+    {
+      "text": "with",
+      "from": 145,
+      "to": 155
+    },
+    {
+      "text": "one",
+      "from": 157,
+      "to": 165
+    },
+    {
+      "text": "fixed",
+      "from": 168,
+      "to": 181
+    },
+    {
+      "text": "place",
+      "from": 183,
+      "to": 196
+    },
+    {
+      "text": "are",
+      "from": 199,
+      "to": 206
+    },
+    {
+      "text": "faster",
+      "from": 209,
+      "to": 224
+    },
+    {
+      "text": "to",
+      "from": 227,
+      "to": 232
+    },
+    {
+      "text": "find.",
+      "from": 234,
+      "to": 247
+    },
+    {
+      "text": "Keys",
+      "from": 259,
+      "to": 269
+    },
+    {
+      "text": "are",
+      "from": 272,
+      "to": 279
+    },
+    {
+      "text": "no",
+      "from": 282,
+      "to": 287
+    },
+    {
+      "text": "exception.",
+      "from": 290,
+      "to": 315
+    },
+    {
+      "text": "Put",
+      "from": 327,
+      "to": 334
+    },
+    {
+      "text": "the",
+      "from": 337,
+      "to": 345
+    },
+    {
+      "text": "hook",
+      "from": 347,
+      "to": 358
+    },
+    {
+      "text": "right",
+      "from": 360,
+      "to": 373
+    },
+    {
+      "text": "by",
+      "from": 376,
+      "to": 381
+    },
+    {
+      "text": "the",
+      "from": 383,
+      "to": 391
+    },
+    {
+      "text": "door,",
+      "from": 393,
+      "to": 406
+    },
+    {
+      "text": "where",
+      "from": 413,
+      "to": 425
+    },
+    {
+      "text": "your",
+      "from": 428,
+      "to": 438
+    },
+    {
+      "text": "hand",
+      "from": 441,
+      "to": 451
+    },
+    {
+      "text": "already",
+      "from": 454,
+      "to": 472
+    },
+    {
+      "text": "is",
+      "from": 474,
+      "to": 479
+    },
+    {
+      "text": "when",
+      "from": 482,
+      "to": 492
+    },
+    {
+      "text": "you",
+      "from": 495,
+      "to": 502
+    },
+    {
+      "text": "come",
+      "from": 505,
+      "to": 515
+    },
+    {
+      "text": "home.",
+      "from": 518,
+      "to": 531
+    },
+    {
+      "text": "This",
+      "from": 552,
+      "to": 563
+    },
+    {
+      "text": "comes",
+      "from": 565,
+      "to": 578
+    },
+    {
+      "text": "from",
+      "from": 581,
+      "to": 591
+    },
+    {
+      "text": "Example",
+      "from": 593,
+      "to": 611
+    },
+    {
+      "text": "Source",
+      "from": 614,
+      "to": 629
+    },
+    {
+      "text": "10.",
+      "from": 632,
+      "to": 640
+    },
+    {
+      "text": "Where",
+      "from": 672,
+      "to": 685
+    },
+    {
+      "text": "did",
+      "from": 687,
+      "to": 695
+    },
+    {
+      "text": "you",
+      "from": 698,
+      "to": 705
+    },
+    {
+      "text": "last",
+      "from": 708,
+      "to": 718
+    },
+    {
+      "text": "lose",
+      "from": 721,
+      "to": 731
+    },
+    {
+      "text": "your",
+      "from": 734,
+      "to": 744
+    },
+    {
+      "text": "keys?",
+      "from": 746,
+      "to": 759
+    }
+  ],
+  "durationInFrames": 801
+}

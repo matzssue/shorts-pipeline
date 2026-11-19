@@ -1,0 +1,322 @@
+{
+  "series": 2,
+  "seriesTitle": "Myth or fact",
+  "sourceLabel": "Source",
+  "audioSrc": "voice/narrator-a.mp3",
+  "scenes": [
+    {
+      "kind": "video",
+      "src": "scenes/01.mp4",
+      "from": 0,
+      "durationInFrames": 120,
+      "playbackRate": 1,
+      "headline": "Honey lasts forever?",
+      "audio": {
+        "startFrom": 0,
+        "endAt": 93,
+        "delay": 18
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/02.mp4",
+      "from": 120,
+      "durationInFrames": 180,
+      "playbackRate": 1,
+      "headline": "Very little water",
+      "overlay": {
+        "type": "label",
+        "heading": "Store:",
+        "value": "closed jar"
+      },
+      "audio": {
+        "startFrom": 93,
+        "endAt": 236,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "text",
+      "from": 300,
+      "durationInFrames": 210,
+      "playbackRate": 1,
+      "headline": "Keep the lid on",
+      "overlay": {
+        "type": "quiz",
+        "options": [
+          "Lasts forever, no matter what",
+          "Lasts long if kept closed"
+        ],
+        "countdown": 3,
+        "answer": 1
+      },
+      "audio": {
+        "startFrom": 236,
+        "endAt": 376,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "text",
+      "from": 510,
+      "durationInFrames": 105,
+      "playbackRate": 1,
+      "headline": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 5, example.com"
+      },
+      "audio": {
+        "startFrom": 376,
+        "endAt": 458,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/05.mp4",
+      "from": 615,
+      "durationInFrames": 165,
+      "playbackRate": 1,
+      "headline": "Tell me below",
+      "audio": {
+        "startFrom": 458,
+        "endAt": 602,
+        "delay": 0
+      }
+    }
+  ],
+  "words": [
+    {
+      "text": "You",
+      "from": 20,
+      "to": 26
+    },
+    {
+      "text": "have",
+      "from": 28,
+      "to": 36
+    },
+    {
+      "text": "heard",
+      "from": 39,
+      "to": 49
+    },
+    {
+      "text": "that",
+      "from": 51,
+      "to": 60
+    },
+    {
+      "text": "honey",
+      "from": 62,
+      "to": 73
+    },
+    {
+      "text": "lasts",
+      "from": 75,
+      "to": 85
+    },
+    {
+      "text": "forever.",
+      "from": 87,
+      "to": 104
+    },
+    {
+      "text": "Honey",
+      "from": 127,
+      "to": 137
+    },
+    {
+      "text": "holds",
+      "from": 140,
+      "to": 150
+    },
+    {
+      "text": "very",
+      "from": 152,
+      "to": 161
+    },
+    {
+      "text": "little",
+      "from": 163,
+      "to": 176
+    },
+    {
+      "text": "water,",
+      "from": 178,
+      "to": 190
+    },
+    {
+      "text": "and",
+      "from": 196,
+      "to": 202
+    },
+    {
+      "text": "that",
+      "from": 204,
+      "to": 213
+    },
+    {
+      "text": "makes",
+      "from": 215,
+      "to": 225
+    },
+    {
+      "text": "spoiling",
+      "from": 227,
+      "to": 244
+    },
+    {
+      "text": "slow.",
+      "from": 247,
+      "to": 257
+    },
+    {
+      "text": "But",
+      "from": 306,
+      "to": 312
+    },
+    {
+      "text": "leave",
+      "from": 314,
+      "to": 325
+    },
+    {
+      "text": "the",
+      "from": 327,
+      "to": 333
+    },
+    {
+      "text": "jar",
+      "from": 336,
+      "to": 342
+    },
+    {
+      "text": "open",
+      "from": 344,
+      "to": 352
+    },
+    {
+      "text": "and",
+      "from": 355,
+      "to": 361
+    },
+    {
+      "text": "it",
+      "from": 363,
+      "to": 367
+    },
+    {
+      "text": "pulls",
+      "from": 369,
+      "to": 380
+    },
+    {
+      "text": "in",
+      "from": 382,
+      "to": 386
+    },
+    {
+      "text": "moisture",
+      "from": 389,
+      "to": 405
+    },
+    {
+      "text": "from",
+      "from": 408,
+      "to": 416
+    },
+    {
+      "text": "the",
+      "from": 418,
+      "to": 425
+    },
+    {
+      "text": "air.",
+      "from": 427,
+      "to": 435
+    },
+    {
+      "text": "This",
+      "from": 515,
+      "to": 524
+    },
+    {
+      "text": "comes",
+      "from": 526,
+      "to": 536
+    },
+    {
+      "text": "from",
+      "from": 539,
+      "to": 547
+    },
+    {
+      "text": "Example",
+      "from": 549,
+      "to": 564
+    },
+    {
+      "text": "Source",
+      "from": 566,
+      "to": 579
+    },
+    {
+      "text": "5.",
+      "from": 581,
+      "to": 585
+    },
+    {
+      "text": "Do",
+      "from": 621,
+      "to": 625
+    },
+    {
+      "text": "you",
+      "from": 627,
+      "to": 634
+    },
+    {
+      "text": "keep",
+      "from": 636,
+      "to": 644
+    },
+    {
+      "text": "honey",
+      "from": 646,
+      "to": 657
+    },
+    {
+      "text": "in",
+      "from": 659,
+      "to": 663
+    },
+    {
+      "text": "the",
+      "from": 666,
+      "to": 672
+    },
+    {
+      "text": "cupboard",
+      "from": 674,
+      "to": 691
+    },
+    {
+      "text": "or",
+      "from": 693,
+      "to": 697
+    },
+    {
+      "text": "the",
+      "from": 699,
+      "to": 706
+    },
+    {
+      "text": "fridge?",
+      "from": 708,
+      "to": 723
+    }
+  ],
+  "durationInFrames": 780
+}

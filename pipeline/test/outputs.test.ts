@@ -25,7 +25,7 @@ describe("writeQaJson", () => {
 });
 
 describe("voice ledger", () => {
-  const full = { date: "2026-11-12", film: "example-cable-labels/F5", narrator: "narrator-a", model: "eleven_v3", kind: "full" as const, chars: 412 };
+  const full = { date: "2026-11-12", film: "2026-11-12-example-cable-labels-F5", narrator: "narrator-a", model: "eleven_v3", kind: "full" as const, chars: 412 };
   const take = { ...full, kind: "take" as const, scene: 3, chars: 120 };
   const cache = { ...full, kind: "cache" as const, chars: 0 };
 
@@ -36,7 +36,7 @@ describe("voice ledger", () => {
     const lines = readFileSync(file, "utf8").trim().split("\n");
     assert.equal(lines[0], "date,film,narrator,model,kind,scene,chars");
     assert.equal(lines.length, 4);
-    assert.equal(lines[1], "2026-11-12,example-cable-labels/F5,narrator-a,eleven_v3,full,,412");
+    assert.equal(lines[1], "2026-11-12,2026-11-12-example-cable-labels-F5,narrator-a,eleven_v3,full,,412");
     assert.deepEqual(readVoiceLedger(file), [full, take, cache]);
   });
 

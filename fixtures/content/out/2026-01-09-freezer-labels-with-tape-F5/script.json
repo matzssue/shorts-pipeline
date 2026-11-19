@@ -1,0 +1,84 @@
+{
+  "input": {
+    "kind": "topic",
+    "id": "freezer-labels-with-tape"
+  },
+  "format": "F5",
+  "series": 1,
+  "angle": "Label freezer bags before you fill them",
+  "hooks": [
+    "Writing on a full freezer bag never works."
+  ],
+  "scenes": [
+    {
+      "kind": "video",
+      "duration_s": 4.5,
+      "visual": "Close-up that shows: Label the bag first",
+      "prompt": "Vertical close-up, soft daylight, no people: label the bag first",
+      "voiceover": "Writing on a full freezer bag never works.",
+      "on_screen_text": "Label the bag first",
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 6.5,
+      "visual": "Flat bag, clear writing",
+      "prompt": "Vertical shot, hands only, no faces: flat bag, clear writing",
+      "voiceover": "Write on the bag while it is flat and dry. The pen actually works.",
+      "on_screen_text": "Flat bag, clear writing",
+      "overlay": {
+        "type": "label",
+        "heading": "Write:",
+        "value": "name + date"
+      },
+      "claims": [
+        {
+          "text": "A flat, dry bag is easier to write on than a full one.",
+          "source": "flat_bag_writes"
+        }
+      ]
+    },
+    {
+      "kind": "image",
+      "duration_s": 6.5,
+      "visual": "Name plus date",
+      "prompt": "Still life, top view, no text: name plus date",
+      "voiceover": "Put the name and the date. Next month you will know what to eat first.",
+      "on_screen_text": "Name plus date",
+      "claims": [
+        {
+          "text": "A label with the contents and the date makes the oldest food easy to find.",
+          "source": "date_and_name"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 3.5,
+      "visual": "Source card",
+      "prompt": "",
+      "voiceover": "This comes from Example Source 3.",
+      "on_screen_text": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 3, example.com"
+      },
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 5,
+      "visual": "Wide shot of a tidy shelf",
+      "prompt": "Vertical wide shot of a tidy shelf, slow push-in, no people",
+      "voiceover": "What is the oldest thing in your freezer?",
+      "on_screen_text": "Tell me below",
+      "claims": []
+    }
+  ],
+  "caption": "Label freezer bags before you fill them. Source: Example Source 3. Script and facts checked by a person; visuals and voice made with AI.",
+  "hashtags": [
+    "#hometips",
+    "#kitchen"
+  ],
+  "notes": ""
+}

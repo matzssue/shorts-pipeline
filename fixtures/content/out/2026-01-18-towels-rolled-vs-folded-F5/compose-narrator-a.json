@@ -1,0 +1,329 @@
+{
+  "series": 1,
+  "seriesTitle": "Quick tip",
+  "sourceLabel": "Source",
+  "audioSrc": "voice/narrator-a.mp3",
+  "scenes": [
+    {
+      "kind": "video",
+      "src": "scenes/01.mp4",
+      "from": 0,
+      "durationInFrames": 153,
+      "playbackRate": 1,
+      "headline": "Roll or fold towels?",
+      "audio": {
+        "startFrom": 0,
+        "endAt": 135,
+        "delay": 18
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/02.mp4",
+      "from": 153,
+      "durationInFrames": 225,
+      "playbackRate": 0.5933333333333334,
+      "headline": "Open shelf: roll",
+      "overlay": {
+        "type": "label",
+        "heading": "Rule:",
+        "value": "shelf decides"
+      },
+      "audio": {
+        "startFrom": 135,
+        "endAt": 340,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "image",
+      "src": "scenes/03.png",
+      "from": 378,
+      "durationInFrames": 195,
+      "playbackRate": 1,
+      "headline": "Cupboard: fold",
+      "audio": {
+        "startFrom": 340,
+        "endAt": 522,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "text",
+      "from": 573,
+      "durationInFrames": 105,
+      "playbackRate": 1,
+      "headline": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 7, example.com"
+      },
+      "audio": {
+        "startFrom": 522,
+        "endAt": 613,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/05.mp4",
+      "from": 678,
+      "durationInFrames": 105,
+      "playbackRate": 1,
+      "headline": "Tell me below",
+      "audio": {
+        "startFrom": 613,
+        "endAt": 718,
+        "delay": 0
+      }
+    }
+  ],
+  "words": [
+    {
+      "text": "Rolled",
+      "from": 20,
+      "to": 34
+    },
+    {
+      "text": "or",
+      "from": 36,
+      "to": 41
+    },
+    {
+      "text": "folded",
+      "from": 43,
+      "to": 58
+    },
+    {
+      "text": "towels?",
+      "from": 60,
+      "to": 77
+    },
+    {
+      "text": "It",
+      "from": 91,
+      "to": 95
+    },
+    {
+      "text": "depends",
+      "from": 98,
+      "to": 114
+    },
+    {
+      "text": "on",
+      "from": 117,
+      "to": 122
+    },
+    {
+      "text": "the",
+      "from": 124,
+      "to": 131
+    },
+    {
+      "text": "shelf.",
+      "from": 134,
+      "to": 148
+    },
+    {
+      "text": "On",
+      "from": 158,
+      "to": 163
+    },
+    {
+      "text": "open",
+      "from": 165,
+      "to": 175
+    },
+    {
+      "text": "shelves",
+      "from": 177,
+      "to": 194
+    },
+    {
+      "text": "and",
+      "from": 196,
+      "to": 204
+    },
+    {
+      "text": "in",
+      "from": 206,
+      "to": 211
+    },
+    {
+      "text": "baskets,",
+      "from": 213,
+      "to": 232
+    },
+    {
+      "text": "rolls",
+      "from": 238,
+      "to": 250
+    },
+    {
+      "text": "stay",
+      "from": 252,
+      "to": 262
+    },
+    {
+      "text": "neat",
+      "from": 264,
+      "to": 274
+    },
+    {
+      "text": "and",
+      "from": 276,
+      "to": 284
+    },
+    {
+      "text": "you",
+      "from": 286,
+      "to": 293
+    },
+    {
+      "text": "can",
+      "from": 296,
+      "to": 303
+    },
+    {
+      "text": "pull",
+      "from": 305,
+      "to": 315
+    },
+    {
+      "text": "one",
+      "from": 317,
+      "to": 324
+    },
+    {
+      "text": "out",
+      "from": 327,
+      "to": 334
+    },
+    {
+      "text": "easily.",
+      "from": 336,
+      "to": 353
+    },
+    {
+      "text": "In",
+      "from": 383,
+      "to": 388
+    },
+    {
+      "text": "a",
+      "from": 391,
+      "to": 393
+    },
+    {
+      "text": "deep",
+      "from": 395,
+      "to": 405
+    },
+    {
+      "text": "cupboard,",
+      "from": 407,
+      "to": 429
+    },
+    {
+      "text": "flat",
+      "from": 436,
+      "to": 446
+    },
+    {
+      "text": "folds",
+      "from": 448,
+      "to": 460
+    },
+    {
+      "text": "stack",
+      "from": 463,
+      "to": 475
+    },
+    {
+      "text": "higher",
+      "from": 477,
+      "to": 491
+    },
+    {
+      "text": "and",
+      "from": 494,
+      "to": 501
+    },
+    {
+      "text": "use",
+      "from": 503,
+      "to": 510
+    },
+    {
+      "text": "the",
+      "from": 513,
+      "to": 520
+    },
+    {
+      "text": "space",
+      "from": 522,
+      "to": 534
+    },
+    {
+      "text": "better.",
+      "from": 537,
+      "to": 554
+    },
+    {
+      "text": "This",
+      "from": 579,
+      "to": 589
+    },
+    {
+      "text": "comes",
+      "from": 591,
+      "to": 603
+    },
+    {
+      "text": "from",
+      "from": 606,
+      "to": 615
+    },
+    {
+      "text": "Example",
+      "from": 617,
+      "to": 634
+    },
+    {
+      "text": "Source",
+      "from": 637,
+      "to": 651
+    },
+    {
+      "text": "7.",
+      "from": 653,
+      "to": 658
+    },
+    {
+      "text": "Where",
+      "from": 684,
+      "to": 696
+    },
+    {
+      "text": "do",
+      "from": 699,
+      "to": 703
+    },
+    {
+      "text": "your",
+      "from": 706,
+      "to": 715
+    },
+    {
+      "text": "towels",
+      "from": 718,
+      "to": 732
+    },
+    {
+      "text": "live?",
+      "from": 734,
+      "to": 746
+    }
+  ],
+  "durationInFrames": 783
+}

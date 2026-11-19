@@ -1,0 +1,60 @@
+{
+  "input": {
+    "kind": "product",
+    "id": "stackable-drawer-trays"
+  },
+  "format": "F1",
+  "series": 1,
+  "angle": "problem and solution",
+  "hooks": [
+    "Small things everywhere in your drawer?"
+  ],
+  "scenes": [
+    {
+      "kind": "video",
+      "duration_s": 4,
+      "visual": "Messy drawer",
+      "prompt": "Vertical shot of a messy drawer, no people",
+      "voiceover": "Small things everywhere in your drawer?",
+      "on_screen_text": "Messy drawer?",
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 5,
+      "visual": "Product shot",
+      "prompt": "",
+      "voiceover": "This is the stackable drawer trays, set of 4.",
+      "on_screen_text": "Stackable drawer trays, set of 4",
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 6,
+      "visual": "Product in use",
+      "prompt": "",
+      "voiceover": "It is made of plastic, with four sizes and stackable.",
+      "on_screen_text": "four sizes · stackable",
+      "claims": [
+        {
+          "text": "plastic",
+          "source": "facts.material"
+        }
+      ]
+    },
+    {
+      "kind": "video",
+      "duration_s": 4,
+      "visual": "Tidy drawer",
+      "prompt": "Vertical shot of a tidy drawer",
+      "voiceover": "Would you use it?",
+      "on_screen_text": "Would you use it?",
+      "claims": []
+    }
+  ],
+  "caption": "Stackable drawer trays, set of 4. Script and facts checked by a person; visuals and voice made with AI.",
+  "hashtags": [
+    "#organisation"
+  ],
+  "notes": ""
+}

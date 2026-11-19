@@ -1,0 +1,84 @@
+{
+  "input": {
+    "kind": "topic",
+    "id": "fridge-door-warmest"
+  },
+  "format": "F5",
+  "series": 1,
+  "angle": "The fridge door is not the place for milk",
+  "hooks": [
+    "The door is the busiest part of the fridge."
+  ],
+  "scenes": [
+    {
+      "kind": "video",
+      "duration_s": 4.5,
+      "visual": "Close-up that shows: Milk in the door?",
+      "prompt": "Vertical close-up, soft daylight, no people: milk in the door?",
+      "voiceover": "The door is the busiest part of the fridge.",
+      "on_screen_text": "Milk in the door?",
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 6,
+      "visual": "Door warms first",
+      "prompt": "Vertical shot, hands only, no faces: door warms first",
+      "voiceover": "Every time you open the fridge, the door shelves warm up first.",
+      "on_screen_text": "Door warms first",
+      "overlay": {
+        "type": "label",
+        "heading": "Door:",
+        "value": "sauces, not milk"
+      },
+      "claims": [
+        {
+          "text": "The fridge door warms up every time the fridge is opened.",
+          "source": "door_warms"
+        }
+      ]
+    },
+    {
+      "kind": "image",
+      "duration_s": 7,
+      "visual": "Door: jars and sauces",
+      "prompt": "Still life, top view, no text: door: jars and sauces",
+      "voiceover": "Keep the door for jars and sauces. They handle the small changes better.",
+      "on_screen_text": "Door: jars and sauces",
+      "claims": [
+        {
+          "text": "The door suits jars and sauces that handle small changes in temperature.",
+          "source": "door_for_sauces"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 3.5,
+      "visual": "Source card",
+      "prompt": "",
+      "voiceover": "This comes from Example Source 9.",
+      "on_screen_text": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 9, example.com"
+      },
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 4.5,
+      "visual": "Wide shot of a tidy shelf",
+      "prompt": "Vertical wide shot of a tidy shelf, slow push-in, no people",
+      "voiceover": "What is in your fridge door right now?",
+      "on_screen_text": "Tell me below",
+      "claims": []
+    }
+  ],
+  "caption": "The fridge door is not the place for milk. Source: Example Source 9. Script and facts checked by a person; visuals and voice made with AI.",
+  "hashtags": [
+    "#hometips",
+    "#kitchenfacts"
+  ],
+  "notes": ""
+}

@@ -1,0 +1,308 @@
+{
+  "narrator": "narrator-b",
+  "provider": "mock",
+  "voiceId": "mock-voice-b",
+  "model": "eleven_multilingual_v2",
+  "hash": "2bcaa999a0113ea5",
+  "text": "Loose batteries rolling around a drawer is a small risk. When battery ends touch keys or coins, they can slowly run down. A small box with sections keeps them apart and sorted by size. This comes from Example Source 12. How many dead batteries are in your drawer?",
+  "parts": [
+    "Loose batteries rolling around a drawer is a small risk.",
+    "When battery ends touch keys or coins, they can slowly run down.",
+    "A small box with sections keeps them apart and sorted by size.",
+    "This comes from Example Source 12.",
+    "How many dead batteries are in your drawer?"
+  ],
+  "sources": [
+    "full recording",
+    "full recording",
+    "full recording",
+    "full recording",
+    "full recording"
+  ],
+  "duration_s": 21.903,
+  "billed_chars": 263,
+  "words": [
+    {
+      "text": "Loose",
+      "start": 0.05,
+      "end": 0.435
+    },
+    {
+      "text": "batteries",
+      "start": 0.512,
+      "end": 1.204
+    },
+    {
+      "text": "rolling",
+      "start": 1.281,
+      "end": 1.82
+    },
+    {
+      "text": "around",
+      "start": 1.897,
+      "end": 2.359
+    },
+    {
+      "text": "a",
+      "start": 2.436,
+      "end": 2.513
+    },
+    {
+      "text": "drawer",
+      "start": 2.59,
+      "end": 3.051
+    },
+    {
+      "text": "is",
+      "start": 3.128,
+      "end": 3.282
+    },
+    {
+      "text": "a",
+      "start": 3.359,
+      "end": 3.436
+    },
+    {
+      "text": "small",
+      "start": 3.513,
+      "end": 3.898
+    },
+    {
+      "text": "risk.",
+      "start": 3.975,
+      "end": 4.36
+    },
+    {
+      "text": "When",
+      "start": 4.824,
+      "end": 5.132
+    },
+    {
+      "text": "battery",
+      "start": 5.209,
+      "end": 5.747
+    },
+    {
+      "text": "ends",
+      "start": 5.824,
+      "end": 6.132
+    },
+    {
+      "text": "touch",
+      "start": 6.209,
+      "end": 6.594
+    },
+    {
+      "text": "keys",
+      "start": 6.671,
+      "end": 6.979
+    },
+    {
+      "text": "or",
+      "start": 7.056,
+      "end": 7.21
+    },
+    {
+      "text": "coins,",
+      "start": 7.287,
+      "end": 7.748
+    },
+    {
+      "text": "they",
+      "start": 8.003,
+      "end": 8.311
+    },
+    {
+      "text": "can",
+      "start": 8.388,
+      "end": 8.619
+    },
+    {
+      "text": "slowly",
+      "start": 8.696,
+      "end": 9.157
+    },
+    {
+      "text": "run",
+      "start": 9.234,
+      "end": 9.465
+    },
+    {
+      "text": "down.",
+      "start": 9.542,
+      "end": 9.927
+    },
+    {
+      "text": "A",
+      "start": 10.396,
+      "end": 10.473
+    },
+    {
+      "text": "small",
+      "start": 10.55,
+      "end": 10.935
+    },
+    {
+      "text": "box",
+      "start": 11.011,
+      "end": 11.242
+    },
+    {
+      "text": "with",
+      "start": 11.319,
+      "end": 11.627
+    },
+    {
+      "text": "sections",
+      "start": 11.704,
+      "end": 12.32
+    },
+    {
+      "text": "keeps",
+      "start": 12.397,
+      "end": 12.782
+    },
+    {
+      "text": "them",
+      "start": 12.858,
+      "end": 13.166
+    },
+    {
+      "text": "apart",
+      "start": 13.243,
+      "end": 13.628
+    },
+    {
+      "text": "and",
+      "start": 13.705,
+      "end": 13.936
+    },
+    {
+      "text": "sorted",
+      "start": 14.013,
+      "end": 14.475
+    },
+    {
+      "text": "by",
+      "start": 14.552,
+      "end": 14.706
+    },
+    {
+      "text": "size.",
+      "start": 14.782,
+      "end": 15.167
+    },
+    {
+      "text": "This",
+      "start": 15.637,
+      "end": 15.945
+    },
+    {
+      "text": "comes",
+      "start": 16.022,
+      "end": 16.407
+    },
+    {
+      "text": "from",
+      "start": 16.483,
+      "end": 16.791
+    },
+    {
+      "text": "Example",
+      "start": 16.868,
+      "end": 17.407
+    },
+    {
+      "text": "Source",
+      "start": 17.484,
+      "end": 17.946
+    },
+    {
+      "text": "12.",
+      "start": 18.023,
+      "end": 18.254
+    },
+    {
+      "text": "How",
+      "start": 18.593,
+      "end": 18.824
+    },
+    {
+      "text": "many",
+      "start": 18.901,
+      "end": 19.209
+    },
+    {
+      "text": "dead",
+      "start": 19.286,
+      "end": 19.594
+    },
+    {
+      "text": "batteries",
+      "start": 19.671,
+      "end": 20.364
+    },
+    {
+      "text": "are",
+      "start": 20.441,
+      "end": 20.671
+    },
+    {
+      "text": "in",
+      "start": 20.748,
+      "end": 20.902
+    },
+    {
+      "text": "your",
+      "start": 20.979,
+      "end": 21.287
+    },
+    {
+      "text": "drawer?",
+      "start": 21.364,
+      "end": 21.903
+    }
+  ],
+  "scenes": [
+    {
+      "index": 0,
+      "duration_s": 5.5,
+      "voice": {
+        "start": 0.05,
+        "end": 4.36
+      }
+    },
+    {
+      "index": 1,
+      "duration_s": 6,
+      "voice": {
+        "start": 4.824,
+        "end": 9.927
+      }
+    },
+    {
+      "index": 2,
+      "duration_s": 6,
+      "voice": {
+        "start": 10.396,
+        "end": 15.167
+      }
+    },
+    {
+      "index": 3,
+      "duration_s": 4,
+      "voice": {
+        "start": 15.637,
+        "end": 18.254
+      }
+    },
+    {
+      "index": 4,
+      "duration_s": 5,
+      "voice": {
+        "start": 18.593,
+        "end": 21.903
+      }
+    }
+  ]
+}

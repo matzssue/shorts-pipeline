@@ -1,0 +1,84 @@
+{
+  "input": {
+    "kind": "topic",
+    "id": "plant-water-finger-test"
+  },
+  "format": "F5",
+  "series": 1,
+  "angle": "The finger test for watering house plants",
+  "hooks": [
+    "Most house plants get too much water, not too little."
+  ],
+  "scenes": [
+    {
+      "kind": "video",
+      "duration_s": 5.5,
+      "visual": "Close-up that shows: Water less, check more",
+      "prompt": "Vertical close-up, soft daylight, no people: water less, check more",
+      "voiceover": "Most house plants get too much water, not too little.",
+      "on_screen_text": "Water less, check more",
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 6,
+      "visual": "Top soil dry?",
+      "prompt": "Vertical shot, hands only, no faces: top soil dry?",
+      "voiceover": "Many plants only need water when the top of the soil is dry.",
+      "on_screen_text": "Top soil dry?",
+      "overlay": {
+        "type": "label",
+        "heading": "Check:",
+        "value": "one finger deep"
+      },
+      "claims": [
+        {
+          "text": "Many house plants only need water when the top layer of soil is dry.",
+          "source": "dry_top"
+        }
+      ]
+    },
+    {
+      "kind": "image",
+      "duration_s": 6.5,
+      "visual": "Finger test",
+      "prompt": "Still life, top view, no text: finger test",
+      "voiceover": "Push a finger into the soil. Dry? Water it. Damp? Wait a few days.",
+      "on_screen_text": "Finger test",
+      "claims": [
+        {
+          "text": "Pushing a finger into the soil is a simple way to check moisture.",
+          "source": "finger_depth"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 4,
+      "visual": "Source card",
+      "prompt": "",
+      "voiceover": "This comes from Example Source 13.",
+      "on_screen_text": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 13, example.com"
+      },
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 4.5,
+      "visual": "Wide shot of a tidy shelf",
+      "prompt": "Vertical wide shot of a tidy shelf, slow push-in, no people",
+      "voiceover": "Which plant of yours always looks sad?",
+      "on_screen_text": "Tell me below",
+      "claims": []
+    }
+  ],
+  "caption": "The finger test for watering house plants. Source: Example Source 13. Script and facts checked by a person; visuals and voice made with AI.",
+  "hashtags": [
+    "#hometips",
+    "#houseplants"
+  ],
+  "notes": ""
+}

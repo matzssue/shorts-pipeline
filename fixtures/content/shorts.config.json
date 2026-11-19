@@ -1,0 +1,36 @@
+{
+  "channels": [
+    {
+      "id": "a",
+      "name": "Example Channel A",
+      "youtubeCategoryId": "26"
+    },
+    {
+      "id": "b",
+      "name": "Example Channel B",
+      "youtubeCategoryId": "22"
+    }
+  ],
+  "narrators": [
+    {
+      "id": "narrator-a",
+      "name": "Narrator A",
+      "voiceIdEnv": "ELEVENLABS_VOICE_NARRATOR_A",
+      "model": "eleven_v3",
+      "stability": 0.5
+    },
+    {
+      "id": "narrator-b",
+      "name": "Narrator B",
+      "voiceIdEnv": "ELEVENLABS_VOICE_NARRATOR_B",
+      "model": "eleven_multilingual_v2"
+    }
+  ],
+  "series": {
+    "1": "Quick tip",
+    "2": "Myth or fact"
+  },
+  "sourceLabel": "Source",
+  "language": "en",
+  "disclosure": "Script and facts checked by a person; visuals and voice made with AI."
+}

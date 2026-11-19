@@ -1,0 +1,337 @@
+{
+  "series": 2,
+  "seriesTitle": "Myth or fact",
+  "sourceLabel": "Source",
+  "audioSrc": "voice/narrator-b.mp3",
+  "scenes": [
+    {
+      "kind": "video",
+      "src": "scenes/01.mp4",
+      "from": 0,
+      "durationInFrames": 135,
+      "playbackRate": 1,
+      "headline": "One tray for paper",
+      "audio": {
+        "startFrom": 0,
+        "endAt": 114,
+        "delay": 18
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/02.mp4",
+      "from": 135,
+      "durationInFrames": 165,
+      "playbackRate": 1,
+      "headline": "One landing spot",
+      "overlay": {
+        "type": "label",
+        "heading": "Routine:",
+        "value": "once a week"
+      },
+      "audio": {
+        "startFrom": 114,
+        "endAt": 255,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "text",
+      "from": 300,
+      "durationInFrames": 210,
+      "playbackRate": 1,
+      "headline": "Clear it weekly",
+      "overlay": {
+        "type": "quiz",
+        "options": [
+          "More trays, more order",
+          "One tray is enough"
+        ],
+        "countdown": 3,
+        "answer": 1
+      },
+      "audio": {
+        "startFrom": 255,
+        "endAt": 418,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "text",
+      "from": 510,
+      "durationInFrames": 120,
+      "playbackRate": 1,
+      "headline": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 14, example.com"
+      },
+      "audio": {
+        "startFrom": 418,
+        "endAt": 509,
+        "delay": 0
+      }
+    },
+    {
+      "kind": "video",
+      "src": "scenes/05.mp4",
+      "from": 630,
+      "durationInFrames": 165,
+      "playbackRate": 1,
+      "headline": "Tell me below",
+      "audio": {
+        "startFrom": 509,
+        "endAt": 673,
+        "delay": 0
+      }
+    }
+  ],
+  "words": [
+    {
+      "text": "Paper",
+      "from": 20,
+      "to": 31
+    },
+    {
+      "text": "piles",
+      "from": 34,
+      "to": 45
+    },
+    {
+      "text": "grow",
+      "from": 48,
+      "to": 57
+    },
+    {
+      "text": "because",
+      "from": 60,
+      "to": 76
+    },
+    {
+      "text": "nothing",
+      "from": 78,
+      "to": 95
+    },
+    {
+      "text": "has",
+      "from": 97,
+      "to": 104
+    },
+    {
+      "text": "a",
+      "from": 107,
+      "to": 109
+    },
+    {
+      "text": "place.",
+      "from": 111,
+      "to": 126
+    },
+    {
+      "text": "Give",
+      "from": 141,
+      "to": 150
+    },
+    {
+      "text": "every",
+      "from": 153,
+      "to": 164
+    },
+    {
+      "text": "new",
+      "from": 167,
+      "to": 174
+    },
+    {
+      "text": "letter",
+      "from": 176,
+      "to": 190
+    },
+    {
+      "text": "one",
+      "from": 193,
+      "to": 200
+    },
+    {
+      "text": "place",
+      "from": 202,
+      "to": 214
+    },
+    {
+      "text": "to",
+      "from": 216,
+      "to": 221
+    },
+    {
+      "text": "land:",
+      "from": 223,
+      "to": 235
+    },
+    {
+      "text": "a",
+      "from": 238,
+      "to": 240
+    },
+    {
+      "text": "single",
+      "from": 242,
+      "to": 256
+    },
+    {
+      "text": "tray.",
+      "from": 259,
+      "to": 271
+    },
+    {
+      "text": "Empty",
+      "from": 306,
+      "to": 318
+    },
+    {
+      "text": "it",
+      "from": 320,
+      "to": 325
+    },
+    {
+      "text": "once",
+      "from": 327,
+      "to": 337
+    },
+    {
+      "text": "a",
+      "from": 339,
+      "to": 342
+    },
+    {
+      "text": "week.",
+      "from": 344,
+      "to": 356
+    },
+    {
+      "text": "The",
+      "from": 366,
+      "to": 373
+    },
+    {
+      "text": "pile",
+      "from": 376,
+      "to": 385
+    },
+    {
+      "text": "never",
+      "from": 387,
+      "to": 399
+    },
+    {
+      "text": "gets",
+      "from": 401,
+      "to": 411
+    },
+    {
+      "text": "the",
+      "from": 413,
+      "to": 420
+    },
+    {
+      "text": "chance",
+      "from": 423,
+      "to": 437
+    },
+    {
+      "text": "to",
+      "from": 439,
+      "to": 444
+    },
+    {
+      "text": "grow.",
+      "from": 446,
+      "to": 458
+    },
+    {
+      "text": "This",
+      "from": 515,
+      "to": 525
+    },
+    {
+      "text": "comes",
+      "from": 527,
+      "to": 539
+    },
+    {
+      "text": "from",
+      "from": 541,
+      "to": 551
+    },
+    {
+      "text": "Example",
+      "from": 553,
+      "to": 569
+    },
+    {
+      "text": "Source",
+      "from": 572,
+      "to": 586
+    },
+    {
+      "text": "14.",
+      "from": 588,
+      "to": 595
+    },
+    {
+      "text": "When",
+      "from": 635,
+      "to": 645
+    },
+    {
+      "text": "did",
+      "from": 647,
+      "to": 654
+    },
+    {
+      "text": "you",
+      "from": 657,
+      "to": 664
+    },
+    {
+      "text": "last",
+      "from": 666,
+      "to": 676
+    },
+    {
+      "text": "see",
+      "from": 678,
+      "to": 685
+    },
+    {
+      "text": "the",
+      "from": 687,
+      "to": 694
+    },
+    {
+      "text": "bottom",
+      "from": 697,
+      "to": 711
+    },
+    {
+      "text": "of",
+      "from": 713,
+      "to": 718
+    },
+    {
+      "text": "your",
+      "from": 720,
+      "to": 730
+    },
+    {
+      "text": "paper",
+      "from": 732,
+      "to": 744
+    },
+    {
+      "text": "pile?",
+      "from": 746,
+      "to": 758
+    }
+  ],
+  "durationInFrames": 795
+}

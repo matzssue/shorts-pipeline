@@ -1,0 +1,84 @@
+{
+  "input": {
+    "kind": "topic",
+    "id": "bed-sheets-in-pillowcase"
+  },
+  "format": "F5",
+  "series": 1,
+  "angle": "Store each bed sheet set inside its own pillowcase",
+  "hooks": [
+    "Stop digging for the matching sheet."
+  ],
+  "scenes": [
+    {
+      "kind": "video",
+      "duration_s": 4,
+      "visual": "Close-up that shows: One set, one pillowcase",
+      "prompt": "Vertical close-up, soft daylight, no people: one set, one pillowcase",
+      "voiceover": "Stop digging for the matching sheet.",
+      "on_screen_text": "One set, one pillowcase",
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 6.5,
+      "visual": "Sheets go inside",
+      "prompt": "Vertical shot, hands only, no faces: sheets go inside",
+      "voiceover": "Fold the sheets and slide the whole set into one of its pillowcases.",
+      "on_screen_text": "Sheets go inside",
+      "overlay": {
+        "type": "label",
+        "heading": "Shelf:",
+        "value": "one bundle per bed"
+      },
+      "claims": [
+        {
+          "text": "A folded sheet set fits inside one of its own pillowcases.",
+          "source": "set_in_case"
+        }
+      ]
+    },
+    {
+      "kind": "image",
+      "duration_s": 6.5,
+      "visual": "Grab one bundle",
+      "prompt": "Still life, top view, no text: grab one bundle",
+      "voiceover": "Now the shelf holds whole sets. You grab one bundle and you are done.",
+      "on_screen_text": "Grab one bundle",
+      "claims": [
+        {
+          "text": "Keeping a set together means one item to grab from the shelf.",
+          "source": "one_grab"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 3.5,
+      "visual": "Source card",
+      "prompt": "",
+      "voiceover": "This comes from Example Source 4.",
+      "on_screen_text": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 4, example.com"
+      },
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 4.5,
+      "visual": "Wide shot of a tidy shelf",
+      "prompt": "Vertical wide shot of a tidy shelf, slow push-in, no people",
+      "voiceover": "How many sheet sets do you actually use?",
+      "on_screen_text": "Tell me below",
+      "claims": []
+    }
+  ],
+  "caption": "Store each bed sheet set inside its own pillowcase. Source: Example Source 4. Script and facts checked by a person; visuals and voice made with AI.",
+  "hashtags": [
+    "#hometips",
+    "#homeorganisation"
+  ],
+  "notes": ""
+}

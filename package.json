@@ -11,6 +11,7 @@
   "packageManager": "pnpm@9.15.9",
   "scripts": {
     "typecheck": "pnpm -r typecheck",
-    "test": "pnpm -r test"
+    "test": "pnpm -r test",
+    "mock": "pnpm --filter @shorts/mock generate"
   }
 }

@@ -1,0 +1,25 @@
+{
+  "name": "@shorts/mock",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Deterministic mock content directory (cards, scripts, narration, timelines, QA, publications, stats) for the dashboard.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/generate.ts"
+  },
+  "scripts": {
+    "generate": "tsx src/cli.ts",
+    "test": "node --import tsx --test test/mock.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@shorts/pipeline": "workspace:*",
+    "@shorts/schema": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "~20",
+    "tsx": "~4.19",
+    "typescript": "~5.6"
+  }
+}

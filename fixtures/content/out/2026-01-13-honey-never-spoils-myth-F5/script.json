@@ -1,0 +1,93 @@
+{
+  "input": {
+    "kind": "topic",
+    "id": "honey-never-spoils-myth"
+  },
+  "format": "F5",
+  "series": 2,
+  "angle": "Does honey really never go off?",
+  "hooks": [
+    "You have heard that honey lasts forever."
+  ],
+  "scenes": [
+    {
+      "kind": "video",
+      "duration_s": 4,
+      "visual": "Close-up that shows: Honey lasts forever?",
+      "prompt": "Vertical close-up, soft daylight, no people: honey lasts forever?",
+      "voiceover": "You have heard that honey lasts forever.",
+      "on_screen_text": "Honey lasts forever?",
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 6,
+      "visual": "Very little water",
+      "prompt": "Vertical shot, hands only, no faces: very little water",
+      "voiceover": "Honey holds very little water, and that makes spoiling slow.",
+      "on_screen_text": "Very little water",
+      "overlay": {
+        "type": "label",
+        "heading": "Store:",
+        "value": "closed jar"
+      },
+      "claims": [
+        {
+          "text": "Honey has very little water, which slows down spoiling.",
+          "source": "low_water"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 7,
+      "visual": "Quiz card",
+      "prompt": "",
+      "voiceover": "But leave the jar open and it pulls in moisture from the air.",
+      "on_screen_text": "Keep the lid on",
+      "overlay": {
+        "type": "quiz",
+        "options": [
+          "Lasts forever, no matter what",
+          "Lasts long if kept closed"
+        ],
+        "countdown": 3,
+        "answer": 1
+      },
+      "claims": [
+        {
+          "text": "Honey left open can take in moisture from the air.",
+          "source": "keep_closed"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 3.5,
+      "visual": "Source card",
+      "prompt": "",
+      "voiceover": "This comes from Example Source 5.",
+      "on_screen_text": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 5, example.com"
+      },
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 5.5,
+      "visual": "Wide shot of a tidy shelf",
+      "prompt": "Vertical wide shot of a tidy shelf, slow push-in, no people",
+      "voiceover": "Do you keep honey in the cupboard or the fridge?",
+      "on_screen_text": "Tell me below",
+      "claims": []
+    }
+  ],
+  "caption": "Does honey really never go off?. Source: Example Source 5. Script and facts checked by a person; visuals and voice made with AI.",
+  "hashtags": [
+    "#hometips",
+    "#kitchenfacts"
+  ],
+  "notes": ""
+}

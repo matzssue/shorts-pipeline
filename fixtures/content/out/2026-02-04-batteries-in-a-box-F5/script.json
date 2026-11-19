@@ -1,0 +1,84 @@
+{
+  "input": {
+    "kind": "topic",
+    "id": "batteries-in-a-box"
+  },
+  "format": "F5",
+  "series": 1,
+  "angle": "Keep loose batteries in a box, ends apart",
+  "hooks": [
+    "Loose batteries rolling around a drawer is a small risk."
+  ],
+  "scenes": [
+    {
+      "kind": "video",
+      "duration_s": 5.5,
+      "visual": "Close-up that shows: Loose batteries? Box them",
+      "prompt": "Vertical close-up, soft daylight, no people: loose batteries? box them",
+      "voiceover": "Loose batteries rolling around a drawer is a small risk.",
+      "on_screen_text": "Loose batteries? Box them",
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 6,
+      "visual": "Ends away from metal",
+      "prompt": "Vertical shot, hands only, no faces: ends away from metal",
+      "voiceover": "When battery ends touch keys or coins, they can slowly run down.",
+      "on_screen_text": "Ends away from metal",
+      "overlay": {
+        "type": "label",
+        "heading": "Store:",
+        "value": "box with sections"
+      },
+      "claims": [
+        {
+          "text": "Battery ends touching metal objects can make them run down.",
+          "source": "ends_touching"
+        }
+      ]
+    },
+    {
+      "kind": "image",
+      "duration_s": 6,
+      "visual": "Sort by size",
+      "prompt": "Still life, top view, no text: sort by size",
+      "voiceover": "A small box with sections keeps them apart and sorted by size.",
+      "on_screen_text": "Sort by size",
+      "claims": [
+        {
+          "text": "A small box with sections keeps batteries sorted by size.",
+          "source": "box_by_size"
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "duration_s": 4,
+      "visual": "Source card",
+      "prompt": "",
+      "voiceover": "This comes from Example Source 12.",
+      "on_screen_text": "",
+      "overlay": {
+        "type": "source",
+        "text": "Example Source 12, example.com"
+      },
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 5,
+      "visual": "Wide shot of a tidy shelf",
+      "prompt": "Vertical wide shot of a tidy shelf, slow push-in, no people",
+      "voiceover": "How many dead batteries are in your drawer?",
+      "on_screen_text": "Tell me below",
+      "claims": []
+    }
+  ],
+  "caption": "Keep loose batteries in a box, ends apart. Source: Example Source 12. Script and facts checked by a person; visuals and voice made with AI.",
+  "hashtags": [
+    "#hometips",
+    "#homeorganisation"
+  ],
+  "notes": ""
+}
