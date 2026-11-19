@@ -27,7 +27,8 @@ A pnpm workspace:
 ```
 pipeline/            the CLI (this README)
 packages/schema/     Zod schemas, types and video constants shared by every package
-packages/            more shared packages (coming: timeline, mock data)
+packages/timeline/   pure timeline functions: caption lines, timecode, scene lookup
+packages/            more shared packages (coming: mock data)
 dashboard/           Next.js dashboard on mock data (coming)
 ```
 
@@ -56,8 +57,19 @@ my-content/
   flows/<name>.json    # step-by-step plans for generated clips
   assets/              # images, character cutouts
   out/                 # renders, audio, QA reports (generated)
-  data/                # publications.csv, stats/<date>.json (generated)
+  data/                # publications.csv, stats/<date>.json, voice-ledger.csv (generated)
 ```
+
+### Generated data files
+
+Besides videos and Markdown reports, the pipeline writes machine-readable files (validated against `@shorts/schema` before writing):
+
+| File | Written by | Contents |
+| --- | --- | --- |
+| `out/<id>/<format>/compose-<narrator>.json` | `pnpm compose` | the timeline the video is rendered from: scenes and caption words in frames |
+| `out/<id>/<format>/qa-<narrator>.json` | `pnpm qa` | QA checks (`ok` / `warning` / `error`), manual checklist, pass flag |
+| `data/voice-ledger.csv` | `pnpm make --narrator`, `pnpm voice-fix --takes` | characters per narration request: `date, film, narrator, model, kind (full/take/cache), scene, chars` |
+| `data/stats/<date>.json` | `pnpm stats --save` | account and per-video stats snapshot |
 
 `shorts.config.json` – see [`examples/shorts.config.example.json`](pipeline/examples/shorts.config.example.json):
 

@@ -88,7 +88,7 @@ export async function recordTakes(
   provider: TtsProvider,
   scene: number,
   count: number,
-): Promise<{ no: number; preview: string; seconds: number }[]> {
+): Promise<{ no: number; preview: string; seconds: number; chars: number }[]> {
   const scenes = takeContext(script, narrator.id, scene);
   const parts = scenes.map((i) => sceneSpoken(script.scenes[i]!, narrator.id));
   if (parts[scenes.indexOf(scene)] === "") throw new Error(`scene ${scene + 1} has no narration`);
@@ -98,7 +98,7 @@ export async function recordTakes(
   const existing = readdirSync(out).map((f) => /^take-(\d+)\.json$/.exec(f)?.[1]).filter(Boolean).map(Number);
   let no = existing.length ? Math.max(...existing) : 0;
 
-  const results: { no: number; preview: string; seconds: number }[] = [];
+  const results: { no: number; preview: string; seconds: number; chars: number }[] = [];
   for (let k = 0; k < count; k++) {
     no++;
     const res = await provider.synthesize(text, narrator);
@@ -112,7 +112,7 @@ export async function recordTakes(
     const seg = sceneSegment(rmsProfile(`${base}.mp3`), takeSpans(take), scenes.indexOf(scene), scene === 0);
     const preview = `${base}-scene.mp3`;
     spliceAudio([{ file: `${base}.mp3`, ...seg }], preview);
-    results.push({ no, preview, seconds: seg.to - seg.from });
+    results.push({ no, preview, seconds: seg.to - seg.from, chars: res.billedChars ?? text.length });
   }
   return results;
 }

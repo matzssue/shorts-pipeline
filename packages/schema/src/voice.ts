@@ -36,6 +36,25 @@ export const voiceTimingsSchema = z.strictObject({
   scenes: z.array(sceneTimingSchema),
 });
 
+/** One row of `data/voice-ledger.csv`: characters used by one narration request. */
+
+export const VOICE_LEDGER_COLUMNS = ["date", "film", "narrator", "model", "kind", "scene", "chars"] as const;
+/** full – whole recording; take – one scene re-recorded by voice-fix; cache – same text, no request, no cost. */
+export const VOICE_LEDGER_KINDS = ["full", "take", "cache"] as const;
+
+export const voiceLedgerRowSchema = z.strictObject({
+  date: z.iso.date(),
+  /** Video folder: `<topic or product id>/<format>`. */
+  film: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*\/F[1-9]$/, "<id>/<format>"),
+  narrator: z.string().min(1),
+  model: z.string().min(1),
+  kind: z.enum(VOICE_LEDGER_KINDS),
+  /** 1-based scene number for a take; none for a full recording. */
+  scene: z.number().int().positive().optional(),
+  chars: z.number().int().nonnegative(),
+});
+
+export type VoiceLedgerRow = z.infer<typeof voiceLedgerRowSchema>;
 export type WordTiming = z.infer<typeof wordTimingSchema>;
 export type SceneTiming = z.infer<typeof sceneTimingSchema>;
 export type VoiceTimings = z.infer<typeof voiceTimingsSchema>;

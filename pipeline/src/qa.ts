@@ -8,6 +8,7 @@ import { getNarrator, narratorChoices, narratorIds, parseNarratorArg } from "./l
 import { rel } from "./lib/paths.js";
 import { checkScript, videoDir } from "./lib/scripts.js";
 import { checkTopic } from "./lib/topics.js";
+import { writeQaJson } from "./lib/outputs.js";
 import { renderQaMd, runQa } from "./steps/qa.js";
 import { voiceFiles, type VoiceTimings } from "./steps/voice.js";
 
@@ -92,6 +93,7 @@ async function main(argv: string[]): Promise<number> {
     const res = runQa(qaInput);
     const md = path.join(dir, `qa-${id}.md`);
     writeFileSync(md, renderQaMd(qaInput, res, now), "utf8");
+    writeQaJson(dir, id, res);
     const meta = {
       topic: input.id,
       format,

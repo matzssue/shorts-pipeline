@@ -1,0 +1,23 @@
+{
+  "name": "@shorts/timeline",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pure timeline functions (caption lines, timecode, scene lookup) shared by the video render and the dashboard.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "node --import tsx --test test/timeline.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@shorts/schema": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "~20",
+    "tsx": "~4.19",
+    "typescript": "~5.6"
+  }
+}

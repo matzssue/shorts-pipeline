@@ -7,6 +7,7 @@ import { rel } from "./lib/paths.js";
 import { checkScript, videoDir } from "./lib/scripts.js";
 import { checkTopic } from "./lib/topics.js";
 import { ElevenLabsTts } from "./providers/elevenlabs.js";
+import { appendVoiceLedger, today } from "./lib/outputs.js";
 import { applyTake, recordTakes, takesDir } from "./steps/voice-fix.js";
 
 const help = () => `Usage: pnpm voice-fix --topic <id> --format F5 --narrator <${narratorChoices(false)}> --scene <no> (--takes <count> | --apply <take no>)
@@ -88,6 +89,7 @@ async function main(argv: string[]): Promise<number> {
     loadEnv();
     const n = getNarrator(narrator!);
     const results = await recordTakes(dir, script, n, new ElevenLabsTts(), scene, takes);
+    appendVoiceLedger(results.map((r) => ({ date: today(), film: `${input.id}/${format}`, narrator: n.id, model: n.model, kind: "take" as const, scene: scene + 1, chars: r.chars })));
     for (const r of results) console.log(`Take ${r.no}: ${rel(r.preview)} · scene ${r.seconds.toFixed(1)} s`);
     console.log(`\nListen and apply the best one: pnpm voice-fix --topic ${input.id} --format ${format} --narrator ${n.id} --scene ${scene + 1} --apply <no>`);
     return 0;

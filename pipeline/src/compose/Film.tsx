@@ -11,6 +11,7 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
+import { chunkWords } from "@shorts/timeline";
 import { CORRECT, fontFamily, INK, paletteFor, SAFE, WHITE, type Palette } from "./theme.js";
 import type { ComposeOverlay, ComposeProps, ComposeScene, ComposeWord } from "./types.js";
 
@@ -264,30 +265,6 @@ const Source: React.FC<{ text: string; label: string; pal: Palette }> = ({ text,
     </div>
   );
 };
-
-interface Chunk {
-  words: ComposeWord[];
-  from: number;
-  to: number;
-}
-
-/** Three words per line, a new line after a full stop, question mark or a longer pause. */
-export function chunkWords(words: ComposeWord[], fps: number): Chunk[] {
-  const chunks: Chunk[] = [];
-  let cur: ComposeWord[] = [];
-  const flush = () => {
-    if (cur.length) chunks.push({ words: cur, from: cur[0]!.from, to: cur.at(-1)!.to });
-    cur = [];
-  };
-  words.forEach((w, i) => {
-    cur.push(w);
-    const next = words[i + 1];
-    const pause = next ? next.from - w.to > fps * 0.35 : true;
-    if (cur.length >= 3 || /[.?!:…]$/.test(w.text) || pause) flush();
-  });
-  flush();
-  return chunks;
-}
 
 /** Captions for the whole narration; the current word sits on an accent-coloured box. */
 const Captions: React.FC<{ words: ComposeWord[]; pal: Palette }> = ({ words, pal }) => {
