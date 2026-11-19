@@ -44,8 +44,8 @@ export const VOICE_LEDGER_KINDS = ["full", "take", "cache"] as const;
 
 export const voiceLedgerRowSchema = z.strictObject({
   date: z.iso.date(),
-  /** Video folder: `<topic or product id>/<format>`. */
-  film: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*\/F[1-9]$/, "<id>/<format>"),
+  /** Video folder name in `out/`: `<date>-<id>-<format>`. */
+  film: z.string().regex(/^\d{4}-\d{2}-\d{2}-[a-z0-9]+(?:-[a-z0-9]+)*-F[1-9]$/, "<date>-<id>-<format>"),
   narrator: z.string().min(1),
   model: z.string().min(1),
   kind: z.enum(VOICE_LEDGER_KINDS),

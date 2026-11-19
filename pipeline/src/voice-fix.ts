@@ -1,3 +1,4 @@
+import path from "node:path";
 import { parseArgs } from "node:util";
 import { formatCheck } from "./lib/cards.js";
 import { loadEnv } from "./lib/env.js";
@@ -89,7 +90,7 @@ async function main(argv: string[]): Promise<number> {
     loadEnv();
     const n = getNarrator(narrator!);
     const results = await recordTakes(dir, script, n, new ElevenLabsTts(), scene, takes);
-    appendVoiceLedger(results.map((r) => ({ date: today(), film: `${input.id}/${format}`, narrator: n.id, model: n.model, kind: "take" as const, scene: scene + 1, chars: r.chars })));
+    appendVoiceLedger(results.map((r) => ({ date: today(), film: path.basename(dir), narrator: n.id, model: n.model, kind: "take" as const, scene: scene + 1, chars: r.chars })));
     for (const r of results) console.log(`Take ${r.no}: ${rel(r.preview)} · scene ${r.seconds.toFixed(1)} s`);
     console.log(`\nListen and apply the best one: pnpm voice-fix --topic ${input.id} --format ${format} --narrator ${n.id} --scene ${scene + 1} --apply <no>`);
     return 0;

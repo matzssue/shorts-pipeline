@@ -66,8 +66,8 @@ Besides videos and Markdown reports, the pipeline writes machine-readable files 
 
 | File | Written by | Contents |
 | --- | --- | --- |
-| `out/<id>/<format>/compose-<narrator>.json` | `pnpm compose` | the timeline the video is rendered from: scenes and caption words in frames |
-| `out/<id>/<format>/qa-<narrator>.json` | `pnpm qa` | QA checks (`ok` / `warning` / `error`), manual checklist, pass flag |
+| `out/<date>-<id>-<format>/compose-<narrator>.json` | `pnpm compose` | the timeline the video is rendered from: scenes and caption words in frames |
+| `out/<date>-<id>-<format>/qa-<narrator>.json` | `pnpm qa` | QA checks (`ok` / `warning` / `error`), manual checklist, pass flag |
 | `data/voice-ledger.csv` | `pnpm make --narrator`, `pnpm voice-fix --takes` | characters per narration request: `date, film, narrator, model, kind (full/take/cache), scene, chars` |
 | `data/stats/<date>.json` | `pnpm stats --save` | account and per-video stats snapshot |
 
