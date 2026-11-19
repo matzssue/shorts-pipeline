@@ -12,7 +12,7 @@ topic / product card (JSON, validated with Zod)
   → stats snapshot (YouTube Analytics, Instagram Insights)
 ```
 
-The engine is generic. Everything specific to a channel – channel list, narrators and voices, series names, language, disclosure text, content cards – lives in a separate **content directory** that is not part of this repo.
+You run it from the terminal, one step at a time – in practice together with Claude Code, which writes the scripts and fixes what QA flags. The engine is generic. Everything specific to a channel – channel list, narrators and voices, series names, language, disclosure text, content cards – lives in a separate **content directory** that is not part of this repo.
 
 ## Requirements
 
@@ -30,14 +30,18 @@ packages/schema/     Zod schemas, types and video constants shared by every pack
 packages/timeline/   pure timeline functions: caption lines, timecode, scene lookup
 packages/mock/       deterministic mock content generator (seeded, no real data)
 fixtures/content/    its output: a complete example content directory, committed
-dashboard/           Stykówka: static Next.js dashboard on the mock data
+dashboard/           Shorts Dashboard: static Next.js report on the mock data
 ```
 
-## Stykówka – the dashboard
+## Shorts Dashboard
 
-**Stykówka** (Polish for *contact sheet*: one sheet with every frame of a film roll) is a production report for the pipeline: what it made, whether it passed its checks, what it cost and how it is watched. It runs on the committed mock data only; every number is made up, the code that makes and checks the videos is real.
+How the pieces fit:
 
-![Overview: the season ruler, the opening sentence and how videos start](docs/screenshots/overview.png)
+- **The pipeline does the work.** A CLI you run one step at a time, usually together with Claude Code. You bring the facts, the script and the clips; it records the narration, renders, checks and publishes on your command. Every step leaves a file.
+- **The dashboard only reads.** A static report built from those files: what was made, whether it passed QA, what it cost and how it is watched. It has no buttons and changes nothing; the pipeline works the same without it.
+- **On GitHub Pages it shows mock data only.** Every number is made up; the code that makes, checks and counts the videos is real. To see your own videos, build it locally on your content folder ([docs/getting-started.md](docs/getting-started.md), step 7).
+
+![Overview: headline numbers, the season ruler and how videos start](docs/screenshots/overview.png)
 
 | View | What it answers |
 | --- | --- |
@@ -72,6 +76,8 @@ pnpm --filter @shorts/dashboard e2e     # end-to-end tests on the built site
 `pnpm mock` regenerates `fixtures/content/`: 17 topic videos and a product video over a six-week season, with scripts, narration timings, timelines, QA results, publications, daily stats snapshots and the voice ledger. The scripts, timelines and QA results are produced by the pipeline's own functions; only the TTS and the platform numbers are simulated. The same seed always gives byte-identical files, and a test fails when the committed fixtures are out of date.
 
 ## Quick start
+
+Step by step from a fresh clone to your own videos, posts and dashboard: [docs/getting-started.md](docs/getting-started.md).
 
 ```sh
 pnpm install           # from the repo root

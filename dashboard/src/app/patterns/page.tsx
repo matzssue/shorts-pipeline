@@ -23,7 +23,7 @@ function Section({ title, note, children }: { title: string; note: string; child
   return (
     <section className="sec">
       <header className="mb-4 flex flex-wrap items-baseline justify-between gap-x-5 gap-y-0.5">
-        <h2 className="text-lg leading-[1.2] font-bold [font-stretch:88%]">{title}</h2>
+        <h2 className="text-[1.75rem] leading-[1.15] font-extrabold">{title}</h2>
         <p className="font-mono text-xs leading-[1.4] text-ink-3">{note}</p>
       </header>
       {children}
@@ -77,14 +77,14 @@ export default function PatternsPage() {
     <div className="page">
       <section className="sec">
         <div className="mb-4 flex flex-wrap items-baseline justify-between gap-x-5 gap-y-0.5">
-          <h1 className="text-lg leading-[1.2] font-bold [font-stretch:88%]">{p.title}</h1>
+          <h1 className="text-[1.75rem] leading-[1.15] font-extrabold">{p.title}</h1>
           <p className="font-mono text-xs leading-[1.4] text-ink-3">{p.note}</p>
         </div>
         <p className="max-w-[68ch] text-ink-2">{p.intro}</p>
       </section>
 
       <Section title={p.line.title} note={p.line.note}>
-        <div className="grid grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-x-5 gap-y-8 md:grid-cols-2">
           <StartChart data={yt} yTicks={yTicks} />
           <StartChart data={ig} yTicks={yTicks} />
         </div>
@@ -123,7 +123,7 @@ export default function PatternsPage() {
         />
       </Section>
 
-      <div className="grid grid-cols-1 gap-x-12 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-x-5 md:grid-cols-2">
         <Section title={p.rank.title} note={p.rank.note}>
           <Ranking items={top.map((f) => ({ key: f.id, label: `${filmNo(f.number)} ${f.title}`, value: filmViews(f) }))} />
         </Section>
@@ -159,7 +159,7 @@ export default function PatternsPage() {
       </div>
 
       <Section title={p.edge.title} note={p.edge.note}>
-        <div className="grid grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-x-5 gap-y-8 md:grid-cols-2">
           <StartChart data={empty} yTicks={yTicks} />
           <StartChart data={one} yTicks={ticks(0, one.max, 3)} />
         </div>

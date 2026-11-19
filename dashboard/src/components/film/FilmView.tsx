@@ -277,7 +277,7 @@ function Releases({ f }: { f: FilmPage }) {
       )}
       {any ? (
         <>
-          <div className="mt-6 grid grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2">
+          <div className="mt-6 grid grid-cols-1 gap-x-5 gap-y-8 md:grid-cols-2">
             <FilmStart data={youtube} filmId={f.id} number={f.number} yTicks={yTicks} />
             <FilmStart data={instagram} filmId={f.id} number={f.number} yTicks={yTicks} />
           </div>

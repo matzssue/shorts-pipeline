@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { count, filmNo, fmtDay, fmtDec, fmtInt } from "@/charts/format";
 import { pct } from "@/charts/scale";
+import { Kpis } from "@/components/charts/Kpis";
 import { Ranking } from "@/components/charts/Ranking";
 import { TableTwin } from "@/components/charts/TableTwin";
 import { SectionHead } from "@/components/overview/bits";
@@ -14,21 +15,18 @@ export function ChecksView({ d }: { d: ChecksPage }) {
   const t = d.totals;
   return (
     <div className="page">
-      <section className="lead-sec" aria-label="Summary">
-        <div>
-          <SectionHead title={messages.views.checks.title} note={messages.views.checks.note} level={1} />
-          <p className="lead" data-testid="lead">
-            QA checked <b>{count(t.checked, "video", "videos")}</b>: {fmtInt(t.clean)} pass every check, <b>{fmtInt(t.withWarnings)}</b> pass with warnings
-            {t.failed ? (
-              <>
-                {" "}
-                and <mark>{count(t.failed, "video is", "videos are")} held back</mark> by an error
-              </>
-            ) : null}
-            .{t.notChecked ? ` ${count(t.notChecked, "video waits", "videos wait")} for a render before QA can run.` : ""}
-          </p>
-        </div>
-      </section>
+      <div className="view-head">
+        <SectionHead title={messages.views.checks.title} note={messages.views.checks.note} level={1} />
+      </div>
+      <Kpis
+        label={m.kpi.label}
+        items={[
+          { key: "checked", label: m.kpi.checked, value: fmtInt(t.checked), sub: t.notChecked ? m.kpi.waiting(t.notChecked) : m.kpi.all },
+          { key: "clean", label: m.kpi.clean, value: fmtInt(t.clean), sub: m.kpi.cleanSub },
+          { key: "warnings", label: m.kpi.warnings, value: fmtInt(t.withWarnings), sub: m.kpi.warningsSub },
+          { key: "held", label: m.kpi.held, value: fmtInt(t.failed), sub: t.failed ? m.kpi.heldSub : m.kpi.noneHeld, hl: t.failed > 0 },
+        ]}
+      />
 
       <section className="sec" data-testid="matrix">
         <SectionHead title={m.matrix.title} note={m.matrix.note} />
@@ -66,7 +64,7 @@ export function ChecksView({ d }: { d: ChecksPage }) {
         ) : null}
       </section>
 
-      <div className="grid grid-cols-1 gap-x-12 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-x-5 md:grid-cols-2">
         <section className="sec" data-testid="ranking">
           <SectionHead title={m.ranking.title} note={m.ranking.note} />
           {d.ranking.length ? (

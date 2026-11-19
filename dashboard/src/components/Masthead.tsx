@@ -12,7 +12,7 @@ export function Masthead() {
         Skip to content
       </a>
       <div className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-x-[22px] gap-y-1.5 md:grid-cols-[auto_minmax(0,1fr)_auto]">
-        <Link href="/" className="text-[2.5rem] leading-[0.86] font-extrabold uppercase no-underline [font-stretch:62%]">
+        <Link href="/" className="text-[1.25rem] leading-none font-extrabold tracking-[-0.01em] whitespace-nowrap no-underline sm:text-[1.625rem]">
           {messages.wordmark}
         </Link>
         <p className="col-span-full row-start-2 max-w-[46ch] pb-px text-sm leading-[1.3] text-ink-2 md:col-span-1 md:row-start-auto">{messages.tagline}</p>

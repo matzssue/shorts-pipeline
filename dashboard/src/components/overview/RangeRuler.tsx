@@ -54,7 +54,7 @@ export function RangeRuler({
   return (
     <section className="ruler page" aria-labelledby="ov-title">
       <div className="ruler-meta">
-        <h1 id="ov-title" className="text-lg leading-[1.2] font-bold [font-stretch:88%]">
+        <h1 id="ov-title" className="text-[1.75rem] leading-[1.15] font-extrabold">
           {messages.views.overview.title}
         </h1>
         <span className="num" data-testid="range-summary">
@@ -120,7 +120,7 @@ export function RangeRuler({
       </div>
 
       {href ? (
-        <div className={ready ? "range-ctl" : "range-ctl js-only"}>
+        <div className={ready ? "range-ctl" : "range-ctl js-only"} inert={!ready || undefined}>
           <span className="lab">{m.label}</span>
           {PRESETS.map((p) => {
             const r = presetRange(input, p);

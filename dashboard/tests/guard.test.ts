@@ -52,13 +52,13 @@ describe("look guard (checklist [auto])", () => {
     expect(bad).toEqual([]);
   });
 
-  it("radius above 2px and blurred shadows only in the frame", () => {
+  it("radius only from the --radius token (cards), blurred shadows only in the frame", () => {
     const bad: string[] = [];
     for (const f of css)
       for (const [sel, body] of rules(fs.readFileSync(f, "utf8"))) {
         if (FRAME.test(sel)) continue;
         for (const m of body.matchAll(/border-radius:\s*([^;]+)/g)) // 50% draws a round data mark (a dot), not a rounded box
-          if (m[1]!.split(/\s+/).some((v) => v !== "50%" && parseFloat(v) > 2)) bad.push(`${rel(f)}: ${sel} radius`);
+          if (m[1]!.split(/\s+/).some((v) => v !== "50%" && v !== "var(--radius)" && parseFloat(v) > 2)) bad.push(`${rel(f)}: ${sel} radius`);
         for (const m of body.matchAll(/box-shadow:\s*([^;]+)/g))
           for (const part of m[1]!.split(/,(?![^(]*\))/)) {
             const lengths = part.replace(/\([^)]*\)/g, "").match(/-?[\d.]+(px|rem|em|cqw)?/g) ?? [];

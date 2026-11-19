@@ -116,13 +116,13 @@ export function FilmsView({
     <div className="page">
       <section className="sec">
         <div className="mb-4 flex flex-wrap items-baseline justify-between gap-x-5 gap-y-0.5">
-          <h1 className="text-lg leading-[1.2] font-bold [font-stretch:88%]">{v.title}</h1>
+          <h1 className="text-[1.75rem] leading-[1.15] font-extrabold">{v.title}</h1>
           <p className="font-mono text-xs leading-[1.4] text-ink-3" data-testid="films-count" aria-live="polite">
             {t.shown(shown.length, rows.length)}
           </p>
         </div>
         {onChange && pathname !== undefined ? (
-          <div className={ready ? undefined : "js-only"}>
+          <div className={ready ? undefined : "js-only"} inert={!ready || undefined}>
             <FilterBar rows={rows} query={query} onChange={onChange} pathname={pathname} />
           </div>
         ) : null}
