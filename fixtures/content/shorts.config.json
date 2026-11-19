@@ -32,5 +32,6 @@
   },
   "sourceLabel": "Source",
   "language": "en",
-  "disclosure": "Script and facts checked by a person; visuals and voice made with AI."
+  "disclosure": "Script and facts checked by a person; visuals and voice made with AI.",
+  "voiceCharsPerMonth": 10000
 }

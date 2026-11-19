@@ -15,12 +15,11 @@ export interface ScriptContext {
   card: unknown;
 }
 
-/** How many narrator characters per second fit a calm pace (Polish). */
-export const MAX_VOICE_CHARS_PER_S = 16;
+import { FLOW_CREDITS_PER_S_720P, MAX_VOICE_CHARS_PER_S } from "@shorts/schema/video";
+
+export { FLOW_CREDITS_PER_S_720P, MAX_VOICE_CHARS_PER_S };
 /** Longest video clip at the standard generator price. */
 export const FLOW_STANDARD_MAX_S = 10;
-/** Video generator credits per second at 720p (clips up to 10 s). */
-export const FLOW_CREDITS_PER_S_720P = 3;
 const MAX_ON_SCREEN_CHARS = 60;
 
 /**

@@ -14,7 +14,7 @@
     },
     {
       "level": "ok",
-      "text": "captions: 46 narration words"
+      "text": "captions: 50 narration words"
     },
     {
       "level": "ok",
@@ -43,6 +43,10 @@
     {
       "level": "ok",
       "text": "last scene asks the viewer a question"
+    },
+    {
+      "level": "warning",
+      "text": "2 exclamation marks in the narration captions (rule: max 1; a character voice – check by ear)"
     },
     {
       "level": "ok",

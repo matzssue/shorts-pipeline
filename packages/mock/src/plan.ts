@@ -37,7 +37,11 @@ export interface FilmPlan {
   slowClip?: boolean;
   takes?: boolean;
   cache?: boolean;
+  /** Script quirks that real QA reports as warnings (the video still passes). */
+  warn?: Quirk[];
 }
+
+export type Quirk = "longFirstFrame" | "exclamations" | "noQuestion" | "noSourceCard" | "linkInCaption";
 
 const yt_ig: Platform[] = ["youtube", "instagram"];
 const all: Platform[] = ["youtube", "instagram", "tiktok"];
@@ -45,20 +49,20 @@ const all: Platform[] = ["youtube", "instagram", "tiktok"];
 export const FILMS: FilmPlan[] = [
   { kind: "topic", index: 0, format: "F5", made: "2026-01-05", channel: "a", narrator: "narrator-a", series: 1, stage: "published", publish: { date: "2026-01-06", platforms: all } },
   { kind: "topic", index: 1, format: "F5", made: "2026-01-07", channel: "b", narrator: "narrator-b", series: 2, stage: "published", publish: { date: "2026-01-08", platforms: yt_ig } },
-  { kind: "topic", index: 2, format: "F5", made: "2026-01-09", channel: "a", narrator: "narrator-a", series: 1, stage: "published", publish: { date: "2026-01-10", platforms: all }, hit: true },
+  { kind: "topic", index: 2, format: "F5", made: "2026-01-09", channel: "a", narrator: "narrator-a", series: 1, stage: "published", publish: { date: "2026-01-10", platforms: all }, hit: true, warn: ["longFirstFrame"] },
   { kind: "topic", index: 3, format: "F5", made: "2026-01-11", channel: "b", narrator: "narrator-b", series: 1, stage: "published", publish: { date: "2026-01-12", platforms: yt_ig }, takes: true },
-  { kind: "topic", index: 4, format: "F5", made: "2026-01-13", channel: "a", narrator: "narrator-a", series: 2, stage: "published", publish: { date: "2026-01-14", platforms: all } },
+  { kind: "topic", index: 4, format: "F5", made: "2026-01-13", channel: "a", narrator: "narrator-a", series: 2, stage: "published", publish: { date: "2026-01-14", platforms: all }, warn: ["exclamations"] },
   { kind: "topic", index: 5, format: "F5", made: "2026-01-16", channel: "b", narrator: "narrator-b", series: 1, stage: "published", publish: { date: "2026-01-17", platforms: ["youtube"] } },
   { kind: "topic", index: 6, format: "F5", made: "2026-01-18", channel: "a", narrator: "narrator-a", series: 1, stage: "published", publish: { date: "2026-01-19", platforms: yt_ig }, slowClip: true },
-  { kind: "topic", index: 7, format: "F5", made: "2026-01-21", channel: "b", narrator: "narrator-b", series: 2, stage: "published", publish: { date: "2026-01-22", platforms: all } },
+  { kind: "topic", index: 7, format: "F5", made: "2026-01-21", channel: "b", narrator: "narrator-b", series: 2, stage: "published", publish: { date: "2026-01-22", platforms: all }, warn: ["noQuestion"] },
   { kind: "topic", index: 8, format: "F5", made: "2026-01-24", channel: "a", narrator: "narrator-a", series: 1, stage: "published", publish: { date: "2026-01-25", platforms: yt_ig }, cache: true },
-  { kind: "topic", index: 9, format: "F5", made: "2026-01-27", channel: "b", narrator: "narrator-b", series: 1, stage: "published", publish: { date: "2026-01-28", platforms: all } },
+  { kind: "topic", index: 9, format: "F5", made: "2026-01-27", channel: "b", narrator: "narrator-b", series: 1, stage: "published", publish: { date: "2026-01-28", platforms: all }, warn: ["noSourceCard", "noQuestion"] },
   { kind: "topic", index: 10, format: "F5", made: "2026-01-31", channel: "a", narrator: "narrator-a", series: 2, stage: "published", publish: { date: "2026-02-01", platforms: yt_ig } },
-  { kind: "topic", index: 11, format: "F5", made: "2026-02-04", channel: "b", narrator: "narrator-b", series: 1, stage: "published", publish: { date: "2026-02-05", platforms: all } },
+  { kind: "topic", index: 11, format: "F5", made: "2026-02-04", channel: "b", narrator: "narrator-b", series: 1, stage: "published", publish: { date: "2026-02-05", platforms: all }, warn: ["linkInCaption"] },
   { kind: "topic", index: 12, format: "F5", made: "2026-02-08", channel: "a", narrator: "narrator-a", series: 1, stage: "published", publish: { date: "2026-02-09", platforms: yt_ig } },
   { kind: "topic", index: 13, format: "F5", made: "2026-02-13", channel: "b", narrator: "narrator-b", series: 2, stage: "published", publish: { date: "2026-02-14", platforms: all } },
   { kind: "topic", index: 14, format: "F5", made: "2026-02-14", channel: "a", narrator: "narrator-a", series: 1, stage: "qaFailed" },
-  { kind: "topic", index: 15, format: "F5", made: "2026-02-15", channel: "b", narrator: "narrator-b", series: 1, stage: "qaPassed" },
+  { kind: "topic", index: 15, format: "F5", made: "2026-02-15", channel: "b", narrator: "narrator-b", series: 1, stage: "qaPassed", warn: ["noSourceCard"] },
   { kind: "topic", index: 16, format: "F5", made: "2026-02-15", channel: "a", narrator: "narrator-a", series: 2, stage: "narrated" },
   { kind: "product", index: 0, format: "F1", made: "2026-02-15", channel: "a", narrator: "narrator-a", series: 1, stage: "scripted" },
 ];

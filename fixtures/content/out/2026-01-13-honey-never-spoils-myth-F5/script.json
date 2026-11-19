@@ -24,7 +24,7 @@
       "duration_s": 6,
       "visual": "Very little water",
       "prompt": "Vertical shot, hands only, no faces: very little water",
-      "voiceover": "Honey holds very little water, and that makes spoiling slow.",
+      "voiceover": "Honey holds very little water, and that makes spoiling slow. Try it!",
       "on_screen_text": "Very little water",
       "overlay": {
         "type": "label",
@@ -43,7 +43,7 @@
       "duration_s": 7,
       "visual": "Quiz card",
       "prompt": "",
-      "voiceover": "But leave the jar open and it pulls in moisture from the air.",
+      "voiceover": "But leave the jar open and it pulls in moisture from the air. Try it!",
       "on_screen_text": "Keep the lid on",
       "overlay": {
         "type": "quiz",

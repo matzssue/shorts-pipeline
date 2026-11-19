@@ -3,6 +3,7 @@
 @import "../components/overview/overview.css";
 @import "../components/films/films.css";
 @import "../components/film/film.css";
+@import "../components/checks/checks.css";
 
 /*
  * Tailwind with its default look switched off: no palette, no radii, no shadows.

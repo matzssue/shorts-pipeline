@@ -78,10 +78,10 @@
       "from": 750,
       "durationInFrames": 165,
       "playbackRate": 1,
-      "headline": "Tell me below",
+      "headline": "That is the trick",
       "audio": {
         "startFrom": 665,
-        "endAt": 824,
+        "endAt": 766,
         "delay": 0
       }
     }
@@ -338,49 +338,29 @@
       "to": 731
     },
     {
-      "text": "Have",
+      "text": "That",
       "from": 757,
       "to": 767
     },
     {
-      "text": "you",
+      "text": "is",
       "from": 769,
-      "to": 776
+      "to": 774
     },
     {
-      "text": "ever",
-      "from": 779,
-      "to": 788
+      "text": "the",
+      "from": 776,
+      "to": 783
     },
     {
-      "text": "needed",
-      "from": 791,
-      "to": 805
+      "text": "whole",
+      "from": 786,
+      "to": 798
     },
     {
-      "text": "one",
-      "from": 807,
+      "text": "trick.",
+      "from": 800,
       "to": 815
-    },
-    {
-      "text": "of",
-      "from": 817,
-      "to": 822
-    },
-    {
-      "text": "those",
-      "from": 824,
-      "to": 836
-    },
-    {
-      "text": "spare",
-      "from": 839,
-      "to": 851
-    },
-    {
-      "text": "buttons?",
-      "from": 853,
-      "to": 872
     }
   ],
   "durationInFrames": 915

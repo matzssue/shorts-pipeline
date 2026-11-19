@@ -54,10 +54,6 @@
       "durationInFrames": 120,
       "playbackRate": 1,
       "headline": "",
-      "overlay": {
-        "type": "source",
-        "text": "Example Source 10, example.com"
-      },
       "audio": {
         "startFrom": 512,
         "endAt": 612,
@@ -70,10 +66,10 @@
       "from": 666,
       "durationInFrames": 135,
       "playbackRate": 1,
-      "headline": "Tell me below",
+      "headline": "That is the trick",
       "audio": {
         "startFrom": 612,
-        "endAt": 741,
+        "endAt": 715,
         "delay": 0
       }
     }
@@ -290,39 +286,29 @@
       "to": 640
     },
     {
-      "text": "Where",
+      "text": "That",
       "from": 672,
-      "to": 685
+      "to": 682
     },
     {
-      "text": "did",
-      "from": 687,
-      "to": 695
+      "text": "is",
+      "from": 685,
+      "to": 690
     },
     {
-      "text": "you",
-      "from": 698,
-      "to": 705
+      "text": "the",
+      "from": 692,
+      "to": 700
     },
     {
-      "text": "last",
-      "from": 708,
-      "to": 718
+      "text": "whole",
+      "from": 703,
+      "to": 716
     },
     {
-      "text": "lose",
-      "from": 721,
-      "to": 731
-    },
-    {
-      "text": "your",
-      "from": 734,
-      "to": 744
-    },
-    {
-      "text": "keys?",
-      "from": 746,
-      "to": 759
+      "text": "trick.",
+      "from": 718,
+      "to": 734
     }
   ],
   "durationInFrames": 801

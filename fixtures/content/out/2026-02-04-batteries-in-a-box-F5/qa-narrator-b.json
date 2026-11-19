@@ -51,6 +51,10 @@
     {
       "level": "ok",
       "text": "description names a source"
+    },
+    {
+      "level": "warning",
+      "text": "link in the description – no links in videos without a product"
     }
   ],
   "manual": [

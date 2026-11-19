@@ -37,8 +37,8 @@
       "text": "motion: video for 55% of the time"
     },
     {
-      "level": "ok",
-      "text": "source shown on screen"
+      "level": "warning",
+      "text": "no source card (overlay \"source\")"
     },
     {
       "level": "ok",

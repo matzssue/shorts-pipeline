@@ -1,5 +1,5 @@
 import { FORMAT_DURATION_S, type Format } from "@shorts/schema/formats";
-import { FPS, paletteFor, WIDTH, HEIGHT } from "@shorts/schema/video";
+import { FPS, HEIGHT, MAX_VOICE_CHARS_PER_S, paletteFor, WIDTH } from "@shorts/schema/video";
 import { chunkWords, type CaptionChunk } from "@shorts/timeline";
 import type { ComposeOverlay, QaCheck } from "@shorts/schema";
 import type { Film } from "../join";
@@ -11,7 +11,7 @@ import { starts, type Starts } from "./starts";
  * the video's own compose-*.json (scenes, words in frames) plus the caption lines the render draws.
  */
 
-export const CPS_LIMIT = 16;
+export const CPS_LIMIT = MAX_VOICE_CHARS_PER_S;
 
 export interface TlScene {
   index: number;

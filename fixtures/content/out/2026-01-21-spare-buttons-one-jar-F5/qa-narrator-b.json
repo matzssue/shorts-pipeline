@@ -14,7 +14,7 @@
     },
     {
       "level": "ok",
-      "text": "captions: 59 narration words"
+      "text": "captions: 55 narration words"
     },
     {
       "level": "ok",
@@ -41,8 +41,8 @@
       "text": "source shown on screen"
     },
     {
-      "level": "ok",
-      "text": "last scene asks the viewer a question"
+      "level": "warning",
+      "text": "last scene without a question to the viewer"
     },
     {
       "level": "ok",

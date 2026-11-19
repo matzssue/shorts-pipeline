@@ -14,7 +14,7 @@
     },
     {
       "level": "ok",
-      "text": "captions: 49 narration words"
+      "text": "captions: 47 narration words"
     },
     {
       "level": "ok",
@@ -37,12 +37,12 @@
       "text": "motion: video for 57% of the time"
     },
     {
-      "level": "ok",
-      "text": "source shown on screen"
+      "level": "warning",
+      "text": "no source card (overlay \"source\")"
     },
     {
-      "level": "ok",
-      "text": "last scene asks the viewer a question"
+      "level": "warning",
+      "text": "last scene without a question to the viewer"
     },
     {
       "level": "ok",

@@ -57,6 +57,7 @@ export const CONFIG: Config = configSchema.parse({
   sourceLabel: "Source",
   language: "en",
   disclosure: DISCLOSURE,
+  voiceCharsPerMonth: 10000,
 });
 
 const NARRATORS: Record<FilmPlan["narrator"], Narrator> = {
@@ -108,7 +109,8 @@ export function topicScript(v: TopicVocab, i: number, plan: FilmPlan): Script {
   const [f1, f2] = v.facts;
   const quiz = plan.series === 2 && v.quiz;
   const sourceLine = `This comes from ${sourceName(i)}.`;
-  const scenes: Script["scenes"] = [
+  const w = new Set(plan.warn ?? []);
+  let scenes: Script["scenes"] = [
     { kind: "video", duration_s: plannedSeconds(v.hook), visual: `Close-up that shows: ${v.firstFrame}`, prompt: `Vertical close-up, soft daylight, no people: ${v.firstFrame.toLowerCase()}`, voiceover: v.hook, on_screen_text: v.firstFrame, claims: [] },
     { kind: "video", duration_s: plannedSeconds(f1.line), visual: f1.onScreen, prompt: `Vertical shot, hands only, no faces: ${f1.onScreen.toLowerCase()}`, voiceover: f1.line, on_screen_text: f1.onScreen, overlay: { type: "label", heading: v.label.heading, value: v.label.value }, claims: [{ text: f1.text, source: f1.id }] },
     quiz
@@ -117,6 +119,11 @@ export function topicScript(v: TopicVocab, i: number, plan: FilmPlan): Script {
     { kind: "text", duration_s: plannedSeconds(sourceLine), visual: "Source card", prompt: "", voiceover: sourceLine, on_screen_text: "", overlay: { type: "source", text: `${sourceName(i)}, example.com` }, claims: [] },
     { kind: "video", duration_s: plannedSeconds(v.question) + 0.5, visual: "Wide shot of a tidy shelf", prompt: "Vertical wide shot of a tidy shelf, slow push-in, no people", voiceover: v.question, on_screen_text: "Tell me below", claims: [] },
   ];
+  // Quirks that QA reports as warnings: the text changes before the narration, as in a real edit.
+  if (w.has("longFirstFrame")) scenes[0] = { ...scenes[0]!, on_screen_text: `${v.firstFrame} and why it matters at home` };
+  if (w.has("exclamations")) scenes = scenes.map((sc, k) => (k === 1 || k === 2 ? { ...sc, voiceover: `${sc.voiceover} Try it!` } : sc));
+  if (w.has("noSourceCard")) scenes = scenes.map(({ overlay, ...sc }) => (overlay?.type === "source" ? sc : { ...sc, ...(overlay ? { overlay } : {}) }));
+  if (w.has("noQuestion")) scenes[4] = { ...scenes[4]!, voiceover: "That is the whole trick.", on_screen_text: "That is the trick" };
   return scriptSchema.parse({
     input: { kind: "topic", id: v.id },
     format: plan.format,
@@ -124,7 +131,7 @@ export function topicScript(v: TopicVocab, i: number, plan: FilmPlan): Script {
     angle: v.title,
     hooks: [v.hook],
     scenes,
-    caption: `${v.title}. Source: ${sourceName(i)}. ${DISCLOSURE}`,
+    caption: `${v.title}. Source: ${sourceName(i)}. ${DISCLOSURE}${w.has("linkInCaption") ? " More: https://example.com/tips" : ""}`,
     hashtags: ["#hometips", `#${v.niche.replaceAll("-", "")}`],
     notes: "",
   });

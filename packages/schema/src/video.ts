@@ -10,6 +10,11 @@ export const HEIGHT = 1920;
  */
 export const SAFE = { top: 170, bottom: 1500, left: 70, right: 930 } as const;
 
+/** How many narrator characters per second fit a calm pace (Polish). */
+export const MAX_VOICE_CHARS_PER_S = 16;
+/** Video generator credits per second at 720p (clips up to 10 s). */
+export const FLOW_CREDITS_PER_S_720P = 3;
+
 export interface Palette {
   /** Background of text cards and headline boxes. */
   base: string;
