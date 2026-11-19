@@ -11,7 +11,7 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
-import { chunkWords } from "@shorts/timeline";
+import { captionAt, chunkWords } from "@shorts/timeline";
 import { CORRECT, fontFamily, INK, paletteFor, SAFE, WHITE, type Palette } from "./theme.js";
 import type { ComposeOverlay, ComposeProps, ComposeScene, ComposeWord } from "./types.js";
 
@@ -271,9 +271,9 @@ const Captions: React.FC<{ words: ComposeWord[]; pal: Palette }> = ({ words, pal
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const chunks = useMemo(() => chunkWords(words, fps), [words, fps]);
-  const idx = chunks.findIndex((c, i) => frame >= c.from && frame < (chunks[i + 1]?.from ?? c.to + fps * 0.5));
-  const chunk = chunks[idx];
-  if (!chunk || frame > chunk.to + fps * 0.6) return null;
+  const caption = captionAt(chunks, frame, fps);
+  if (!caption) return null;
+  const { chunk, active } = caption;
   return (
     <div
       style={{
@@ -290,7 +290,7 @@ const Captions: React.FC<{ words: ComposeWord[]; pal: Palette }> = ({ words, pal
       }}
     >
       {chunk.words.map((w, i) => {
-        const on = frame >= w.from && frame < w.to + 2;
+        const on = active[i];
         return (
           <span
             key={i}

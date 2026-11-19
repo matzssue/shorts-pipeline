@@ -214,7 +214,9 @@ export function OverviewView({ input, range, href, onChange }: { input: Overview
                         <Thumb film={f} />
                       </td>
                       <td>
-                        <span className="f-title">{f.title}</span>
+                        <Link className="f-title" href={`/films/${f.id}/`}>
+                          {f.title}
+                        </Link>
                         <span className="f-id">{f.folder}</span>
                       </td>
                       <td className="n">{f.published ? fmtDay(f.published) : <span className="mute">{releaseWord(f)}</span>}</td>
@@ -238,7 +240,9 @@ export function OverviewView({ input, range, href, onChange }: { input: Overview
                 {rec.map((f) => (
                   <li key={f.id}>
                     <Thumb film={f} />
-                    <span className="f-title">{f.title}</span>
+                    <Link className="f-title" href={`/films/${f.id}/`}>
+                          {f.title}
+                        </Link>
                     <QaWord film={f} />
                     <span className="m">
                       {[
