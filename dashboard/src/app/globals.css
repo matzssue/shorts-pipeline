@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "../components/charts/charts.css";
 
 /*
  * Tailwind with its default look switched off: no palette, no radii, no shadows.

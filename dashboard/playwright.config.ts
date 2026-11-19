@@ -10,6 +10,8 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
   reporter: process.env.CI ? [["list"], ["html", { open: "never" }]] : "list",
+  // CI never writes reference screenshots: a platform without its baseline skips the visual test
+  updateSnapshots: process.env.CI ? "none" : "missing",
   use: { baseURL: `http://localhost:${PORT}${BASE}/`, trace: "retain-on-failure" },
   webServer: {
     command: "node e2e/serve.mjs",

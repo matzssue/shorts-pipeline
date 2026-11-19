@@ -1,0 +1,486 @@
+/*
+ * Chart marks (design doc, section 6): ink is data, mark-2 is context, the highlighter marks the one
+ * thing that matters. Thin marks, solid hairline grid, no fills under lines, radius only on bar ends.
+ */
+@layer components {
+  .chart-h {
+    font-size: 0.9375rem;
+    font-weight: 650;
+    font-stretch: 88%;
+  }
+  .chart-h span {
+    font: 400 0.75rem var(--font-mono);
+    color: var(--ink-3);
+    margin-left: 8px;
+  }
+
+  /* ---------- line chart ---------- */
+  .plot-wrap {
+    display: grid;
+    grid-template-columns: 2.8rem minmax(0, 1fr);
+    column-gap: 8px;
+    margin-top: 26px;
+  }
+  .yax {
+    position: relative;
+    font: 400 0.6875rem/1 var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-3);
+  }
+  .yax span {
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  .plot {
+    position: relative;
+    height: 210px;
+  }
+  .plot-img {
+    position: absolute;
+    inset: 0;
+  }
+  .plot svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+  .plot path,
+  .plot line {
+    fill: none;
+    vector-effect: non-scaling-stroke;
+  }
+  .g-grid {
+    stroke: var(--rule);
+    stroke-width: 1;
+  }
+  .g-ctx {
+    stroke: var(--mark-2);
+    stroke-width: 1.25;
+    opacity: 0.55;
+    stroke-linejoin: round;
+  }
+  .g-med {
+    stroke: var(--ink);
+    stroke-width: 2.5;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+  .g-hl {
+    stroke: var(--hl);
+    stroke-width: 8;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+  .g-top {
+    stroke: var(--ink);
+    stroke-width: 1.5;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+  .dot {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--ink);
+    box-shadow: 0 0 0 2px var(--paper);
+    transform: translate(-50%, -50%);
+  }
+  .tag {
+    position: absolute;
+    transform: translate(-100%, -150%);
+    margin-left: -3px;
+    font: 500 0.6875rem/1.2 var(--font-mono);
+    white-space: nowrap;
+    background: var(--paper);
+    padding: 1px 3px;
+  }
+  .tag.hl {
+    background: var(--hl);
+    color: var(--hl-ink);
+    padding: 2px 5px;
+  }
+  .plot-empty {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-size: 0.8125rem;
+    color: var(--ink-2);
+  }
+  .xax {
+    grid-column: 2;
+    display: flex;
+    justify-content: space-between;
+    font: 400 0.6875rem/1 var(--font-mono);
+    color: var(--ink-3);
+    padding-top: 6px;
+    border-top: 1px solid var(--ink);
+  }
+
+  /* crosshair: added by JavaScript, the chart reads the same without it */
+  .xhair {
+    position: absolute;
+    inset: 0;
+    touch-action: pan-y;
+    cursor: crosshair;
+  }
+  .xhair:focus-visible {
+    outline-offset: 4px;
+  }
+  .xhair-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    border-left: 1px solid var(--ink-2);
+    pointer-events: none;
+  }
+  .xhair-tip {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    min-width: 9.5rem;
+    padding: 6px 8px;
+    background: var(--ink);
+    color: var(--paper);
+    font: 400 0.75rem/1.45 var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  .xhair-tip b {
+    display: block;
+    font-weight: 500;
+  }
+  .xhair-tip span {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  .xhair-tip strong {
+    font-weight: 500;
+  }
+
+  /* ---------- legend ---------- */
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 22px;
+    margin-top: 16px;
+    font-size: 0.8125rem;
+    color: var(--ink-2);
+  }
+  .legend i {
+    display: inline-block;
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 7px;
+  }
+  .k-med {
+    border-top: 2.5px solid var(--ink);
+  }
+  .k-ctx {
+    border-top: 1.25px solid var(--mark-2);
+  }
+  .k-top {
+    height: 8px;
+    background: linear-gradient(var(--ink), var(--ink)) center / 100% 1.5px no-repeat, var(--hl);
+  }
+  .k-band {
+    height: 10px;
+    background: var(--tint);
+    border-inline: 1px solid var(--ink);
+  }
+  .k-dot {
+    width: 7px !important;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--ink);
+  }
+
+  /* ---------- band with points ---------- */
+  .rng li,
+  .rng-ax {
+    display: grid;
+    grid-template-columns: 7.4rem minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+  }
+  .rng li {
+    padding: 8px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .rng li:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+  .rng .name {
+    font-size: 0.8125rem;
+    line-height: 1.2;
+    color: var(--ink-2);
+  }
+  .rng .name b {
+    font: 500 0.8125rem var(--font-mono);
+    color: var(--ink);
+    margin-right: 6px;
+  }
+  .rng .ax {
+    position: relative;
+    height: 18px;
+  }
+  .rng .band {
+    position: absolute;
+    top: 4px;
+    height: 10px;
+    background: var(--tint);
+    border-inline: 1px solid var(--ink);
+  }
+  .rng .d {
+    position: absolute;
+    top: 9px;
+    width: 24px;
+    height: 24px;
+    transform: translate(-50%, -50%);
+  }
+  .rng .d::before {
+    content: "";
+    position: absolute;
+    left: 8.5px;
+    top: 8.5px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--ink);
+    box-shadow: 0 0 0 1.5px var(--paper);
+  }
+  .rng .d.out::before {
+    background: var(--paper);
+    box-shadow: inset 0 0 0 1.5px var(--ink), 0 0 0 1.5px var(--paper);
+  }
+  .rng-ax div {
+    grid-column: 2;
+    position: relative;
+    height: 18px;
+    font: 400 0.6875rem/1 var(--font-mono);
+    color: var(--ink-3);
+    border-top: 1px solid var(--ink);
+  }
+  .rng-ax span {
+    position: absolute;
+    white-space: nowrap;
+    top: 5px;
+    transform: translateX(-50%);
+  }
+  .rng-ax span:first-child {
+    transform: none;
+  }
+  .rng-ax span:last-child {
+    transform: translateX(-100%);
+  }
+
+  /* ---------- ranking ---------- */
+  .rank li {
+    padding: 8px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .rank li:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+  .rank .t {
+    font-size: 0.8125rem;
+    line-height: 1.3;
+  }
+  .rank .b {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+  }
+  .rank .b i {
+    height: 8px;
+    min-width: 2px;
+    background: var(--ink);
+    border-radius: 0 2px 2px 0;
+  }
+  .rank .b span {
+    font: 500 0.75rem/1 var(--font-mono);
+  }
+
+  /* ---------- meters ---------- */
+  .meter {
+    display: inline-grid;
+    grid-template-columns: 54px 3.8em;
+    align-items: center;
+    gap: 8px;
+  }
+  .meter i {
+    height: 4px;
+    background: var(--tint);
+    position: relative;
+  }
+  .meter i::after {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: var(--v);
+    background: var(--ink);
+  }
+  .meter .num {
+    text-align: right;
+  }
+  .limit-track {
+    position: relative;
+    height: 12px;
+    margin-top: 8px;
+    background: var(--tint);
+  }
+  .limit-track i {
+    position: absolute;
+    inset: 0 auto 0 0;
+    background: var(--ink);
+  }
+  .limit-track b {
+    position: absolute;
+    top: -4px;
+    bottom: -4px;
+    width: 0;
+    border-left: 2px solid var(--ink);
+  }
+  .limit-scale {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+    font: 400 0.6875rem/1 var(--font-mono);
+    color: var(--ink-3);
+  }
+
+  /* ---------- hover and focus value (CSS only, works without JavaScript) ---------- */
+  .tip {
+    outline-offset: 0;
+  }
+  .tip:hover,
+  .tip:focus-visible {
+    z-index: 3;
+  }
+  .tip:hover::after,
+  .tip:focus-visible::after {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: calc(100% + 2px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 7px;
+    background: var(--ink);
+    color: var(--paper);
+    font: 400 0.75rem/1.3 var(--font-mono);
+    white-space: nowrap;
+    pointer-events: none;
+  }
+  .tip.tip-l::after {
+    left: auto;
+    right: 0;
+    transform: none;
+  }
+  .tip.tip-r::after {
+    left: 0;
+    transform: none;
+  }
+
+  /* ---------- table twin ---------- */
+  .twin {
+    margin-top: 14px;
+  }
+  .twin summary {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    font-stretch: 88%;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+  .twin summary::-webkit-details-marker {
+    display: none;
+  }
+  .twin[open] summary {
+    margin-bottom: 10px;
+  }
+  .scroll-x {
+    overflow-x: auto;
+  }
+  .tbl {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+  .tbl caption {
+    text-align: left;
+    font-size: 0.8125rem;
+    color: var(--ink-2);
+    padding-bottom: 8px;
+  }
+  .tbl th {
+    font: 600 0.6875rem/1.25 var(--font-sans);
+    font-stretch: 78%;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--ink-3);
+    text-align: left;
+    padding: 0 12px 6px 0;
+    border-bottom: 1px solid var(--ink);
+    white-space: nowrap;
+    vertical-align: bottom;
+  }
+  .tbl td {
+    padding: 6px 12px 6px 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: middle;
+  }
+  .tbl tbody th {
+    font: 400 0.875rem/1.35 var(--font-sans);
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--ink);
+    white-space: normal;
+    padding: 6px 12px 6px 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: middle;
+  }
+  .tbl th:last-child,
+  .tbl td:last-child {
+    padding-right: 0;
+  }
+  .tbl .r {
+    text-align: right;
+  }
+  .tbl td.r {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (forced-colors: active) {
+  .g-hl {
+    stroke: Mark;
+  }
+  .tag.hl,
+  .k-top {
+    background: Mark;
+    color: MarkText;
+  }
+  .dot,
+  .rng .d::before,
+  .rank .b i,
+  .meter i::after,
+  .limit-track i {
+    background: CanvasText;
+    forced-color-adjust: none;
+  }
+}
