@@ -16,7 +16,7 @@ The engine is generic. Everything specific to a channel – channel list, narrat
 
 ## Requirements
 
-- Node.js ≥ 20.12, pnpm 9
+- Node.js 24 (see `.nvmrc`), pnpm 9
 - ffmpeg on `PATH` (audio checks, flow clips)
 - Optional, per step: ElevenLabs API key, a Google OAuth client (YouTube), an Instagram system-user token
 
