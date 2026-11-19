@@ -30,10 +30,38 @@ packages/schema/     Zod schemas, types and video constants shared by every pack
 packages/timeline/   pure timeline functions: caption lines, timecode, scene lookup
 packages/mock/       deterministic mock content generator (seeded, no real data)
 fixtures/content/    its output: a complete example content directory, committed
-dashboard/           Stykówka: static Next.js dashboard on the mock data (in progress)
+dashboard/           Stykówka: static Next.js dashboard on the mock data
 ```
 
-**Stykówka** (Polish for *contact sheet*: one sheet with every frame of a film roll) is the dashboard. Next.js 16 static export, Tailwind 4 with its default theme switched off in favour of its own tokens, self-hosted fonts, light and dark themes. At build time it reads a content directory (the committed mock fixtures; real data is refused in the public build), validates every file with `@shorts/schema` and joins videos with their publications, stats and narration costs. A broken file stops the build with its path and field. Charts render on the server to SVG and HTML, so they read the same without JavaScript (it only adds the hover and keyboard readout), and every chart has its numbers in a table; `/patterns/` shows each chart form on the mock data. The Overview takes its date range from the address (`?from=…&to=…`), so a link reproduces the view; the static HTML holds the whole season and the browser recomputes every section for the range. Films works the same way: filters, sort, table or contact sheet and the chosen columns all live in the address. Vitest covers the data layer, scales and ticks; Playwright with axe checks every view in both themes and at phone width, and compares the pattern page with reference screenshots (kept per platform).
+## Stykówka – the dashboard
+
+**Stykówka** (Polish for *contact sheet*: one sheet with every frame of a film roll) is a production report for the pipeline: what it made, whether it passed its checks, what it cost and how it is watched. It runs on the committed mock data only; every number is made up, the code that makes and checks the videos is real.
+
+![Overview: the season ruler, the opening sentence and how videos start](docs/screenshots/overview.png)
+
+| View | What it answers |
+| --- | --- |
+| Overview | What did the pipeline make in a date range, and how do the videos start? A ruler of the season picks the range. |
+| Films | Which video? A table or a contact sheet, with filters, sort and columns. |
+| Film | How is one video built? A frame preview drawn from the timeline, four tracks under a playhead, the edit list, QA, releases, narration cost, claims and their facts. |
+| Checks | Where does QA flag problems? A matrix of videos × checks, the checks that flag most, the videos held back. |
+| Costs | What did narration and clips cost? Characters per video, the monthly limit, generator credits, characters per 1,000 views. |
+| About the data | Where the numbers come from, what is real, how they are counted. |
+
+![Film: frame preview, timeline tracks and the playhead](docs/screenshots/film.png)
+
+![Checks: the QA matrix](docs/screenshots/checks.png)
+
+How it is built:
+
+- **Next.js 16 static export**, Tailwind 4 with its default theme switched off in favour of its own tokens, self-hosted fonts, light and dark themes.
+- **Data at build time.** The build reads a content directory, validates every file with `@shorts/schema` and joins videos with their publications, stats and narration costs. A broken file stops the build with its path and field.
+- **Charts without a chart library.** They render on the server to SVG and HTML, read the same without JavaScript (it only adds the hover and keyboard readout), and every chart has its numbers in a table. `/patterns/` shows each chart form.
+- **State in the address.** The Overview range, the Films filters and view, and the Film playhead (`?t=` in frames) live in the URL, so a link reproduces the view.
+- **The preview is the render.** The Film preview uses the same caption function (`@shorts/timeline`) as the Remotion composition, and a test checks it against `compose-*.json` word by word.
+- **Tests.** Vitest covers the data layer, scales and the look rules of the review checklist (no stray colour, gradient, radius or stock font). Playwright with axe checks every view in both themes and at phone width, compares every view with reference screenshots (kept per platform), and scans the built site for anything that is not `example.com`.
+
+![Contact sheet in the dark theme](docs/screenshots/films-sheet-dark.png)
 
 ```sh
 pnpm --filter @shorts/dashboard dev     # http://localhost:3000

@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { StateLink } from "@/lib/StateLink";
 import { useEffect, useRef } from "react";
 import { COLUMNS, DEFAULT_QUERY, filterOptions, isFiltered, QA_STATES, toSearch, type FilmQuery, type FilmRow, type SortKey } from "@/data/selectors/filmQuery";
 import { messages } from "@/lib/messages.en";
@@ -99,9 +99,13 @@ export function FilterBar({ rows, query, onChange, pathname }: { rows: FilmRow[]
         </details>
       ) : null}
       {isFiltered(query) ? (
-        <Link className="clear" href={`${pathname}${toSearch({ ...DEFAULT_QUERY, sort: query.sort, dir: query.dir, view: query.view, cols: query.cols })}`} scroll={false}>
+        <StateLink
+          className="clear"
+          href={`${pathname}${toSearch({ ...DEFAULT_QUERY, sort: query.sort, dir: query.dir, view: query.view, cols: query.cols })}`}
+          onGo={() => onChange({ ...DEFAULT_QUERY, sort: query.sort, dir: query.dir, view: query.view, cols: query.cols })}
+        >
           {t.clear}
-        </Link>
+        </StateLink>
       ) : null}
     </form>
   );

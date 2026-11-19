@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { StateLink } from "@/lib/StateLink";
 import { useRef, useState, type PointerEvent } from "react";
 import { count, fmtDay, fmtMeasured, fmtRange, fmtSpan } from "@/charts/format";
 import { pct } from "@/charts/scale";
@@ -21,6 +21,7 @@ export function RangeRuler({
   films,
   href,
   onChange,
+  ready = true,
 }: {
   input: OverviewInput;
   range: Range;
@@ -29,6 +30,7 @@ export function RangeRuler({
   /** Address for a range; absent = static render (no controls). */
   href?: (r: Range) => string;
   onChange?: (r: Range) => void;
+  ready?: boolean;
 }) {
   const n = spanDays({ from: input.start, to: input.end });
   const idx = (iso: string) => spanDays({ from: input.start, to: iso }) - 1;
@@ -47,7 +49,7 @@ export function RangeRuler({
   const s1 = Math.min(n - 1, idx(shown.to));
   const published = films.filter((f) => f.stage === "published");
   const channels = new Set(published.map((f) => f.channel).filter(Boolean)).size;
-  const live = !!onChange;
+  const live = !!onChange && ready;
 
   return (
     <section className="ruler page" aria-labelledby="ov-title">
@@ -118,14 +120,14 @@ export function RangeRuler({
       </div>
 
       {href ? (
-        <div className="range-ctl">
+        <div className={ready ? "range-ctl" : "range-ctl js-only"}>
           <span className="lab">{m.label}</span>
           {PRESETS.map((p) => {
             const r = presetRange(input, p);
             return (
-              <Link key={p} href={href(r)} scroll={false} aria-current={sameRange(r, range) ? "true" : undefined}>
+              <StateLink key={p} href={href(r)} onGo={() => onChange?.(r)} aria-current={sameRange(r, range) ? "true" : undefined}>
                 {m.presets[p]}
-              </Link>
+              </StateLink>
             );
           })}
           <label>

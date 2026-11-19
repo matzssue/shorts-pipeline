@@ -1,0 +1,180 @@
+/* About the data: the flow of files, real and made up, the mock, the counting rules. */
+@layer components {
+  .prose {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    max-width: 62ch;
+  }
+
+  /* ---------- the flow: seven steps on one rule, a list on a phone ---------- */
+  .flow {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 0;
+    margin-top: 8px;
+    border-top: 1px solid var(--ink);
+  }
+  .flow li {
+    position: relative;
+    padding: 10px 14px 4px 0;
+    min-width: 0;
+  }
+  .flow li + li {
+    padding-left: 14px;
+    border-left: 1px solid var(--rule);
+  }
+  .flow h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    font-stretch: 84%;
+    margin-top: 2px;
+  }
+  .flow .num {
+    color: var(--ink-3);
+    font-size: 0.75rem;
+  }
+  .flow code {
+    display: block;
+    margin-top: 4px;
+    font: 400 0.6875rem/1.4 var(--font-mono);
+    color: var(--ink-2);
+  }
+  .flow code span {
+    white-space: nowrap;
+  }
+  .flow p {
+    margin-top: 6px;
+    font-size: 0.8125rem;
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+  @media (max-width: 1179px) {
+    .flow {
+      grid-template-columns: minmax(0, 1fr);
+      border-top: 0;
+    }
+    .flow li,
+    .flow li + li {
+      display: grid;
+      grid-template-columns: 2rem minmax(0, 1fr);
+      column-gap: 8px;
+      padding: 10px 0;
+      border-left: 0;
+      border-top: 1px solid var(--rule);
+    }
+    .flow li:first-child {
+      border-top-color: var(--ink);
+    }
+    .flow li > :not(.num) {
+      grid-column: 2;
+    }
+    .flow .num {
+      grid-row: 1 / span 3;
+      padding-top: 3px;
+    }
+  }
+
+  /* ---------- real and made up ---------- */
+  .real {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 32px;
+    margin-top: 6px;
+  }
+  .real ul li,
+  .scen li {
+    padding: 6px 0;
+    border-top: 1px solid var(--rule);
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+  .real ul {
+    margin-top: 6px;
+  }
+  @media (max-width: 479px) {
+    .real {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  /* ---------- the mock ---------- */
+  .mock {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 24px 56px;
+    margin-top: 6px;
+  }
+  @media (max-width: 759px) {
+    .mock {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+  .cmd {
+    margin-top: 14px;
+    padding: 8px 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    font: 500 0.875rem/1.3 var(--font-mono);
+  }
+  .cmd code::before {
+    content: "$ ";
+    color: var(--ink-3);
+  }
+  .scen {
+    list-style: decimal-leading-zero inside;
+    margin-top: 6px;
+  }
+  .scen li::marker {
+    font: 400 0.75rem var(--font-mono);
+    color: var(--ink-3);
+  }
+
+  /* ---------- counting rules ---------- */
+  .rules {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 32px;
+    margin-top: 6px;
+  }
+  .rules > div {
+    padding: 8px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .rules dt {
+    font-weight: 700;
+    font-stretch: 84%;
+  }
+  .rules dd {
+    margin-top: 2px;
+    font-size: 0.875rem;
+    line-height: 1.45;
+    color: var(--ink-2);
+  }
+  @media (max-width: 899px) {
+    .rules {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  /* ---------- links and colophon ---------- */
+  .links li {
+    padding: 6px 0;
+    border-top: 1px solid var(--rule);
+    font-weight: 600;
+  }
+  .swatches {
+    display: grid;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .swatches li {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    font-size: 0.875rem;
+  }
+  .swatches .sw {
+    flex: none;
+    width: 54px;
+  }
+}

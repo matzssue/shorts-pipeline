@@ -1,3 +1,6 @@
+/** Seed of the committed mock data (`@shorts/mock`); a test keeps it equal to the generator's. */
+export const MOCK_SEED = 20260105;
+
 /** Every interface text in one place: a second language is one more file like this. */
 export const messages = {
   wordmark: "Stykówka",
@@ -285,6 +288,76 @@ export const messages = {
     },
     perThousand: { title: "Characters per 1,000 views", note: "narration cost against the result · lowest first", cols: { video: "Video", chars: "Characters", views: "Views", value: "Per 1,000 views" } },
   },
+  about: {
+    lead: "Every number on this site is made up. The code that makes the videos, checks them and counts them is not.",
+    flow: {
+      title: "From card to stats",
+      note: "one video's path through the pipeline, and the file each step leaves",
+      steps: [
+        { name: "Card", file: "topics/<id>.json", body: "A topic and its facts, each with a source and the day it was checked. The script may only claim what is here." },
+        { name: "Script", file: "out/<video>/script.json", body: "Scenes with narration, text on screen, overlays and claims that point to card facts." },
+        { name: "Narration", file: "voice/<narrator>.json · data/voice-ledger.csv", body: "Word timings from the voice service, and every billed character: full recordings, scene retakes, cache hits." },
+        { name: "Render", file: "compose-<narrator>.json", body: "The timeline Remotion renders: scenes and caption words in frames." },
+        { name: "QA", file: "qa-<narrator>.json", body: "Automated checks with a level each, and a list for a person to tick." },
+        { name: "Publication", file: "data/publications.csv", body: "A person publishes and writes down the date, platform and link." },
+        { name: "Stats", file: "data/stats/<day>.json", body: "One snapshot a day from the YouTube and Instagram APIs." },
+      ],
+    },
+    read: {
+      title: "What this build read",
+      cols: { what: "Files", count: "Count" },
+      rows: { topics: "Topic cards", products: "Product cards", videos: "Video folders", publications: "Publication rows", snapshots: "Daily stats snapshots", ledger: "Narration ledger rows" },
+    },
+    real: {
+      title: "Real and made up",
+      realHead: "Real",
+      real: [
+        "The pipeline code: script checks, the timeline builder, caption timing, QA, the stats join.",
+        "The file formats and their schemas (@shorts/schema); every file here passes them.",
+        "The tests, the CI and this dashboard.",
+      ],
+      madeHead: "Made up",
+      made: [
+        "Channels, narrators, topics, titles and facts.",
+        "Every view, like, share and watch time.",
+        "Links: all point to example.com. No video was published.",
+      ],
+    },
+    mock: {
+      title: "Making the data again",
+      note: "same seed, same files, byte for byte",
+      body: (seed: number) => `The generator @shorts/mock writes the whole content directory from seed ${seed}. It runs the real pipeline functions on made-up scripts, so timelines and QA results come from the same code as real ones. A test fails when the committed files differ from a fresh run.`,
+      command: "pnpm mock",
+      scenariosHead: "Edge cases it creates on purpose",
+      scenarios: [
+        "A video from the last two days with no YouTube Analytics yet.",
+        "A video published on one platform only.",
+        "A video failing QA: the narration was recorded for a different text.",
+        "A video waiting for the narration and one waiting for clips.",
+        "A video that passed QA and is not published.",
+        "One hit, several times above the median.",
+        "Scene retakes, and a cache hit that costs 0 characters.",
+        "A title over 100 characters.",
+        "A scene whose clip is slowed down.",
+        "Days without Instagram insights, noted in the snapshot.",
+        "TikTok publications without stats.",
+        "Videos that pass QA with warnings in several checks.",
+      ],
+    },
+    rules: {
+      title: "How the numbers are counted",
+      items: [
+        { term: "Range", body: "A video belongs to a range by its publishing date; before publishing, by the day it was made. Both ends of the range count." },
+        { term: "Views", body: "YouTube plus Instagram from the latest snapshot that has the video. TikTok has no API for these accounts, so its numbers are not here." },
+        { term: "Starts", body: "Cumulative views by day since publishing. The median uses only videos older than 14 days." },
+        { term: "Narration pace", body: (n: number) => `Characters of narration per second of the scene; above ${n} the pipeline warns.` },
+        { term: "Credits", body: (n: number) => `Seconds of generated video clips × ${n} credits at 720p. An estimate: retries are not recorded.` },
+        { term: "Measured", body: "Snapshots are taken at 09:30 UTC. YouTube Analytics reports “% watched” 1–2 days late." },
+      ],
+    },
+    links: { title: "Code", repo: "Repository", tests: "Tests", ci: "CI runs", none: "Links to the repository appear in the published build." },
+    palette: { title: "Colophon", type: "Archivo for text, Chivo Mono for numbers and files, Space Grotesk only inside video frames, as in the videos.", series: (n: number, title: string) => `Series ${n} · ${title}`, ink: "One highlighter yellow marks what matters; everything else is ink on paper." },
+  },
   status: { ok: "OK", warning: (n: number) => (n === 1 ? "1 WARNING" : `${n} WARNINGS`), error: "ERROR" },
   patterns: {
     title: "Patterns",
@@ -302,7 +375,7 @@ export const messages = {
   },
   notFound: { title: "Nothing here", body: "This page does not exist.", back: "Back to the overview" },
   colophon: {
-    data: { label: "Data", body: "Generated by @shorts/mock with seed 20260105. Channels, titles, links and numbers are made up." },
+    data: { label: "Data", body: `Generated by @shorts/mock with seed ${MOCK_SEED}. Channels, titles, links and numbers are made up.` },
     code: { label: "Code", body: "shorts-pipeline, MIT licence. The pipeline functions that build the timelines and QA results are real." },
     type: { label: "Type", body: "Archivo and Chivo Mono by Omnibus-Type, served from this site." },
   },
