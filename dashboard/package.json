@@ -2,7 +2,7 @@
   "name": "@shorts/dashboard",
   "version": "0.1.0",
   "private": true,
-  "description": "Stykówka – static Next.js dashboard for the shorts pipeline, built from the mock content directory.",
+  "description": "Shorts Dashboard – static Next.js dashboard for the shorts pipeline, built from the mock content directory.",
   "license": "MIT",
   "type": "module",
   "scripts": {

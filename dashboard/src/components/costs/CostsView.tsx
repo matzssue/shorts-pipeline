@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FLOW_CREDITS_PER_S_720P } from "@shorts/schema/video";
 import { count, filmNo, fmtDec, fmtInt, fmtPct } from "@/charts/format";
 import { pct } from "@/charts/scale";
+import { Kpis } from "@/components/charts/Kpis";
 import { LimitMeter } from "@/components/charts/Meter";
 import { TableTwin } from "@/components/charts/TableTwin";
 import { SectionHead } from "@/components/overview/bits";
@@ -21,21 +22,18 @@ export function CostsView({ d }: { d: CostsPage }) {
 
   return (
     <div className="page">
-      <section className="lead-sec" aria-label="Summary">
-        <div>
-          <SectionHead title={messages.views.costs.title} note={messages.views.costs.note} level={1} />
-          <p className="lead" data-testid="lead">
-            Narration took <b>{count(d.total, "character", "characters")}</b> for {count(d.narrated, "video", "videos")}, about <b>{fmtInt(Math.round(avg))}</b> per video.
-            {d.takes ? (
-              <>
-                {" "}
-                Scene retakes were <mark>{fmtPct(share)}</mark> of that.
-              </>
-            ) : null}{" "}
-            The clips of {count(made.length, "rendered video", "rendered videos")} cost about <b>{fmtInt(credits)}</b> generator credits.
-          </p>
-        </div>
-      </section>
+      <div className="view-head">
+        <SectionHead title={messages.views.costs.title} note={messages.views.costs.note} level={1} />
+      </div>
+      <Kpis
+        label={m.kpi.label}
+        items={[
+          { key: "chars", label: m.kpi.chars, value: fmtInt(d.total), sub: m.kpi.charsSub(count(d.narrated, "video", "videos")), hl: true },
+          { key: "perVideo", label: m.kpi.perVideo, value: fmtInt(Math.round(avg)), sub: m.kpi.perVideoSub },
+          { key: "retakes", label: m.kpi.retakes, value: fmtPct(share), sub: m.kpi.retakesSub },
+          { key: "credits", label: m.kpi.credits, value: fmtInt(credits), sub: m.kpi.creditsSub(count(made.length, "rendered video", "rendered videos")) },
+        ]}
+      />
 
       <section className="sec" data-testid="per-film">
         <SectionHead title={m.perFilm.title} note={m.perFilm.note} />
@@ -74,7 +72,7 @@ export function CostsView({ d }: { d: CostsPage }) {
         />
       </section>
 
-      <div className="grid grid-cols-1 gap-x-12 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-x-5 md:grid-cols-2">
         <section className="sec" data-testid="limit">
           <SectionHead title={m.limit.title} note={m.limit.note} />
           {d.limit ? (
@@ -128,7 +126,7 @@ export function CostsView({ d }: { d: CostsPage }) {
         </section>
       </div>
 
-      <div className="grid grid-cols-1 gap-x-12 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-x-5 md:grid-cols-2">
         <section className="sec" data-testid="credits">
           <SectionHead title={m.credits.title} note={m.credits.note(FLOW_CREDITS_PER_S_720P)} />
           <div className="tbl-scroll" role="region" aria-label={m.credits.title} tabIndex={0}>

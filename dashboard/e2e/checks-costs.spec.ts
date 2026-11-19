@@ -46,7 +46,7 @@ test("on a phone the matrix scrolls inside its box, the page does not", async ({
 
 test("costs: the total is the sum of voice-ledger.csv", async ({ page }) => {
   await page.goto("costs/");
-  await expect(page.getByTestId("lead")).toContainText(`${fmt(total)} characters`);
+  await expect(page.getByTestId("kpi-chars")).toContainText(fmt(total));
   await expect(page.getByTestId("limit").getByRole("meter")).toHaveCount(new Set(ledger.map((l) => l.slice(0, 7))).size);
   await expect(page.getByTestId("credits")).toContainText("estimate");
 });

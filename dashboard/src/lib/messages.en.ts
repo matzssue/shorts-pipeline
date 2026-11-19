@@ -3,8 +3,8 @@ export const MOCK_SEED = 20260105;
 
 /** Every interface text in one place: a second language is one more file like this. */
 export const messages = {
-  wordmark: "Stykówka",
-  tagline: "Production report for AI-made shorts: what the pipeline built and how it is watched.",
+  wordmark: "Shorts Dashboard",
+  tagline: "A read-only report on an AI short-video pipeline: what it made and how the videos do.",
   nav: {
     label: "Views",
     overview: "Overview",
@@ -54,6 +54,29 @@ export const messages = {
       measured: (when: string) => `measured ${when}`,
       ruler: "Publications day by day on each channel. The shaded part is the range; the playhead stands on the measurement day.",
       drag: "Drag across the ruler to pick days.",
+    },
+    intro: {
+      title: "What is this?",
+      body: "The pipeline is a command-line tool: you run it step by step, usually together with Claude Code. It writes every script, recording, render and QA result as a file. This dashboard only reads those files and shows them. It changes nothing.",
+      mock: "All numbers here come from made-up example data.",
+      more: "How it works",
+    },
+    kpi: {
+      label: "Headline numbers",
+      made: "Videos made",
+      fromCards: (n: number) => `from ${n} topic ${n === 1 ? "card" : "cards"}`,
+      inSpan: (span: string) => `in ${span}`,
+      published: "Published",
+      onChannels: (n: number) => `on ${n} ${n === 1 ? "channel" : "channels"}`,
+      nothing: "nothing in this range",
+      views: "Views",
+      median: (v: string) => `half of the videos have fewer than ${v}`,
+      watched: "Watched on YouTube",
+      watchedSub: "average share of a video",
+      notIn: "not in yet",
+      failed: "Failed QA",
+      failedSub: (n: number) => (n === 1 ? "waits for a new render" : "wait for a new render"),
+      noneFailed: "nothing held back",
     },
     notesTitle: "Measurement notes",
     note: {
@@ -247,6 +270,19 @@ export const messages = {
     next: "Next",
   },
   checks: {
+    kpi: {
+      label: "QA in numbers",
+      checked: "Videos checked",
+      waiting: (n: number) => `${n} more ${n === 1 ? "waits" : "wait"} for a render`,
+      all: "every rendered video",
+      clean: "Pass every check",
+      cleanSub: "ready to publish",
+      warnings: "Pass with warnings",
+      warningsSub: "worth a second look",
+      held: "Held back",
+      heldSub: "an error stops publishing",
+      noneHeld: "no errors",
+    },
     matrix: {
       title: "Every check, every video",
       note: "rows: videos · columns: the checks of runQa in five groups",
@@ -276,6 +312,17 @@ export const messages = {
     },
   },
   costs: {
+    kpi: {
+      label: "Costs in numbers",
+      chars: "Narration characters",
+      charsSub: (videos: string) => `for ${videos}`,
+      perVideo: "Per video",
+      perVideoSub: "characters, on average",
+      retakes: "Scene retakes",
+      retakesSub: "share of all characters",
+      credits: "Generator credits",
+      creditsSub: (videos: string) => `estimate for ${videos}`,
+    },
     perFilm: { title: "Characters per video", note: "full recording, then scene retakes · cache hits cost 0", full: "full recording", takes: "retakes", cached: (n: number) => (n === 1 ? "1 cache hit" : `${n} cache hits`), caption: "Narration characters per video" },
     limit: { title: "Monthly limit", note: "characters used against the voice plan from the config", label: (m: string) => `Characters in ${m}`, none: "No monthly limit in the config (voiceCharsPerMonth)." },
     narrators: { title: "Narrators and models", note: "characters per second of finished video", cols: { narrator: "Narrator", model: "Model", videos: "Videos", chars: "Characters", perS: "Chars per video second", takes: "Retakes" } },
@@ -290,6 +337,23 @@ export const messages = {
   },
   about: {
     lead: "Every number on this site is made up. The code that makes the videos, checks them and counts them is not.",
+    what: {
+      title: "How the pieces fit",
+      items: [
+        {
+          name: "The tool does the work",
+          body: "A command-line pipeline you run one step at a time, usually with Claude Code: you bring the facts, the script and the clips; it records the narration, renders the video, checks it and publishes it when you say so.",
+        },
+        {
+          name: "The dashboard only reads",
+          body: "An add-on with no buttons. It reads the files the pipeline leaves in its content folder and turns them into this report. Delete it and the pipeline works the same.",
+        },
+        {
+          name: "Your own data",
+          body: "Point the dashboard at a content folder the pipeline wrote and build it locally. Files from other tools need a small converter into this format first. Step by step: docs/getting-started.md in the repository.",
+        },
+      ],
+    },
     flow: {
       title: "From card to stats",
       note: "one video's path through the pipeline, and the file each step leaves",

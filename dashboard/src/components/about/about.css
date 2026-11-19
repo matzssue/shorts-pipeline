@@ -1,5 +1,42 @@
 /* About the data: the flow of files, real and made up, the mock, the counting rules. */
 @layer components {
+  .about-lead {
+    margin-top: 10px;
+    max-width: 60ch;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+  .what {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+  }
+  @media (min-width: 820px) {
+    .what {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .what-c {
+    padding: 16px 18px 18px;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+  }
+  .what-c .num {
+    color: var(--ink-3);
+  }
+  .what-c h3 {
+    margin-top: 4px;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .what-c p {
+    margin-top: 6px;
+    font-size: 0.9375rem;
+    color: var(--ink-2);
+  }
   .prose {
     font-size: 0.9375rem;
     line-height: 1.5;

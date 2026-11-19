@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { count, filmNo, fmtDay, fmtInt, fmtPct, fmtSpan } from "@/charts/format";
+import { Kpis, type Kpi } from "@/components/charts/Kpis";
 import { ticks } from "@/charts/scale";
 import { Legend } from "@/components/charts/Legend";
 import { Meter } from "@/components/charts/Meter";
@@ -33,48 +34,22 @@ import { RangeRuler } from "./RangeRuler";
 const o = messages.overview;
 const FPS = 30;
 
-/** The opening sentence: the numbers that matter, one of them highlighted. Written by hand, filled from data. */
-export function LeadSentence({ l }: { l: Lead }) {
-  const span = fmtSpan(l.days);
-  const qa =
-    l.qaFailed === 0 ? null : l.qaFailed === 1 ? " One video failed QA and waits for a new render." : ` ${l.qaFailed} videos failed QA and wait for a new render.`;
-  if (!l.published)
-    return (
-      <p className="lead" data-testid="lead">
-        In {span} nothing was published.{" "}
-        {l.made ? (
-          <>
-            The pipeline made <b>{count(l.made, "video", "videos")}</b> in this time.
-          </>
-        ) : null}
-        {qa}
-      </p>
-    );
-  return (
-    <p className="lead" data-testid="lead">
-      In {span} the pipeline made <b>{count(l.made, "video", "videos")}</b>
-      {l.season ? ` from ${count(l.cards, "card", "cards")}` : ""} and published <b>{fmtInt(l.published)}</b> of them on {count(l.channels, "channel", "channels")}.{" "}
-      {l.published === 1 ? (
-        <>
-          It gathered <mark>{count(l.totalViews, "view", "views")}</mark>.
-        </>
-      ) : (
-        <>
-          They gathered <mark>{count(l.totalViews, "view", "views")}</mark>
-          {"; half of the videos have fewer than "}
-          <b>{fmtInt(l.medianViews)}</b>.
-        </>
-      )}{" "}
-      {l.avgViewPercent !== undefined ? (
-        <>
-          On YouTube a viewer watches <b>{fmtPct(l.avgViewPercent)}</b> of a video on average.
-        </>
-      ) : (
-        "The share watched on YouTube is not in yet."
-      )}
-      {qa}
-    </p>
-  );
+/** The headline numbers of the range, as cards. */
+export function LeadKpis({ l }: { l: Lead }) {
+  const k = o.kpi;
+  const items: Kpi[] = [
+    { key: "made", label: k.made, value: fmtInt(l.made), sub: l.season ? k.fromCards(l.cards) : k.inSpan(fmtSpan(l.days)) },
+    { key: "published", label: k.published, value: fmtInt(l.published), sub: l.published ? k.onChannels(l.channels) : k.nothing },
+    { key: "views", label: k.views, value: fmtInt(l.totalViews), sub: l.published > 1 ? k.median(fmtInt(l.medianViews)) : undefined, hl: true },
+    {
+      key: "watched",
+      label: k.watched,
+      value: l.avgViewPercent !== undefined ? fmtPct(l.avgViewPercent) : "–",
+      sub: l.avgViewPercent !== undefined ? k.watchedSub : k.notIn,
+    },
+    { key: "failed", label: k.failed, value: fmtInt(l.qaFailed), sub: l.qaFailed ? k.failedSub(l.qaFailed) : k.noneFailed },
+  ];
+  return <Kpis items={items} label={k.label} />;
 }
 
 function noteText(n: MeasurementNote): string {
@@ -132,24 +107,32 @@ export function OverviewView({
       <RangeRuler input={input} range={range} films={films} href={href} onChange={onChange} ready={ready} />
 
       <div className="page">
-        <section className="lead-sec" aria-label="Summary">
-          <LeadSentence l={l} />
-          <div className="notes">
-            <span className="lab">{o.notesTitle}</span>
-            {ns.length ? (
-              <ul>
-                {ns.map((n, i) => (
-                  <li key={i}>
-                    <span>{n.platform}</span>
-                    <span>{noteText(n)}</span>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className="pt-1.5 text-[0.8125rem] text-ink-2">{o.noNotes}</p>
-            )}
-          </div>
+        <section className="intro" aria-labelledby="intro-h" data-testid="intro">
+          <h2 id="intro-h">{o.intro.title}</h2>
+          <p>
+            {o.intro.body} <b>{o.intro.mock}</b> <Link href="/about/">{o.intro.more} →</Link>
+          </p>
         </section>
+
+        <LeadKpis l={l} />
+
+        <details className="notes-d">
+          <summary>
+            {o.notesTitle} ({ns.length})
+          </summary>
+          {ns.length ? (
+            <ul>
+              {ns.map((n, i) => (
+                <li key={i}>
+                  <span className="num">{n.platform}</span>
+                  <span>{noteText(n)}</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p>{o.noNotes}</p>
+          )}
+        </details>
 
         <section className="sec" data-testid="stages">
           <SectionHead title={o.stages.title} note={o.stages.note} />
@@ -173,7 +156,7 @@ export function OverviewView({
 
         <section className="sec" data-testid="starts">
           <SectionHead title={o.starts.title} note={o.starts.note} />
-          <div className="grid grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-x-5 gap-y-8 md:grid-cols-2">
             <StartChart data={yt} yTicks={yTicks} />
             <StartChart data={ig} yTicks={yTicks} />
           </div>
@@ -230,7 +213,6 @@ export function OverviewView({
                         <Link className="f-title" href={`/films/${f.id}/`}>
                           {f.title}
                         </Link>
-                        <span className="f-id">{f.folder}</span>
                       </td>
                       <td className="n">{f.published ? fmtDay(f.published) : <span className="mute">{releaseWord(f)}</span>}</td>
                       <td className="n">

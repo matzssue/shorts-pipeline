@@ -63,7 +63,8 @@ test("dragging across the ruler picks days", async ({ page, isMobile }) => {
 
 test("a range with nothing published says so and keeps empty axes", async ({ page }) => {
   await page.goto("?from=2025-06-01&to=2025-06-30");
-  await expect(page.getByTestId("lead")).toHaveText("In 30 days nothing was published.");
+  await expect(page.getByTestId("kpi-published")).toContainText("0");
+  await expect(page.getByTestId("kpi-published")).toContainText("nothing in this range");
   await expect(page.getByTestId("starts").getByText("No video published in this range")).toHaveCount(2);
   await expect(page.getByTestId("recent")).toContainText("No video in this range.");
   await expect(page.getByTestId("qa")).toContainText("QA flagged nothing in this range.");
@@ -77,7 +78,7 @@ test("a broken address falls back to the whole season", async ({ page }) => {
 test("the highlighted number agrees with the accounts table", async ({ page }) => {
   for (const q of ["", WEEK]) {
     await page.goto(q);
-    const views = num((await page.getByTestId("lead").locator("mark").innerText()) ?? "");
+    const views = num((await page.getByTestId("kpi-views").locator(".kpi-v").innerText()) ?? "");
     const cells = await page.getByTestId("accounts").locator("tbody tr td:nth-of-type(4)").allInnerTexts();
     expect(cells.reduce((s, c) => s + num(c), 0), q || "season").toBe(views);
   }
@@ -105,7 +106,7 @@ test("without JavaScript: the whole season, no range controls", async ({ browser
   const page = await ctx.newPage();
   await page.goto(WEEK);
   await expect(page.getByTestId("range-summary")).toContainText("5 Jan – 15 Feb 2026 · 6 weeks");
-  await expect(page.getByTestId("lead")).toContainText("from 19 cards");
+  await expect(page.getByTestId("kpi-made")).toContainText("from 19 topic cards");
   await expect(page.getByRole("link", { name: "Last 7 days" })).toHaveCount(0);
   await expect(page.getByTestId("starts").locator("path.g-med")).toHaveCount(2);
   await ctx.close();

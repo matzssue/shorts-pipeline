@@ -2,7 +2,7 @@
 
 export type Theme = "system" | "light" | "dark";
 export const THEMES: readonly Theme[] = ["system", "light", "dark"];
-export const THEME_KEY = "stykowka-theme";
+export const THEME_KEY = "shorts-dashboard-theme";
 
 /** Runs in <head> before paint. Storage may be blocked – then the OS theme stays. */
 export const THEME_INIT_SCRIPT = `try{var t=localStorage.getItem("${THEME_KEY}");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`;

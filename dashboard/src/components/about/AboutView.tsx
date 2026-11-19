@@ -17,13 +17,24 @@ export interface AboutData {
 export function AboutView({ d }: { d: AboutData }) {
   return (
     <div className="page">
-      <section className="lead-sec" aria-label="Summary">
-        <div>
-          <SectionHead title={messages.views.about.title} note={messages.views.about.note} level={1} />
-          <p className="lead" data-testid="lead">
-            {m.lead}
-          </p>
-        </div>
+      <div className="view-head">
+        <SectionHead title={messages.views.about.title} note={messages.views.about.note} level={1} />
+        <p className="about-lead" data-testid="lead">
+          {m.lead}
+        </p>
+      </div>
+
+      <section className="what" aria-labelledby="what-h" data-testid="what">
+        <h2 id="what-h" className="sr-only">
+          {m.what.title}
+        </h2>
+        {m.what.items.map((x, i) => (
+          <div key={x.name} className="what-c">
+            <span className="num">{String(i + 1).padStart(2, "0")}</span>
+            <h3>{x.name}</h3>
+            <p>{x.body}</p>
+          </div>
+        ))}
       </section>
 
       <section className="sec" data-testid="flow">
@@ -48,7 +59,7 @@ export function AboutView({ d }: { d: AboutData }) {
         </ol>
       </section>
 
-      <div className="grid grid-cols-1 gap-x-12 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-x-5 md:grid-cols-2">
         <section className="sec" data-testid="real">
           <SectionHead title={m.real.title} />
           <div className="real">
@@ -126,7 +137,7 @@ export function AboutView({ d }: { d: AboutData }) {
         </dl>
       </section>
 
-      <div className="grid grid-cols-1 gap-x-12 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-x-5 md:grid-cols-2">
         <section className="sec" data-testid="links">
           <SectionHead title={m.links.title} />
           {d.repoUrl ? (

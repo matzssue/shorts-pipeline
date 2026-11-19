@@ -10,12 +10,12 @@
   }
   .sec-h h2 {
     font-size: 1.125rem;
-    line-height: 1.2;
+    line-height: 1.25;
     font-weight: 700;
-    font-stretch: 88%;
   }
   .sec-note {
-    font: 400 0.75rem/1.4 var(--font-mono);
+    font-size: 0.8125rem;
+    line-height: 1.4;
     color: var(--ink-3);
   }
   .foot-note {
@@ -185,6 +185,18 @@
   }
 
   /* ---------- opening sentence and notes ---------- */
+  .view-head {
+    margin-top: 32px;
+  }
+  .view-head .sec-h {
+    margin-bottom: 0;
+  }
+  .view-head h1,
+  .ruler-meta h1 {
+    font-size: 1.75rem;
+    line-height: 1.15;
+    font-weight: 750;
+  }
   .lead-sec {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -239,6 +251,61 @@
   .notes li > span:first-child {
     font: 500 0.75rem/1.5 var(--font-mono);
     color: var(--ink);
+  }
+
+  /* on a phone the funnel keeps its numbers; what each step does is on About */
+  @media (max-width: 599px) {
+    .stages .st-note {
+      display: none;
+    }
+  }
+
+  /* ---------- what is this ---------- */
+  .intro {
+    margin-top: 24px;
+    padding: 14px 18px;
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--hl);
+    border-radius: var(--radius);
+    background: var(--card);
+  }
+  .intro h2 {
+    font-size: 0.9375rem;
+    font-weight: 700;
+  }
+  .intro p {
+    margin-top: 4px;
+    max-width: 75ch;
+    font-size: 0.9375rem;
+    color: var(--ink-2);
+  }
+  .intro b {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* ---------- measurement notes, folded ---------- */
+  .notes-d {
+    margin-top: 12px;
+    font-size: 0.875rem;
+    color: var(--ink-2);
+  }
+  .notes-d summary {
+    cursor: pointer;
+    width: fit-content;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .notes-d ul,
+  .notes-d p {
+    margin-top: 6px;
+    max-width: 80ch;
+  }
+  .notes-d li {
+    display: grid;
+    grid-template-columns: 2.2rem minmax(0, 1fr);
+    gap: 8px;
+    padding: 4px 0;
   }
 
   /* ---------- stages ---------- */
@@ -443,7 +510,7 @@
   .trio {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    gap: 0 48px;
+    gap: 0 20px;
   }
   @media (min-width: 980px) {
     .trio {
