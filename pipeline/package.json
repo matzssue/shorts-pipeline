@@ -1,0 +1,45 @@
+{
+  "name": "shorts-pipeline",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CLI pipeline that turns fact-checked topic cards into vertical short videos: script validation, TTS narration with word timings, Remotion render, QA and publishing to YouTube Shorts and Instagram Reels.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20.12"
+  },
+  "packageManager": "pnpm@9.15.9",
+  "scripts": {
+    "make": "tsx src/cli.ts",
+    "validate": "tsx src/validate.ts",
+    "voice-samples": "tsx src/voice-samples.ts",
+    "compose": "tsx src/compose.ts",
+    "voice-fix": "tsx src/voice-fix.ts",
+    "qa": "tsx src/qa.ts",
+    "flow": "tsx src/flow.ts",
+    "ig-publish": "tsx src/ig-publish.ts",
+    "yt-auth": "tsx src/yt-auth.ts",
+    "yt-publish": "tsx src/yt-publish.ts",
+    "stats": "tsx src/stats.ts",
+    "test": "node --import tsx --test test/product.test.ts test/topic.test.ts test/script.test.ts test/voice.test.ts test/compose.test.ts test/voice-fix.test.ts test/qa.test.ts test/flow.test.ts test/ig-publish.test.ts test/yt-publish.test.ts test/stats.test.ts test/examples.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "~20",
+    "@types/react": "~19.3.0",
+    "@types/react-dom": "~19.3.0",
+    "tsx": "~4.19",
+    "typescript": "~5.6"
+  },
+  "dependencies": {
+    "@elevenlabs/elevenlabs-js": "~2.77.0",
+    "@remotion/bundler": "4.0.541",
+    "@remotion/cli": "4.0.541",
+    "@remotion/google-fonts": "4.0.541",
+    "@remotion/renderer": "4.0.541",
+    "react": "~19.3.1",
+    "react-dom": "~19.3.1",
+    "remotion": "4.0.541",
+    "zod": "~4.6.7"
+  }
+}

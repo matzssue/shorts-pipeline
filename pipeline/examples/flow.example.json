@@ -1,0 +1,23 @@
+{
+  "film": "2026-01-01-example-B",
+  "suffix": "Vertical 9:16, natural light, no text on screen.",
+  "characters": {
+    "HERO": "a small grey robot with round blue eyes, the one from the reference image"
+  },
+  "steps": [
+    {
+      "id": "01",
+      "note": "The robot rolls into the kitchen.",
+      "prompt": "HERO rolls across a kitchen floor towards the camera.",
+      "seconds": 8,
+      "refs": ["asset:hero/front.jpg"]
+    },
+    {
+      "id": "02",
+      "mode": "frames",
+      "note": "It stops and looks at the drawer.",
+      "prompt": "HERO stops and turns its head towards an open drawer.",
+      "start": "frame:01@end"
+    }
+  ]
+}

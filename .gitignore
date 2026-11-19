@@ -1,0 +1,20 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# dependencies and build output
+node_modules/
+dist/
+*.log
+
+# content and outputs (live in CONTENT_DIR, never in this repo)
+pipeline/out/
+pipeline/data/
+pipeline/topics/
+pipeline/products/
+pipeline/flows/
+pipeline/assets/**
+!pipeline/assets/.gitkeep
+pipeline/shorts.config.json
+*.stackdump

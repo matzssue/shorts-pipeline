@@ -1,0 +1,22 @@
+{
+  "id": "example-cable-labels",
+  "title": "Label your chargers with bread bag clips",
+  "niche": "home-organisation",
+  "formats": ["F5"],
+  "problem": "All the chargers in the drawer look the same and you never know which one is which.",
+  "facts": [
+    {
+      "id": "clip_fits_cable",
+      "text": "A plastic bread bag clip fits around a standard charging cable and stays in place.",
+      "source_url": "https://example.com/source",
+      "source_name": "Source name",
+      "checked_at": "2026-11-08"
+    }
+  ],
+  "forbidden_claims": [
+    "Numbers (e.g. \"saves 10 minutes a day\") that are not in the facts."
+  ],
+  "risk_category": "none",
+  "related_product_idea": "cable organiser (later)",
+  "notes": ""
+}

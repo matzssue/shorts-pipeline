@@ -1,0 +1,41 @@
+{
+  "input": { "kind": "topic", "id": "example-cable-labels" },
+  "format": "F5",
+  "series": 1,
+  "angle": "One cheap trick, shown with the drawer everyone has.",
+  "hooks": ["Which charger is which?"],
+  "scenes": [
+    {
+      "kind": "video",
+      "duration_s": 8,
+      "visual": "Hands pull a tangle of identical white chargers out of a drawer.",
+      "prompt": "Close-up of hands pulling a tangle of identical white phone chargers out of a kitchen drawer, soft daylight, vertical 9:16, no faces, no text.",
+      "voiceover": "Every charger in this drawer looks the same.",
+      "on_screen_text": "Which charger is which?",
+      "claims": []
+    },
+    {
+      "kind": "video",
+      "duration_s": 9,
+      "visual": "A bread bag clip is pushed onto a cable next to the plug.",
+      "prompt": "Macro shot of fingers clipping a small plastic bread bag clip onto a white charging cable near the plug, vertical 9:16, no faces, no text.",
+      "voiceover": "A bread bag clip fits right around the cable.",
+      "on_screen_text": "",
+      "overlay": { "type": "label", "heading": "Written on the clip:", "value": "PHONE" },
+      "claims": [{ "text": "A bread bag clip fits around a charging cable.", "source": "clip_fits_cable" }]
+    },
+    {
+      "kind": "text",
+      "duration_s": 6,
+      "visual": "Card with the source.",
+      "prompt": "",
+      "voiceover": "How do you sort yours?",
+      "on_screen_text": "",
+      "overlay": { "type": "source", "text": "Source name" },
+      "claims": []
+    }
+  ],
+  "caption": "One clip per cable and the drawer makes sense again. Script and facts checked by a person; visuals and voice made with AI. Source: Source name.",
+  "hashtags": ["#hometips", "#organisation"],
+  "notes": ""
+}
