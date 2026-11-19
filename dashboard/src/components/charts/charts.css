@@ -186,9 +186,19 @@
   .k-ctx {
     border-top: 1.25px solid var(--mark-2);
   }
+  /* highlighter with the ink line through it, as on the chart (no gradient: those belong to frames) */
   .k-top {
+    position: relative;
     height: 8px;
-    background: linear-gradient(var(--ink), var(--ink)) center / 100% 1.5px no-repeat, var(--hl);
+    background: var(--hl);
+  }
+  .k-top::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 3px;
+    border-top: 1.5px solid var(--ink);
   }
   .k-band {
     height: 10px;
