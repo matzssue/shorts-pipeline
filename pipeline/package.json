@@ -12,7 +12,7 @@
     "./voice": "./src/steps/voice.ts"
   },
   "engines": {
-    "node": ">=20.12"
+    "node": ">=24"
   },
   "scripts": {
     "make": "tsx src/cli.ts",
@@ -30,7 +30,7 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@types/node": "~20",
+    "@types/node": "~24",
     "@types/react": "~19.3.0",
     "@types/react-dom": "~19.3.0",
     "tsx": "~4.19",
