@@ -3,7 +3,8 @@ import { expect, test, type Page } from "@playwright/test";
 
 const VIEWS = [
   { path: "", nav: "Overview", h1: "Overview" },
-  { path: "films/", nav: "Films", h1: "Films" },
+  // the Films item carries the number of videos read from the content directory
+  { path: "films/", nav: "Films 18", h1: "Films" },
   { path: "checks/", nav: "Checks", h1: "Checks" },
   { path: "costs/", nav: "Costs", h1: "Costs" },
   { path: "about/", nav: "About the data", h1: "About the data" },

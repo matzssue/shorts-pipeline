@@ -2,6 +2,7 @@ import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } fr
 import path from "node:path";
 import {
   composePropsSchema,
+  parseCsv,
   qaResultSchema,
   VOICE_LEDGER_COLUMNS,
   voiceLedgerRowSchema,
@@ -9,7 +10,6 @@ import {
   type QaResult,
   type VoiceLedgerRow,
 } from "@shorts/schema";
-import { parseCsv } from "../steps/stats.js";
 import { DATA_DIR } from "./paths.js";
 
 /**

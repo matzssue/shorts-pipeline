@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { channelId } from "./common.js";
+import { channelId } from "./common.ts";
 
 /** `shorts.config.json` in the content directory: everything channel-specific. */
 

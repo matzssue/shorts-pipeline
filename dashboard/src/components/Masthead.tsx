@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { getData } from "@/data";
 import { messages } from "@/lib/messages.en";
 import { Nav } from "./Nav";
 import { ThemeToggle } from "./ThemeToggle";
 
 export function Masthead() {
+  const { films } = getData();
   return (
     <header className="page pt-5">
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:bg-hl focus:px-2 focus:py-1 focus:text-hl-ink">
@@ -16,7 +18,7 @@ export function Masthead() {
         <p className="col-span-full row-start-2 max-w-[46ch] pb-px text-sm leading-[1.3] text-ink-2 md:col-span-1 md:row-start-auto">{messages.tagline}</p>
         <ThemeToggle />
       </div>
-      <Nav />
+      <Nav counts={{ "/films/": films.length }} />
     </header>
   );
 }

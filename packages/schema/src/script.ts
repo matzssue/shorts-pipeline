@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { FORMATS } from "./formats.js";
+import { FORMATS } from "./formats.ts";
 
 /** A claim in the narration or on screen: must point to a source in the card. */
 const claimSchema = z.strictObject({
