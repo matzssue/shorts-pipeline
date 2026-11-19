@@ -54,10 +54,6 @@
       "durationInFrames": 120,
       "playbackRate": 1,
       "headline": "",
-      "overlay": {
-        "type": "source",
-        "text": "Example Source 16, example.com"
-      },
       "audio": {
         "startFrom": 475,
         "endAt": 568,

@@ -38,6 +38,8 @@ export const configSchema = z.strictObject({
   language: z.string().min(2).default("en"),
   /** Sentence every description must contain to disclose AI use; empty = no check. */
   disclosure: z.string().default(""),
+  /** Characters per month in the voice service plan – the dashboard shows usage against it. */
+  voiceCharsPerMonth: z.number().int().positive().optional(),
 });
 
 export type Config = z.infer<typeof configSchema>;

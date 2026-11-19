@@ -1,0 +1,284 @@
+/* Checks (QA matrix, weeks, held back) and Costs (characters per video). */
+@layer components {
+  /* ---------- the matrix: scrolls inside its own box, never the page ---------- */
+  .matrix-scroll {
+    /* holds the visually hidden cell texts inside the box, so they do not widen the page */
+    position: relative;
+    overflow-x: auto;
+    max-width: 100%;
+    margin-top: 6px;
+  }
+  .matrix {
+    border-collapse: collapse;
+    font-size: 0.8125rem;
+  }
+  .matrix th,
+  .matrix td {
+    padding: 0;
+  }
+  .matrix .grp {
+    font: 600 0.6875rem/1.25 var(--font-sans);
+    font-stretch: 78%;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--ink-3);
+    text-align: left;
+    padding: 0 6px 4px;
+    border-left: 1px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+    white-space: nowrap;
+  }
+  /* check names stand upright in narrow columns */
+  .matrix th.qh {
+    vertical-align: bottom;
+    height: 8.5rem;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--ink);
+    font-weight: 500;
+    color: var(--ink-2);
+  }
+  .matrix th.qh span {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    white-space: nowrap;
+    display: inline-block;
+    width: 32px;
+    line-height: 32px;
+    text-align: left;
+  }
+  .matrix th.g0,
+  .matrix td.g0 {
+    border-left: 1px solid var(--ink);
+  }
+  .matrix th.vid {
+    text-align: left;
+    vertical-align: bottom;
+    font-weight: 500;
+    padding: 0 16px 6px 0;
+    border-bottom: 1px solid var(--ink);
+    min-width: 12rem;
+    max-width: 18rem;
+  }
+  .matrix tbody th.vid {
+    padding: 5px 16px 5px 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: middle;
+  }
+  .matrix tbody th.vid a {
+    display: flex;
+    gap: 8px;
+    text-decoration: none;
+  }
+  .matrix tbody th.vid a:hover .vt {
+    text-decoration: underline;
+  }
+  .matrix .vt {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+  }
+  .matrix tr.fail th.vid .num {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 0 3px;
+  }
+  /* the video names stay put while the checks scroll under them */
+  .matrix th.vid {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: var(--paper);
+  }
+  .matrix td.corner {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: var(--paper);
+  }
+  .matrix tbody tr:hover th.vid {
+    background: var(--tint);
+  }
+  @media (max-width: 599px) {
+    .matrix th.vid {
+      min-width: 8.5rem;
+      max-width: 8.5rem;
+      padding-right: 8px;
+    }
+  }
+  .matrix td.qc {
+    width: 32px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--rule);
+  }
+  .matrix tbody tr:hover {
+    background: var(--tint);
+  }
+  .qm {
+    position: relative;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    vertical-align: middle;
+    font-style: normal;
+  }
+  .qm-warning {
+    box-shadow: inset 0 0 0 2px var(--ink);
+  }
+  .qm-error {
+    background: var(--ink);
+  }
+  .qm-none {
+    width: auto;
+    height: auto;
+    font: 400 0.75rem/1 var(--font-mono);
+    color: var(--ink-3);
+  }
+  span.qm.tip {
+    cursor: default;
+  }
+  .qm-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+    margin-top: 12px;
+    font-size: 0.8125rem;
+    color: var(--ink-2);
+  }
+  .qm-legend .qm {
+    margin-right: 6px;
+    vertical-align: -2px;
+  }
+
+  /* ---------- flags per video by week: columns ---------- */
+  .wk-cols {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    gap: 10px;
+    align-items: end;
+    margin-top: 6px;
+  }
+  .wk-cols li {
+    display: grid;
+    justify-items: center;
+    gap: 4px;
+  }
+  .wk-cols .bar {
+    display: flex;
+    align-items: end;
+    width: 100%;
+    max-width: 44px;
+    height: 120px;
+    border-bottom: 1px solid var(--ink);
+  }
+  .wk-cols .bar i {
+    display: block;
+    width: 100%;
+    min-height: 0;
+    background: var(--ink);
+  }
+  .wk-cols .v {
+    font-size: 0.75rem;
+  }
+
+  /* ---------- held back ---------- */
+  .held > li {
+    padding: 10px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .held > li:first-child {
+    border-top-color: var(--ink);
+  }
+  .held .f-title {
+    display: inline-flex;
+    gap: 8px;
+    overflow-wrap: anywhere;
+  }
+  .held ul li {
+    display: grid;
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+    gap: 8px;
+    margin-top: 6px;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    align-items: start;
+  }
+  .held ul li .lv {
+    justify-self: start;
+  }
+
+  /* ---------- characters per video: two-part bars ---------- */
+  .cbars li {
+    display: grid;
+    grid-template-columns: minmax(0, 17rem) minmax(0, 1fr);
+    column-gap: 16px;
+    row-gap: 3px;
+    align-items: center;
+    padding: 6px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .cbars li:first-child {
+    border-top-color: var(--ink);
+  }
+  .cbars .t {
+    font-size: 0.8125rem;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+    grid-row: 1 / span 2;
+  }
+  .cbars .t .num {
+    margin-right: 4px;
+  }
+  .cbars .b {
+    display: flex;
+    height: 9px;
+  }
+  .cbars .v {
+    font-size: 0.75rem;
+  }
+  .cbars i.full,
+  .cbars-legend i.full {
+    background: var(--ink);
+  }
+  .cbars i.takes,
+  .cbars-legend i.takes {
+    background: repeating-linear-gradient(135deg, var(--ink) 0 1.5px, transparent 1.5px 4px);
+    box-shadow: inset 0 0 0 1px var(--ink);
+  }
+  .cbars .b i {
+    display: block;
+    height: 100%;
+    min-width: 2px;
+  }
+  .cbars-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+    margin-top: 10px;
+    font-size: 0.8125rem;
+    color: var(--ink-2);
+  }
+  .cbars-legend i {
+    display: inline-block;
+    width: 14px;
+    height: 9px;
+    margin-right: 6px;
+  }
+  @media (max-width: 599px) {
+    .cbars li {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .cbars .t {
+      grid-row: auto;
+    }
+  }
+  .tbl tfoot th,
+  .tbl tfoot td {
+    border-top: 1px solid var(--ink);
+    font-weight: 600;
+  }
+}

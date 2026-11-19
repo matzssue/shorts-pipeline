@@ -92,6 +92,7 @@ Besides videos and Markdown reports, the pipeline writes machine-readable files 
 | `language` | BCP-47 language of the videos (YouTube metadata) |
 | `sourceLabel` | label of the source card at the end of a video |
 | `disclosure` | sentence every caption must contain (AI disclosure); QA fails without it |
+| `voiceCharsPerMonth` | optional: characters per month in the voice plan, shown against usage in the dashboard |
 
 ## Commands
 

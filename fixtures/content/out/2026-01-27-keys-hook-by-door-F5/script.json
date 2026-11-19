@@ -59,10 +59,6 @@
       "prompt": "",
       "voiceover": "This comes from Example Source 10.",
       "on_screen_text": "",
-      "overlay": {
-        "type": "source",
-        "text": "Example Source 10, example.com"
-      },
       "claims": []
     },
     {
@@ -70,8 +66,8 @@
       "duration_s": 4.5,
       "visual": "Wide shot of a tidy shelf",
       "prompt": "Vertical wide shot of a tidy shelf, slow push-in, no people",
-      "voiceover": "Where did you last lose your keys?",
-      "on_screen_text": "Tell me below",
+      "voiceover": "That is the whole trick.",
+      "on_screen_text": "That is the trick",
       "claims": []
     }
   ],

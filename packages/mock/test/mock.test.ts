@@ -146,6 +146,13 @@ describe("scenarios", () => {
     assert.ok(content.films.some((f) => f.voice?.sources?.some((s) => s.startsWith("voice/takes/"))));
   });
 
+  it("11. videos that pass QA with warnings, in several checks", () => {
+    const warned = content.films.filter((f) => f.qa?.passed && f.qa.checks.some((c) => c.level === "warning"));
+    assert.ok(warned.length >= 5, `${warned.length} videos with warnings`);
+    const kinds = new Set(warned.flatMap((f) => f.qa!.checks.filter((c) => c.level === "warning").map((c) => c.text.split(" ")[0])));
+    assert.ok(kinds.size >= 4, [...kinds].join(", "));
+  });
+
   it("8. a very long title", () => {
     assert.ok(content.films.some((f) => f.title.length > 100));
   });

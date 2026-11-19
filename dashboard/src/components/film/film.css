@@ -22,6 +22,8 @@
     margin-top: 6px;
   }
   .tbl-scroll {
+    /* holds the visually hidden cell texts inside the box, so they do not widen the page */
+    position: relative;
     overflow-x: auto;
     max-width: 100%;
   }

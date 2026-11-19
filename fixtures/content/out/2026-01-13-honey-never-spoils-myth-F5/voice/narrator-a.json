@@ -3,12 +3,12 @@
   "provider": "mock",
   "voiceId": "mock-voice-a",
   "model": "eleven_v3",
-  "hash": "6a8e100a0b75bbc7",
-  "text": "You have heard that honey lasts forever. Honey holds very little water, and that makes spoiling slow. But leave the jar open and it pulls in moisture from the air. This comes from Example Source 5. Do you keep honey in the cupboard or the fridge?",
+  "hash": "f4e35d04447f4680",
+  "text": "You have heard that honey lasts forever. Honey holds very little water, and that makes spoiling slow. Try it! But leave the jar open and it pulls in moisture from the air. Try it! This comes from Example Source 5. Do you keep honey in the cupboard or the fridge?",
   "parts": [
     "You have heard that honey lasts forever.",
-    "Honey holds very little water, and that makes spoiling slow.",
-    "But leave the jar open and it pulls in moisture from the air.",
+    "Honey holds very little water, and that makes spoiling slow. Try it!",
+    "But leave the jar open and it pulls in moisture from the air. Try it!",
     "This comes from Example Source 5.",
     "Do you keep honey in the cupboard or the fridge?"
   ],
@@ -19,8 +19,8 @@
     "full recording",
     "full recording"
   ],
-  "duration_s": 18.851,
-  "billed_chars": 246,
+  "duration_s": 20.677,
+  "billed_chars": 262,
   "words": [
     {
       "text": "You",
@@ -108,149 +108,169 @@
       "end": 7.674
     },
     {
-      "text": "But",
+      "text": "Try",
       "start": 8.065,
       "end": 8.277
     },
     {
-      "text": "leave",
+      "text": "it!",
       "start": 8.347,
-      "end": 8.701
+      "end": 8.559
+    },
+    {
+      "text": "But",
+      "start": 8.907,
+      "end": 9.119
+    },
+    {
+      "text": "leave",
+      "start": 9.19,
+      "end": 9.543
     },
     {
       "text": "the",
-      "start": 8.771,
-      "end": 8.983
+      "start": 9.614,
+      "end": 9.826
     },
     {
       "text": "jar",
-      "start": 9.054,
-      "end": 9.266
+      "start": 9.896,
+      "end": 10.108
     },
     {
       "text": "open",
-      "start": 9.337,
-      "end": 9.619
+      "start": 10.179,
+      "end": 10.462
     },
     {
       "text": "and",
-      "start": 9.69,
-      "end": 9.902
+      "start": 10.532,
+      "end": 10.744
     },
     {
       "text": "it",
-      "start": 9.973,
-      "end": 10.114
+      "start": 10.815,
+      "end": 10.956
     },
     {
       "text": "pulls",
-      "start": 10.185,
-      "end": 10.538
+      "start": 11.027,
+      "end": 11.38
     },
     {
       "text": "in",
-      "start": 10.609,
-      "end": 10.75
+      "start": 11.451,
+      "end": 11.592
     },
     {
       "text": "moisture",
-      "start": 10.821,
-      "end": 11.386
+      "start": 11.663,
+      "end": 12.228
     },
     {
       "text": "from",
-      "start": 11.457,
-      "end": 11.739
+      "start": 12.299,
+      "end": 12.582
     },
     {
       "text": "the",
-      "start": 11.81,
-      "end": 12.022
+      "start": 12.652,
+      "end": 12.864
     },
     {
       "text": "air.",
-      "start": 12.093,
-      "end": 12.375
+      "start": 12.935,
+      "end": 13.218
+    },
+    {
+      "text": "Try",
+      "start": 13.621,
+      "end": 13.833
+    },
+    {
+      "text": "it!",
+      "start": 13.904,
+      "end": 14.116
     },
     {
       "text": "This",
-      "start": 12.723,
-      "end": 13.006
+      "start": 14.523,
+      "end": 14.806
     },
     {
       "text": "comes",
-      "start": 13.076,
-      "end": 13.43
+      "start": 14.877,
+      "end": 15.23
     },
     {
       "text": "from",
-      "start": 13.5,
-      "end": 13.783
+      "start": 15.301,
+      "end": 15.583
     },
     {
       "text": "Example",
-      "start": 13.854,
-      "end": 14.348
+      "start": 15.654,
+      "end": 16.149
     },
     {
       "text": "Source",
-      "start": 14.419,
-      "end": 14.843
+      "start": 16.219,
+      "end": 16.643
     },
     {
       "text": "5.",
-      "start": 14.914,
-      "end": 15.055
+      "start": 16.714,
+      "end": 16.855
     },
     {
       "text": "Do",
-      "start": 15.459,
-      "end": 15.6
+      "start": 17.285,
+      "end": 17.426
     },
     {
       "text": "you",
-      "start": 15.671,
-      "end": 15.883
+      "start": 17.497,
+      "end": 17.709
     },
     {
       "text": "keep",
-      "start": 15.953,
-      "end": 16.236
+      "start": 17.779,
+      "end": 18.062
     },
     {
       "text": "honey",
-      "start": 16.307,
-      "end": 16.66
+      "start": 18.133,
+      "end": 18.486
     },
     {
       "text": "in",
-      "start": 16.731,
-      "end": 16.872
+      "start": 18.557,
+      "end": 18.698
     },
     {
       "text": "the",
-      "start": 16.943,
-      "end": 17.155
+      "start": 18.769,
+      "end": 18.981
     },
     {
       "text": "cupboard",
-      "start": 17.225,
-      "end": 17.791
+      "start": 19.051,
+      "end": 19.617
     },
     {
       "text": "or",
-      "start": 17.861,
-      "end": 18.003
+      "start": 19.687,
+      "end": 19.829
     },
     {
       "text": "the",
-      "start": 18.073,
-      "end": 18.285
+      "start": 19.899,
+      "end": 20.112
     },
     {
       "text": "fridge?",
-      "start": 18.356,
-      "end": 18.851
+      "start": 20.182,
+      "end": 20.677
     }
   ],
   "scenes": [
@@ -267,31 +287,31 @@
       "duration_s": 6,
       "voice": {
         "start": 3.33,
-        "end": 7.674
+        "end": 8.559
       }
     },
     {
       "index": 2,
       "duration_s": 7,
       "voice": {
-        "start": 8.065,
-        "end": 12.375
+        "start": 8.907,
+        "end": 14.116
       }
     },
     {
       "index": 3,
       "duration_s": 3.5,
       "voice": {
-        "start": 12.723,
-        "end": 15.055
+        "start": 14.523,
+        "end": 16.855
       }
     },
     {
       "index": 4,
       "duration_s": 5.5,
       "voice": {
-        "start": 15.459,
-        "end": 18.851
+        "start": 17.285,
+        "end": 20.677
       }
     }
   ]

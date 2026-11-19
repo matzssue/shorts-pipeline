@@ -29,8 +29,8 @@
       "text": "2 claims, each with a source in the topic card"
     },
     {
-      "level": "ok",
-      "text": "first frame: \"Label the bag first\""
+      "level": "warning",
+      "text": "first frame text has 10 words (6–8 recommended)"
     },
     {
       "level": "ok",
