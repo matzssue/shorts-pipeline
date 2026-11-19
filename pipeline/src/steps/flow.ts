@@ -2,7 +2,7 @@ import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, renameS
 import path from "node:path";
 import { ffmpeg } from "../lib/ffmpeg.js";
 import { ASSETS_DIR, OUT_DIR } from "../lib/paths.js";
-import { flowPlanSchema, type FlowPlan, type FlowStep } from "../schema/flow.js";
+import { flowPlanSchema, type FlowPlan, type FlowStep } from "@shorts/schema";
 
 /** Flow step: a package per shot for a video generator used by hand, and import of the downloaded clips. */
 

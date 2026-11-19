@@ -3,7 +3,7 @@ import path from "node:path";
 import { JOIN_GAP_S, rmsProfile, silenceCut, speechEnd, spliceAudio, type AudioSegment } from "../lib/audio.js";
 import type { Narrator } from "../lib/narrators.js";
 import type { CharTiming, TtsProvider } from "../providers/tts.js";
-import type { Script } from "../schema/script.js";
+import type { Script } from "@shorts/schema";
 import {
   buildVoiceText,
   FULL_RECORDING,

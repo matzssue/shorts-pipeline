@@ -1,4 +1,4 @@
-import { topicSchema, type Topic } from "../schema/topic.js";
+import { topicSchema, type Topic } from "@shorts/schema";
 import { cardFile, daysBetween, listCardIds, parseCard, readCardJson, type CardCheck } from "./cards.js";
 import { TOPICS_DIR } from "./paths.js";
 

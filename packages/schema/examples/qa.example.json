@@ -1,0 +1,9 @@
+{
+  "checks": [
+    { "level": "ok", "text": "video 1080×1920, 31.2 s (F5: 20–45 s)" },
+    { "level": "warning", "text": "scene 2: narration 3.9 s > 3.5 s" },
+    { "level": "ok", "text": "caption contains the AI disclosure" }
+  ],
+  "manual": ["Watch the whole video with sound", "Check the captions against the narration"],
+  "passed": true
+}

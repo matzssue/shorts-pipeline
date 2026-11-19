@@ -1,8 +1,7 @@
 import { existsSync, readdirSync } from "node:fs";
 import path from "node:path";
-import { scriptSchema, type Scene, type Script } from "../schema/script.js";
+import { FORMAT_DURATION_S, scriptSchema, type Format, type Scene, type Script } from "@shorts/schema";
 import { parseCard, readCardJson, type CardCheck } from "./cards.js";
-import { FORMAT_DURATION_S, type Format } from "./formats.js";
 import { isNarratorId, narratorIds } from "./narrators.js";
 import { countWords } from "../steps/voice.js";
 import { OUT_DIR } from "./paths.js";

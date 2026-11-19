@@ -2,12 +2,12 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, it } from "node:test";
-import { configSchema } from "../src/lib/config.js";
+import { configSchema } from "@shorts/schema";
 import { PIPELINE_DIR } from "../src/lib/paths.js";
 import { checkProductData } from "../src/lib/products.js";
 import { checkScriptData } from "../src/lib/scripts.js";
 import { checkTopicData } from "../src/lib/topics.js";
-import { flowPlanSchema } from "../src/schema/flow.js";
+import { flowPlanSchema } from "@shorts/schema";
 
 const read = (name: string) => JSON.parse(readFileSync(path.join(PIPELINE_DIR, "examples", name), "utf8"));
 const TODAY = new Date("2026-11-10T12:00:00Z");

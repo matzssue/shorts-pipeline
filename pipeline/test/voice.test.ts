@@ -6,7 +6,7 @@ import { describe, it } from "node:test";
 import { checkScriptData, type ScriptContext } from "../src/lib/scripts.js";
 import type { Narrator } from "../src/lib/narrators.js";
 import type { TtsProvider } from "../src/providers/tts.js";
-import type { Script } from "../src/schema/script.js";
+import type { Script } from "@shorts/schema";
 import { buildVoiceText, runVoice, sceneOverruns, sceneTimings, voiceFiles, wordTimings } from "../src/steps/voice.js";
 
 const card = { id: "t", facts: [{ id: "f" }] };

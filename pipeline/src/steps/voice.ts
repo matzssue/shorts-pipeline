@@ -3,46 +3,15 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import type { Narrator } from "../lib/narrators.js";
 import type { CharTiming, TtsProvider } from "../providers/tts.js";
-import type { Scene, Script } from "../schema/script.js";
+import type { Scene, SceneTiming, Script, VoiceTimings, WordTiming } from "@shorts/schema";
+
+export type { SceneTiming, VoiceTimings, WordTiming } from "@shorts/schema";
 
 /** The narration of the whole video for one narrator + the character range of each scene. */
 export interface VoiceText {
   text: string;
   /** [from, to) in `text`; an empty range for a scene without narration. */
   scenes: { from: number; to: number }[];
-}
-
-export interface WordTiming {
-  text: string;
-  start: number;
-  end: number;
-}
-
-export interface SceneTiming {
-  index: number;
-  /** Planned scene length from the script. */
-  duration_s: number;
-  /** This scene's narration in the recording; null – scene without narration. */
-  voice: { start: number; end: number } | null;
-}
-
-/** Contents of `voice/<narrator>.json` – input for the captions and the edit. */
-export interface VoiceTimings {
-  narrator: string;
-  provider: string;
-  voiceId: string;
-  model: string;
-  /** Hash of the text and voice settings – the same hash = recording from cache. */
-  hash: string;
-  text: string;
-  /** Text spoken in each scene of this recording (for re-recording one scene). */
-  parts?: string[];
-  /** Where each scene comes from: the full recording or a take path in `voice/takes/`. */
-  sources?: string[];
-  duration_s: number;
-  billed_chars?: number;
-  words: WordTiming[];
-  scenes: SceneTiming[];
 }
 
 /** The scene's narration as shown in the captions. */

@@ -1,11 +1,8 @@
-import { HEIGHT, WIDTH } from "../compose/types.js";
+import { FORMAT_DURATION_S, HEIGHT, WIDTH, type Format, type QaCheck, type QaLevel, type QaResult, type Script, type Topic } from "@shorts/schema";
 import { loadConfig } from "../lib/config.js";
-import { FORMAT_DURATION_S, type Format } from "../lib/formats.js";
 import type { Mp4Info } from "../lib/mp4.js";
 import type { Narrator } from "../lib/narrators.js";
 import { findAiPhrases, videoSeconds } from "../lib/scripts.js";
-import type { Script } from "../schema/script.js";
-import type { Topic } from "../schema/topic.js";
 import { buildVoiceText, sceneVoiceover, voiceHash, type VoiceTimings } from "./voice.js";
 
 /**
@@ -13,12 +10,7 @@ import { buildVoiceText, sceneVoiceover, voiceHash, type VoiceTimings } from "./
  * Publishing stays manual – QA does not replace listening to the video.
  */
 
-export type QaLevel = "ok" | "warning" | "error";
-
-export interface QaCheck {
-  level: QaLevel;
-  text: string;
-}
+export type { QaCheck, QaLevel, QaResult } from "@shorts/schema";
 
 /**
  * Words never used in the narration, captions or description: medical authority, guarantees, superlatives,
@@ -49,12 +41,6 @@ export interface QaInput {
   mtimes: { script: number; voice?: number; video?: number };
   /** Sentence the description must contain to disclose AI use; default from the config. */
   disclosure?: string;
-}
-
-export interface QaResult {
-  checks: QaCheck[];
-  manual: string[];
-  passed: boolean;
 }
 
 const ok = (text: string): QaCheck => ({ level: "ok", text });

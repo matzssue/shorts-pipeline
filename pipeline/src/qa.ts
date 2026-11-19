@@ -2,7 +2,7 @@ import { existsSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { parseArgs } from "node:util";
 import { formatCheck } from "./lib/cards.js";
-import { FORMATS, type Format } from "./lib/formats.js";
+import { FORMATS, type Format } from "@shorts/schema";
 import { mp4Info } from "./lib/mp4.js";
 import { getNarrator, narratorChoices, narratorIds, parseNarratorArg } from "./lib/narrators.js";
 import { rel } from "./lib/paths.js";

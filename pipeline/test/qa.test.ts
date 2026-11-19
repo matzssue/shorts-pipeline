@@ -1,8 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import type { Narrator } from "../src/lib/narrators.js";
-import type { Script } from "../src/schema/script.js";
-import type { Topic } from "../src/schema/topic.js";
+import type { Script, Topic } from "@shorts/schema";
 import { findForbidden, renderQaMd, runQa, type QaInput } from "../src/steps/qa.js";
 import { buildVoiceText, voiceHash, type VoiceTimings } from "../src/steps/voice.js";
 

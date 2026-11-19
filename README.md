@@ -26,7 +26,8 @@ A pnpm workspace:
 
 ```
 pipeline/            the CLI (this README)
-packages/            shared packages (coming: schema, timeline, mock data)
+packages/schema/     Zod schemas, types and video constants shared by every package
+packages/            more shared packages (coming: timeline, mock data)
 dashboard/           Next.js dashboard on mock data (coming)
 ```
 

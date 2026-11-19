@@ -6,8 +6,8 @@ export const FORMATS = ["F1", "F2", "F3", "F4", "F5"] as const;
 export type Format = (typeof FORMATS)[number];
 
 /** Formats allowed for each input. */
-export const PRODUCT_FORMATS: readonly Format[] = ["F1", "F2", "F3", "F4"];
-export const TOPIC_FORMATS: readonly Format[] = ["F3", "F5"];
+export const PRODUCT_FORMATS = ["F1", "F2", "F3", "F4"] as const satisfies readonly Format[];
+export const TOPIC_FORMATS = ["F3", "F5"] as const satisfies readonly Format[];
 
 /** Video length in seconds [min, max]. */
 export const FORMAT_DURATION_S: Record<Format, readonly [number, number]> = {

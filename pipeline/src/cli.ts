@@ -4,7 +4,7 @@ import { pathToFileURL } from "node:url";
 import { parseArgs } from "node:util";
 import { formatCheck, type CardCheck } from "./lib/cards.js";
 import { loadEnv } from "./lib/env.js";
-import { FORMATS, PRODUCT_FORMATS, TOPIC_FORMATS, type Format } from "./lib/formats.js";
+import { FORMATS, PRODUCT_FORMATS, PRODUCT_ID_RE, TOPIC_FORMATS, type Format } from "@shorts/schema";
 import { getNarrator, narratorChoices, narratorIds, parseNarratorArg, type NarratorId } from "./lib/narrators.js";
 import { rel } from "./lib/paths.js";
 import { checkProduct } from "./lib/products.js";
@@ -18,7 +18,6 @@ import {
 } from "./lib/scripts.js";
 import { checkTopic } from "./lib/topics.js";
 import { ElevenLabsTts } from "./providers/elevenlabs.js";
-import { PRODUCT_ID_RE } from "./schema/product.js";
 import { runVoice, sceneOverruns, voiceFiles } from "./steps/voice.js";
 
 export { FORMATS, PRODUCT_FORMATS, TOPIC_FORMATS, type Format };
@@ -99,7 +98,7 @@ export function parseMakeArgs(argv: string[]): MakeArgs | "help" {
   } else if (!(FORMATS as readonly string[]).includes(format)) {
     errors.push(`--format "${values.format}" – allowed: ${FORMATS.join(", ")}`);
   } else if (input) {
-    const allowed = input.kind === "topic" ? TOPIC_FORMATS : PRODUCT_FORMATS;
+    const allowed: readonly Format[] = input.kind === "topic" ? TOPIC_FORMATS : PRODUCT_FORMATS;
     if (!allowed.includes(format as Format)) {
       errors.push(`format ${format} does not fit --${input.kind} – allowed: ${allowed.join(", ")}`);
     }

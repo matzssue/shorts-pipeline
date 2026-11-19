@@ -1,6 +1,6 @@
 import { existsSync } from "node:fs";
 import path from "node:path";
-import { productSchema, type Product } from "../schema/product.js";
+import { productSchema, type Product } from "@shorts/schema";
 import { cardFile, daysBetween, listCardIds, parseCard, readCardJson, type CardCheck } from "./cards.js";
 import { CONTENT_DIR, PRODUCTS_DIR } from "./paths.js";
 

@@ -8,7 +8,7 @@ import { buildComposeProps } from "./compose/props.js";
 import { FPS } from "./compose/types.js";
 import { formatCheck } from "./lib/cards.js";
 import { loadConfig } from "./lib/config.js";
-import { FORMATS, type Format } from "./lib/formats.js";
+import { FORMATS, type Format } from "@shorts/schema";
 import { mp4Duration } from "./lib/mp4.js";
 import { narratorChoices, narratorIds, parseNarratorArg } from "./lib/narrators.js";
 import { rel } from "./lib/paths.js";

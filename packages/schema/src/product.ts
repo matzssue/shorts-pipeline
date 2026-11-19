@@ -2,7 +2,7 @@ import { z } from "zod";
 
 /**
  * Product card – the only source of facts about a product. The script may not invent features or numbers.
- * Example: examples/product.example.json. Files: products/<id>.json.
+ * Example: pipeline/examples/product.example.json. Files: products/<id>.json.
  */
 
 export const PRODUCT_ID_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;

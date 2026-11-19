@@ -1,0 +1,5 @@
+[
+  { "date": "2026-11-12", "platform": "youtube", "channel": "a", "file": "out/example-cable-labels/F5/narrator-a.mp4", "link": "https://www.youtube.com/shorts/AAAAAAAAAAA", "status": "published" },
+  { "date": "2026-11-12", "platform": "instagram", "channel": "a", "file": "out/example-cable-labels/F5/narrator-a.mp4", "link": "https://www.instagram.com/reel/EXAMPLE0001/", "status": "published" },
+  { "date": "2026-11-13", "platform": "tiktok", "channel": "b", "file": "out/example-drawer-organizer/F1/narrator-b.mp4", "link": "", "status": "planned" }
+]

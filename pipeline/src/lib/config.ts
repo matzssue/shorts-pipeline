@@ -1,48 +1,9 @@
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
-import { z } from "zod";
+import { configSchema, type Config } from "@shorts/schema";
 import { CONTENT_DIR, PIPELINE_DIR } from "./paths.js";
 
-const narratorSchema = z
-  .strictObject({
-    id: z.string().regex(/^[a-z0-9-]+$/, "kebab-case"),
-    name: z.string().min(1),
-    /** ElevenLabs voice ID. Not a secret, but account-specific – prefer `voiceIdEnv`. */
-    voiceId: z.string().min(1).optional(),
-    /** Name of the env variable that holds the voice ID. */
-    voiceIdEnv: z.string().regex(/^[A-Z][A-Z0-9_]*$/).optional(),
-    model: z.string().min(1),
-    /** Forced pronunciation language; without it the voice keeps more of its own accent. */
-    languageCode: z.string().min(2).optional(),
-    /** 0–1: lower = more expressive. */
-    stability: z.number().min(0).max(1).optional(),
-  })
-  .refine((n) => n.voiceId || n.voiceIdEnv, "set voiceId or voiceIdEnv");
-
-const channelSchema = z.strictObject({
-  /** Short ID used in `--channel` and in env names, e.g. `a` → `YT_REFRESH_TOKEN_A`. */
-  id: z.string().regex(/^[a-z0-9]+$/, "lowercase letters and digits"),
-  name: z.string().min(1),
-  /** Default YouTube category for uploads (22 = People & Blogs). */
-  youtubeCategoryId: z.string().regex(/^\d+$/).default("22"),
-});
-
-export const configSchema = z.strictObject({
-  channels: z.array(channelSchema).min(1),
-  narrators: z.array(narratorSchema).min(1),
-  /** Series titles shown on the intro card, by series number. */
-  series: z.record(z.string().regex(/^\d+$/), z.string().min(1)).default({}),
-  /** Label above the source overlay in the video (in the video's language). */
-  sourceLabel: z.string().min(1).default("Source"),
-  /** Language of the videos (BCP-47), e.g. "pl" – sent to YouTube as the video and audio language. */
-  language: z.string().min(2).default("en"),
-  /** Sentence every description must contain to disclose AI use; empty = no check. */
-  disclosure: z.string().default(""),
-});
-
-export type Config = z.infer<typeof configSchema>;
-export type ChannelConfig = Config["channels"][number];
-export type NarratorConfig = Config["narrators"][number];
+export type { ChannelConfig, Config, NarratorConfig } from "@shorts/schema";
 
 export const CONFIG_FILE = path.join(CONTENT_DIR, "shorts.config.json");
 export const EXAMPLE_CONFIG_FILE = path.join(PIPELINE_DIR, "examples", "shorts.config.example.json");

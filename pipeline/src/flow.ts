@@ -5,7 +5,7 @@ import path from "node:path";
 import { createInterface } from "node:readline";
 import { parseArgs } from "node:util";
 import { CONTENT_DIR, FLOWS_DIR } from "./lib/paths.js";
-import type { FlowPlan, FlowStep } from "./schema/flow.js";
+import type { FlowPlan, FlowStep } from "@shorts/schema";
 import {
   clipFile,
   describeStep,

@@ -1,13 +1,12 @@
 import { z } from "zod";
+import { TOPIC_FORMATS } from "./formats.js";
 import { PRODUCT_ID_RE } from "./product.js";
 
 /**
  * Topic card – the source of facts for videos without a product (F5, F3).
- * Example: examples/topic.example.json. Files: topics/<id>.json.
+ * Example: pipeline/examples/topic.example.json. Files: topics/<id>.json.
  * Every claim in a script must point to a `facts[].id`.
  */
-
-export const TOPIC_FORMATS = ["F3", "F5"] as const;
 
 /** Categories we do not give advice in. */
 export const RISK_CATEGORIES = ["none", "health", "finance", "legal"] as const;

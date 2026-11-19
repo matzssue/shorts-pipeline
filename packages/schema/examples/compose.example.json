@@ -1,0 +1,44 @@
+{
+  "series": 1,
+  "seriesTitle": "Quick tip",
+  "sourceLabel": "Source",
+  "audioSrc": "voice/narrator-a.mp3",
+  "durationInFrames": 270,
+  "scenes": [
+    {
+      "kind": "video",
+      "src": "scenes/01.mp4",
+      "from": 0,
+      "durationInFrames": 90,
+      "playbackRate": 1,
+      "headline": "Tangled cables?",
+      "audio": { "startFrom": 0, "endAt": 31, "delay": 2 }
+    },
+    {
+      "kind": "image",
+      "src": "scenes/02.png",
+      "from": 90,
+      "durationInFrames": 120,
+      "playbackRate": 1,
+      "headline": "Label both ends",
+      "overlay": { "type": "label", "heading": "Tip:", "value": "both ends" },
+      "audio": { "startFrom": 42, "endAt": 75, "delay": 0 }
+    },
+    {
+      "kind": "text",
+      "from": 210,
+      "durationInFrames": 60,
+      "playbackRate": 1,
+      "headline": "",
+      "overlay": { "type": "source", "text": "Example manufacturer guide, 2026" },
+      "audio": { "startFrom": 75, "endAt": 75, "delay": 0 }
+    }
+  ],
+  "words": [
+    { "text": "Tangled", "from": 2, "to": 14 },
+    { "text": "cables?", "from": 15, "to": 31 },
+    { "text": "Label", "from": 90, "to": 100 },
+    { "text": "both", "from": 100, "to": 107 },
+    { "text": "ends.", "from": 108, "to": 123 }
+  ]
+}

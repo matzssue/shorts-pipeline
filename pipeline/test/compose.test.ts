@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import { buildComposeProps, formatDate, MIN_PLAYBACK_RATE } from "../src/compose/props.js";
-import type { Script } from "../src/schema/script.js";
+import type { Script } from "@shorts/schema";
 import type { VoiceTimings } from "../src/steps/voice.js";
 
 const base = { visual: "v", on_screen_text: "Headline", claims: [] };

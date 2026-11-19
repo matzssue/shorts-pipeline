@@ -1,7 +1,7 @@
 import { parseArgs } from "node:util";
 import { formatCheck } from "./lib/cards.js";
 import { loadEnv } from "./lib/env.js";
-import { FORMATS, type Format } from "./lib/formats.js";
+import { FORMATS, type Format } from "@shorts/schema";
 import { getNarrator, narratorChoices, narratorIds, parseNarratorArg } from "./lib/narrators.js";
 import { rel } from "./lib/paths.js";
 import { checkScript, videoDir } from "./lib/scripts.js";

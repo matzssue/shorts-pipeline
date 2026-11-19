@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import path from "node:path";
 import { describe, it } from "node:test";
 import { ASSETS_DIR } from "../src/lib/paths.js";
-import { flowPlanSchema } from "../src/schema/flow.js";
+import { flowPlanSchema } from "@shorts/schema";
 import { buildPrompt, framesNeeded, pickDownload, refSource, snapshot, stepFolder, VIDEO_EXTS } from "../src/steps/flow.js";
 
 const plan = flowPlanSchema.parse({

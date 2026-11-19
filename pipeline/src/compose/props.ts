@@ -1,4 +1,4 @@
-import type { Overlay, Script } from "../schema/script.js";
+import type { Overlay, Script } from "@shorts/schema";
 import type { VoiceTimings } from "../steps/voice.js";
 import { FPS, type ComposeOverlay, type ComposeProps, type ComposeScene, type ComposeWord } from "./types.js";
 

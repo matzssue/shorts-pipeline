@@ -1,0 +1,23 @@
+{
+  "narrator": "narrator-a",
+  "provider": "elevenlabs",
+  "voiceId": "example-voice",
+  "model": "eleven_v3",
+  "hash": "3f2a9c",
+  "text": "Tangled cables? Label both ends.",
+  "parts": ["Tangled cables?", "Label both ends."],
+  "duration_s": 2.6,
+  "billed_chars": 32,
+  "words": [
+    { "text": "Tangled", "start": 0.05, "end": 0.48 },
+    { "text": "cables?", "start": 0.5, "end": 1.02 },
+    { "text": "Label", "start": 1.4, "end": 1.72 },
+    { "text": "both", "start": 1.74, "end": 1.98 },
+    { "text": "ends.", "start": 2.0, "end": 2.5 }
+  ],
+  "scenes": [
+    { "index": 0, "duration_s": 3, "voice": { "start": 0.05, "end": 1.02 } },
+    { "index": 1, "duration_s": 4, "voice": { "start": 1.4, "end": 2.5 } },
+    { "index": 2, "duration_s": 2, "voice": null }
+  ]
+}

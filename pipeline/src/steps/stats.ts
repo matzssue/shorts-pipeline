@@ -1,3 +1,4 @@
+import { PUBLICATION_COLUMNS, type IgAccountStats, type IgMediaStats, type Publication, type YtChannelStats, type YtVideoStats } from "@shorts/schema";
 import type { FetchFn } from "./ig-publish.js";
 import { GRAPH } from "./ig-publish.js";
 import { API as YT_API, type YtFetch } from "./yt-publish.js";
@@ -18,17 +19,8 @@ export const IG_REEL_METRICS = ["views", "reach", "likes", "comments", "shares",
 
 // ---------- publications.csv ----------
 
-export interface Publication {
-  date: string;
-  platform: string;
-  /** Channel ID from the config, lowercase. */
-  channel: string;
-  file: string;
-  link: string;
-  status: string;
-}
-
-export const PUBLICATION_COLUMNS = ["date", "platform", "channel", "file", "link", "status"] as const;
+export { PUBLICATION_COLUMNS };
+export type { IgAccountStats, IgMediaStats, Publication, YtChannelStats, YtVideoStats };
 
 /** Simple CSV parser (quotes, commas and newlines inside fields). */
 export function parseCsv(text: string): string[][] {
@@ -80,21 +72,6 @@ export function instagramCode(link: string): string | undefined {
 
 // ---------- YouTube ----------
 
-export interface YtVideoStats {
-  id: string;
-  title?: string;
-  publishedAt?: string;
-  privacy?: string;
-  views?: number;
-  likes?: number;
-  comments?: number;
-  /** from YouTube Analytics (1–2 days delay) */
-  avgViewPercent?: number;
-  avgViewSeconds?: number;
-  shares?: number;
-  subscribersGained?: number;
-}
-
 async function ytJson<T>(where: string, res: Awaited<ReturnType<YtFetch>>): Promise<T> {
   const data = (await res.json().catch(() => ({}))) as T & { error?: { message?: string; errors?: { reason?: string }[] } };
   if (!res.ok) {
@@ -106,7 +83,7 @@ async function ytJson<T>(where: string, res: Awaited<ReturnType<YtFetch>>): Prom
 
 const num = (v: unknown): number | undefined => (v === undefined || v === null || v === "" ? undefined : Number(v));
 
-export async function ytChannelStats(token: string, f: YtFetch = fetch as unknown as YtFetch): Promise<{ id: string; title: string; subscribers?: number; views?: number; videos?: number }> {
+export async function ytChannelStats(token: string, f: YtFetch = fetch as unknown as YtFetch): Promise<YtChannelStats> {
   const r = await ytJson<{ items?: { id: string; snippet: { title: string }; statistics?: { subscriberCount?: string; viewCount?: string; videoCount?: string } }[] }>(
     "channel",
     await f(`${YT_API}/channels?part=snippet,statistics&mine=true`, { headers: { Authorization: `Bearer ${token}` } }),
@@ -169,21 +146,6 @@ export async function ytAnalytics(token: string, ids: string[], startDate: strin
 
 // ---------- Instagram ----------
 
-export interface IgMediaStats {
-  id: string;
-  permalink: string;
-  timestamp?: string;
-  likes?: number;
-  comments?: number;
-  views?: number;
-  reach?: number;
-  shares?: number;
-  saved?: number;
-  totalInteractions?: number;
-  /** average watch time in s (the API returns ms) */
-  avgWatchSeconds?: number;
-}
-
 interface IgError {
   error?: { message?: string; code?: number };
 }
@@ -195,7 +157,7 @@ async function igGet<T>(f: FetchFn, base: string, path: string, token: string, p
   return data;
 }
 
-export async function igAccountStats(token: string, userId: string, f: FetchFn = fetch as unknown as FetchFn, base = GRAPH): Promise<{ username?: string; followers?: number; mediaCount?: number }> {
+export async function igAccountStats(token: string, userId: string, f: FetchFn = fetch as unknown as FetchFn, base = GRAPH): Promise<IgAccountStats> {
   const r = await igGet<{ username?: string; followers_count?: number; media_count?: number }>(f, base, `/${userId}`, token, { fields: "username,followers_count,media_count" });
   return { username: r.username, followers: r.followers_count, mediaCount: r.media_count };
 }

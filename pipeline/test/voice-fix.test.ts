@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import { silenceCut, speechEnd } from "../src/lib/audio.js";
-import type { Script } from "../src/schema/script.js";
+import type { Script } from "@shorts/schema";
 import { joinParts, sceneSegment, takeContext } from "../src/steps/voice-fix.js";
 
 /** Loudness profile every 10 ms: `loud` in the given second ranges, silence elsewhere. */

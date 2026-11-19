@@ -25,8 +25,4 @@ export const WHITE = "#FFFFFF";
 export const INK = "#141414";
 export const CORRECT = "#2EB872";
 
-/**
- * Safe area on 1080×1920: below the top bar, above the bottom ~20% (caption, buttons)
- * and left of the right-hand button column.
- */
-export const SAFE = { top: 170, bottom: 1500, left: 70, right: 930 } as const;
+export { SAFE } from "@shorts/schema/video";
