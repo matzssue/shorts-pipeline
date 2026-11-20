@@ -2,6 +2,8 @@
 
 A TypeScript CLI that turns fact-checked content cards into vertical short videos (9:16) and publishes them.
 
+**Live dashboard (mock data):** https://matzssue.github.io/shorts-pipeline/
+
 ```
 topic / product card (JSON, validated with Zod)
   → script checks (scene lengths, banned phrases, facts only from the card)
