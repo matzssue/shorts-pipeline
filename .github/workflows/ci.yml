@@ -66,7 +66,7 @@ jobs:
         with:
           path: dashboard/out/
 
-  # GitHub Pages on a free account works only for public repos: skipped while the repo is private.
+  # Deploys the dashboard to GitHub Pages on every push to main (free accounts: public repos only).
   deploy:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !github.event.repository.private
     needs: [check, secrets, dashboard]
