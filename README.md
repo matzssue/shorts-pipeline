@@ -77,7 +77,7 @@ pnpm --filter @shorts/dashboard e2e     # end-to-end tests on the built site
 
 ## Quick start
 
-Step by step from a fresh clone to your own videos, posts and dashboard: [docs/getting-started.md](docs/getting-started.md).
+Who does what, in plain words: [docs/how-it-works.md](docs/how-it-works.md). Step by step from a fresh clone to your own videos, posts and dashboard: [docs/getting-started.md](docs/getting-started.md).
 
 ```sh
 pnpm install           # from the repo root
